@@ -1,0 +1,86 @@
+.workshop {
+    width: 100%;
+    padding: 100px 20%;
+    box-sizing: border-box;
+    background: #000000;
+}
+
+.workshop .heading {
+    width: 100%;
+    text-align: end;
+    color: #fafafa;
+    font-size: 3.5rem;
+    letter-spacing: 1rem;
+    font-family: 'Space Mono Bold', serif;
+}
+
+.workshop .heading span {
+    padding-left: 1rem;
+    border-left: 0.6rem solid #fafafa;
+}
+
+.workshop .body {
+    width: 100%;
+    padding-top: 128px;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.workshop .body .card {
+    width: 45%;
+    font-size: 0.9rem;
+    color: #fafafa;
+    letter-spacing: 0.25rem;
+    margin: 40px 0;
+}
+
+.workshop .body .card > * {
+    width: 100%;
+}
+
+.workshop .body .card .workshop-name {
+    font-family: 'Space Mono', serif;
+    margin-bottom: 8px;
+}
+
+.workshop .body .card .workshop-content {
+    font-family: 'Space Mono Bold', serif;
+    display: flex;
+}
+
+.workshop .body .card .workshop-content img {
+    width: 35%;
+    margin-left: 10%;
+    margin-right: 7.5%;
+}
+
+.workshop .body .card .workshop-content span {
+    display: inline-block;
+    width: 47.5%;
+}
+
+.workshop .body .card .workshop-content span .workshop-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    height: 75%;
+}
+
+.workshop .body .card .workshop-content span .workshop-details .workshop-date {
+    margin-bottom: 12px;
+}
+
+.workshop .body .card .workshop-content span .view-detail-button {
+    width: 100%;
+    height: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.4);
+    font-size: 0.75rem;
+    cursor: pointer;
+}
