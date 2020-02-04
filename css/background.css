@@ -1,5 +1,6 @@
 .noise-background {
-    background: url('http://api.thumbr.it/whitenoise-361x370.png?background=00000000&noise=626262&density=50&opacity=40');
+    /* background: url('http://api.thumbr.it/whitenoise-361x370.png?background=00000000&noise=626262&density=50&opacity=40'); */
+    background: url('../assets//backgrounds/noise.png');
     height: 200%;
     width: 200%;
     background-repeat: repeat;
