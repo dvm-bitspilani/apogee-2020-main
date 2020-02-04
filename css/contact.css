@@ -1,8 +1,7 @@
 .contact {
-    width: 90%;
-    padding: 100px 15%;
+    width: 100%;
+    padding: 100px 13%;
     box-sizing: border-box;
-    margin-left: 10%;
 }
 
 .contact .heading {
@@ -25,16 +24,16 @@
     box-sizing: border-box;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
 }
 
 .contact .body .card {
-    width: 18%;
+    width: 19%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    font-size: .65vw;
+    font-size: .7vw;
     font-family: 'Space Mono', serif;
     color: #fafafa;
     margin: 24px 0;
@@ -49,4 +48,8 @@
 .contact .body .card * {
     margin: 2px 0;
     text-align: center;
+}
+
+.contact .body .card .department {
+    white-space: nowrap;
 }
