@@ -31,7 +31,7 @@
     justify-content: space-between;
     align-items: center;
     height: 5vh;
-    width: 35vw;
+    width: 25vw;
 }
 
 .home .navbar .nav-link-container .nav-links {
@@ -64,23 +64,69 @@
 }
 
 .left-nav .left-nav-link {
-    height: 60px;
-    width: 120px;
+    height: 70px;
+    width: 170px;
     display: flex;
-    justify-content: space-between;
+}
+
+.left-nav .left-nav-link .side {
+    width: 40px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.left-nav .left-nav-link .side .line {
+    height: 60px;
+    width: 1.5px;
+    background: #FAFAFA;
+}
+
+.left-nav .left-nav-link .side .circle {
+    display: flex;
+    justify-content: center;
     align-items: center;
 }
 
-.left-nav .left-nav-link .circle {
+.left-nav .left-nav-link .side .active {
+    height: 21px;
+    width: 21px;
+    opacity: 1;
     border: 1.5px solid #707070;
 }
 
-.left-nav .left-nav-link .circle .dot {
-    margin: 2px;
-    height: 14px;
-    width: 14px;
+.left-nav .left-nav-link .side .circle .dot {
+    height: 12px;
+    width: 12px;
     border-radius: 50%;
-    background-color: lightgray;
+    background-color: #FAFAFA;
+    opacity: 0.6;
+}
+
+
+.left-nav .left-nav-link .side .circle .active {
+    opacity: 1;
+}
+
+.left-nav .left-nav-link .left-nav-text {
+    height: 21px;
+    display: flex;
+    font-family: 'Space Mono';
+    padding-left: 15px;
+    margin-top: -8px;
+    align-items: center;
+    color: #FAFAFA;
+    opacity: 0.6;
+}
+
+.left-nav .left-nav-link .first {
+    margin-top: 0;
+}
+
+.left-nav .left-nav-link .active {
+    color: #FAFAFA;
+    opacity: 1;
 }
 
 #stars {
