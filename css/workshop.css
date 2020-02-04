@@ -1,8 +1,10 @@
 .workshop {
-    width: 100%;
+    width: 100vw;
     padding: 100px 20%;
     box-sizing: border-box;
     background: #000000;
+    z-index: 10;
+    position: relative;
 }
 
 .workshop .heading {
