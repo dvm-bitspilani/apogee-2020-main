@@ -1,0 +1,52 @@
+.contact {
+    width: 90%;
+    padding: 100px 15%;
+    box-sizing: border-box;
+    margin-left: 10%;
+}
+
+.contact .heading {
+    width: 100%;
+    text-align: end;
+    color: #fafafa;
+    font-size: 3.5rem;
+    letter-spacing: 1rem;
+    font-family: 'Space Mono Bold', serif;
+}
+
+.contact .heading span {
+    padding-left: 1rem;
+    border-left: 0.6rem solid #fafafa;
+}
+
+.contact .body {
+    width: 100%;
+    padding-top: 128px;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.contact .body .card {
+    width: 18%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: .65vw;
+    font-family: 'Space Mono', serif;
+    color: #fafafa;
+    margin: 24px 0;
+}
+
+.contact .body .card img {
+    width: 60%;
+    border-radius: 50%;
+    border: 2px solid #666666;
+}
+
+.contact .body .card * {
+    margin: 2px 0;
+    text-align: center;
+}
