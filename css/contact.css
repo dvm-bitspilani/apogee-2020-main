@@ -30,21 +30,23 @@
 }
 
 .contact .body .card {
+    width: 18%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    font-size: 0.75rem;
+    font-size: .65vw;
     font-family: 'Space Mono', serif;
     color: #fafafa;
     margin: 24px 0;
 }
 
 .contact .body .card img {
-    width: 100px;
+    width: 60%;
     border-radius: 50%;
     border: 2px solid #666666;
 }
 
 .contact .body .card * {
     margin: 2px 0;
+    text-align: center;
 }
