@@ -1,8 +1,8 @@
 .contact {
-    width: 100%;
-    padding: 100px 20%;
+    width: 90%;
+    padding: 100px 15%;
     box-sizing: border-box;
-    background: #000000;
+    margin-left: 10%;
 }
 
 .contact .heading {
@@ -25,6 +25,25 @@
     box-sizing: border-box;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: center;
+}
+
+.contact .body .card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 0.75rem;
+    color: #fafafa;
+    margin: 24px 0;
+}
+
+.contact .body .card img {
+    width: 100px;
+    border-radius: 50%;
+    border: 2px solid #666666;
+}
+
+.contact .body .card * {
+    margin: 3px 0;
 }
