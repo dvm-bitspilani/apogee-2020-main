@@ -34,6 +34,7 @@
     flex-direction: column;
     align-items: center;
     font-size: 0.75rem;
+    font-family: 'Space Mono', serif;
     color: #fafafa;
     margin: 24px 0;
 }
@@ -45,5 +46,5 @@
 }
 
 .contact .body .card * {
-    margin: 3px 0;
+    margin: 2px 0;
 }
