@@ -1,8 +1,8 @@
 .workshop {
-  width: 100vw;
-  padding: 100px 20%;
-  box-sizing: border-box;
-  position: relative;
+    width: 100%;
+    padding: 128px 20%;
+    box-sizing: border-box;
+    position: relative;
 }
 
 .workshop .heading {
