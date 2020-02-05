@@ -30,3 +30,8 @@ html, body {
     font-family: 'Glitch';
     src: url(../assets/fonts/CFGlitchCity-Regular.ttf);
 }
+
+@font-face {
+    font-family: 'Apex Medium';
+    src: url(../assets/fonts/Apex\ Mk3-Medium.otf);
+}
