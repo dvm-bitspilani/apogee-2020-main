@@ -23,10 +23,10 @@
 }
 
 .backgrounds .landing-background {
-    background: url('../assets/backgrounds/noob1wnoise.png');
+    background: url('../assets/backgrounds/component.png');
     background-size: cover;
-    background-position: center;
-    width: 100%;
+    /* background-position: center; */
+    width: 100vw;
     height: 100vh;
     /* overflow: hidden; */
 }

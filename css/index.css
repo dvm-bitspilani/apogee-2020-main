@@ -14,13 +14,13 @@
   display: flex;
   box-sizing: border-box;
   justify-content: space-between;
-  align-items: flex-end;
 }
 
 .home .navbar .nav-logo {
   background: url("../assets/backgrounds/Apogee.png");
   background-repeat: no-repeat;
   background-position: center;
+  align-self: flex-end;
   width: 320px;
   height: 55px;
 }
@@ -30,13 +30,14 @@
   justify-content: space-between;
   align-items: center;
   height: 5vh;
-  width: 25vw;
+  width: 22vw;
+  align-self: flex-start;
+  margin-top: 50px;
 }
 
 .home .navbar .nav-link-container .nav-links {
-  font-family: "Space Mono";
-  font-size: 21px;
-  letter-spacing: 2.64px;
+  font: 20px/29px "Space Mono";
+  letter-spacing: 1.64px;
   color: #fafafa;
   cursor: pointer;
 }
