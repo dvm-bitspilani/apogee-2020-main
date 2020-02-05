@@ -115,7 +115,22 @@
   opacity: 1;
 }
 
+.left-nav .left-nav-link .index {
+    height: 35px;
+    display: flex;
+    font-family: 'Space Mono';
+    padding-left: 15px;
+    margin-top: -10px;
+    align-items: center;
+    color: rgb(223, 223, 223);
+    opacity: 0.6;
+    font-size: 20px;
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
+}
+
 .left-nav .left-nav-link .left-nav-text {
+<<<<<<< HEAD
   height: 21px;
   display: flex;
   font-family: "Space Mono";
@@ -125,6 +140,18 @@
   color: #fafafa;
   opacity: 0.6;
   cursor: pointer;
+=======
+    height: 21px;
+    display: flex;
+    font-family: 'Space Mono';
+    padding-left: 5px;
+    margin-top: -5px;
+    align-items: center;
+    color: rgb(223, 223, 223);
+    opacity: 0.6;
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
+>>>>>>> 8204e431e5418c1823ec027b674ef70698a3b6e1
 }
 
 .left-nav .left-nav-link .first {
