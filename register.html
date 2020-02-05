@@ -44,10 +44,14 @@
             </div>
             <div class="form-button-container">
                 <input type="submit" value="REGISTER">
-                <input type="button" value="GO BACK" onclick="toogleRegisterForm()">
+                <input type="button" value="GO BACK" onclick="window.history.back()">
             </div>
         </form>
         <div class="note">If you are not able to register using the above form, use this <a href="https://forms.gle/EnsMKTv9ri4x3XJQ9" target="_blank">google form</a>.</div>
+    </div>
+    <div class="message-box">
+        <img src="assets/icons/close.svg" alt="close" onclick="closeMessage()">
+        <div id="message"><!-- MESSAGES GOES HERE --></div>
     </div>
     <script src="js/register.js"></script>
 </body>

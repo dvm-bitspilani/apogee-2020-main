@@ -200,7 +200,7 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    z-index: 3;
+    z-index: 20;
     transform: translate(-50%, -50%);
     display: none;
 }
@@ -348,3 +348,28 @@
         letter-spacing: 0.1rem;
     }
 }
+
+
+@keyframes slideIn {
+    from {
+      transform: translate(-50%, -150%);
+      opacity: 0;
+    }
+  
+    to {
+      transform: translate(-50%, -50%);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes slideOut {
+    from {
+      transform: translate(-50%, -50%);
+      opacity: 1;
+    }
+  
+    to {
+      transform: translate(-50%, 150%);
+      opacity: 0;
+    }
+  }
