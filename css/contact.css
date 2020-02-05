@@ -18,7 +18,7 @@
     border-left: 0.6rem solid #fafafa;
 }
 
-.contact .body {
+.contact .contact-body {
     width: 100%;
     padding-top: 128px;
     box-sizing: border-box;
@@ -28,7 +28,7 @@
     align-items: center;
 }
 
-.contact .body .card {
+.contact .contact-body .card {
     width: 19%;
     display: flex;
     flex-direction: column;
@@ -39,17 +39,17 @@
     margin: 24px 0;
 }
 
-.contact .body .card img {
+.contact .contact-body .card img {
     width: 60%;
     border-radius: 50%;
     border: 2px solid #666666;
 }
 
-.contact .body .card * {
+.contact .contact-body .card * {
     margin: 2px 0;
     text-align: center;
 }
 
-.contact .body .card .department {
+.contact .contact-body .card .department {
     white-space: nowrap;
 }
