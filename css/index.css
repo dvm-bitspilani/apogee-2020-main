@@ -122,6 +122,7 @@
     opacity: 0.6;
     font-size: 20px;
     transition: 0.3s ease-in-out;
+    cursor: pointer;
 }
 
 .left-nav .left-nav-link .left-nav-text {
@@ -134,6 +135,7 @@
     color: rgb(223, 223, 223);
     opacity: 0.6;
     transition: 0.3s ease-in-out;
+    cursor: pointer;
 }
 
 .left-nav .left-nav-link .first {

@@ -1,24 +1,26 @@
 /* handle mouseover on side menu */
-let index = document.querySelector(".index");
-console/log(index);
-let navtext = document.querySelector(".left-nav-text");
+let index = document.querySelectorAll(".index");
+let navtext = document.querySelectorAll(".left-nav-text");
 
-index.addEventListener("mouseenter", () => {
-  index.style.cursor = "pointer";
-  index.style.color = "#fff";
-  index.style.opacity = "1";
-
-  navtext.style.cursor = "pointer";
-  navtext.style.color = "#fff";
-  navtext.style.opacity = "1";
+index.forEach((item) => {
+  item.onmouseover = () => {
+    item.style.opacity = "1";
+    item.style.color = "#fff";
+  }
+  item.onmouseout = () => {
+    item.style.opacity = "0.6";
+    item.style.color = "rgb(223, 223, 223)";
+  }
 })
 
-navtext.addEventListener("mouseenter", () => {
-  index.style.cursor = "pointer";
-  index.style.color = "#fff";
-  index.style.opacity = "1";
-
-  navtext.style.cursor = "pointer";
-  navtext.style.color = "#fff";
-  navtext.style.opacity = "1";
+navtext.forEach((item) => {
+  item.onmouseover = () => {
+    item.style.opacity = "1";
+    item.style.color = "#fff";
+  }
+  item.onmouseout = () => {
+    item.style.opacity = "0.6";
+    item.style.color = "rgb(223, 223, 223)";
+  }
 })
+/* ---------------------------- */
