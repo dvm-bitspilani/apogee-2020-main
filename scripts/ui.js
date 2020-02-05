@@ -1,31 +1,62 @@
 /* handle mouseover on side menu */
-let index = document.querySelectorAll(".index");
-let navtext = document.querySelectorAll(".left-nav-text");
+let index = []
+let navtext = []
 
-index.forEach((item) => {
-  item.onmouseover = () => {
-    item.style.opacity = "1";
-    item.style.color = "#fff";
-  }
-  item.onmouseout = () => {
-    item.style.opacity = "0.6";
-    item.style.color = "rgb(223, 223, 223)";
-  }
+document.querySelectorAll(".index").forEach(item => {
+  index.push(item);
 })
 
-navtext.forEach((item) => {
-  item.onmouseover = () => {
-    item.style.opacity = "1";
-    item.style.color = "#fff";
-  }
-  item.onmouseout = () => {
-    item.style.opacity = "0.6";
-    item.style.color = "rgb(223, 223, 223)";
-  }
+document.querySelectorAll(".left-nav-text").forEach(item => {
+  navtext.push(item);
 })
 
+for (let i = 0; i < index.length; i++) {
+  index[i].onmouseover = () => {
+    index[i].style.opacity = "1";
+    index[i].style.color = "#fff";
 
-/* Render comtacts */
+    navtext[i].style.opacity = "1";
+    navtext[i].style.color = "#fff";
+  }
+
+  navtext[i].onmouseover = () => {
+    index[i].style.opacity = "1";
+    index[i].style.color = "#fff";
+
+    navtext[i].style.opacity = "1";
+    navtext[i].style.color = "#fff";
+  }
+
+  index[i].onmouseout = () => {
+    index[i].style.opacity = "0.6";
+    index[i].style.color = "rgb(223, 223, 223)";
+
+    navtext[i].style.opacity = "0.6";
+    navtext[i].style.color = "rgb(223, 223, 223)";
+  }
+
+  navtext[i].onmouseout = () => {
+    index[i].style.opacity = "0.6";
+    index[i].style.color = "rgb(223, 223, 223)";
+
+    navtext[i].style.opacity = "0.6";
+    navtext[i].style.color = "rgb(223, 223, 223)";
+  }
+}
+
+// navtext.forEach((item) => {
+//   item.onmouseover = () => {
+//     item.style.opacity = "1";
+//     item.style.color = "#fff";
+//   }
+//   item.onmouseout = () => {
+//     item.style.opacity = "0.6";
+//     item.style.color = "rgb(223, 223, 223)";
+//   }
+// })
+
+
+/* Generate contacts and inject into HTML */
 const contactData = {
   dvm: {
     name: "Manish Thakur",

@@ -1,0 +1,26 @@
+.videos {
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+  box-sizing: border-box;
+}
+
+.video-header {
+  font: Bold 74px/110px "Space Mono";
+  letter-spacing: 17.17px;
+  color: #fafafa;
+  opacity: 1;
+  position: absolute;
+  top: 200px;
+  right: 320px;
+}
+
+.video-ele-1 {
+  position: absolute;
+  top: 206px;
+  right: 255px;
+  width: 15px;
+  height: 96px;
+  background: #ffffff 0% 0% no-repeat padding-box;
+  opacity: 1;
+}
