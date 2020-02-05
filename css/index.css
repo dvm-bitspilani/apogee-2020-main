@@ -39,6 +39,12 @@
   font: 20px/29px "Space Mono";
   letter-spacing: 1.64px;
   color: #fafafa;
+  /* cursor: pointer; */
+  transition: 0.1s ease;
+}
+
+.home .navbar .nav-link-container .nav-links:hover {
+  transform: scale(1.05);
   cursor: pointer;
 }
 
