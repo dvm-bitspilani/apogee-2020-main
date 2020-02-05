@@ -1,0 +1,350 @@
+.form-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: "Space Mono", sans-serif;
+    padding-top: 64px;
+}
+
+.form-container .heading {
+    font-family: "Space Mono Bold", sans-serif;
+    font-size: 3rem;
+    letter-spacing: 0.5rem;
+    font-weight: bold;
+    margin: 3vh 0;
+    color: #ffffff;
+}
+
+.form-container .heading span {
+    padding: 0 20px;
+    border-left: 8px solid #ffffff;
+}
+
+.form-container form {
+    width: 100%;
+    padding: 0 10%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.form-container form > * {
+    width: 40%;
+    margin: 1.5% 0;
+    font-size: 1.6rem;
+    font-family: "Space Mono", sans-serif;
+    letter-spacing: 0.15rem;
+    color: #ffffff;
+    background: transparent;
+    outline: none;
+    padding: 8px 16px;
+    box-sizing: border-box;
+}
+
+.form-container form input[type="text"], .form-container form select, .form-container form input[type="email"], .form-container form input[type="number"] {
+    border: 3.5px solid #00ffff;
+}
+
+.form-container form input:focus, .form-container form select:focus {
+    border: 3.5px solid #b02c8d;
+}
+
+.form-container form input:-webkit-autofill-selected {
+    background: transparent;
+    color: #ffffff;
+}
+
+.form-container form input:-webkit-autofill {
+    background: transparent;
+    color: #ffffff;
+}
+
+.form-container form input::placeholder {
+    color: #ffffff;
+    background: transparent;
+    opacity: 1;
+}
+
+.form-container form .field-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 8px 0;
+    position: relative;
+}
+
+.form-container form .field-wrapper > input {
+    width: 100%;
+    border: 3.5px solid #00ffff;
+    font-size: 1.6rem;
+    font-family: "Space Mono", sans-serif;
+    letter-spacing: 0.15rem;
+    color: #ffffff;
+    background: transparent;
+    outline: none;
+    padding: 8px 16px;
+    box-sizing: border-box;
+}
+
+.form-container form .field-wrapper > input:focus {
+    border: 3.5px solid #b02c8d;
+}
+
+.form-container form .field-wrapper label {
+    width: 100%;
+}
+
+.form-container form .field-wrapper .sub-field-wrapper {
+    margin-right: 7.5%;
+}
+
+.form-container form .field-wrapper .sub-field-wrapper label {
+    cursor: pointer;
+}
+
+.form-container form .field-wrapper .sub-field-wrapper input[type="radio"] {
+    visibility: hidden;
+    position: absolute;
+}
+
+.form-container form .field-wrapper .sub-field-wrapper input[type="radio"] + label:before {
+    height: 10px;
+    width: 10px;
+    margin-right: 16px;
+    content: " ";
+    display: inline-block;
+    vertical-align: baseline;
+    border: 3px solid #0fffff;
+    padding: 2.5px;
+    cursor: pointer;
+}
+
+.form-container form .field-wrapper .sub-field-wrapper input[type="radio"]:checked + label:before {
+    background: #b02c8d;
+    border: 3px solid #b02c8d;
+    background-clip: content-box;
+}
+
+.form-container form .field-wrapper .sub-field-wrapper input[type="radio"] + label:before {
+    border-radius: 50%;
+}
+
+.form-container form .form-button-container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.form-container form .form-button-container input {
+    font-size: 1.75rem;
+    letter-spacing: 0.25rem;
+    font-weight: bold;
+    font-family: "Space Mono Bold", sans-serif;
+    padding: 8px 40px;
+    color: #ffffff;
+    background: transparent;
+    outline: none;
+    cursor: pointer;
+    border: 5px solid #ffffff;
+    transition: 0.5s;
+    margin: 0 32px;
+}
+
+.form-container form .note {
+    padding: 8px 0;
+}
+
+.form-container form .form-button-container input[type="submit"] {
+    border: 5px solid #0fffff;
+}
+
+.form-container form .form-button-container input:hover {
+    border: 5px solid #b02c8d;
+}
+
+.form-container .back-button {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 6%;
+    right: 3.5vw;
+    cursor: pointer;
+}
+
+.form-container > .note {
+    font-size: 1.75rem;
+    color: #ffffff;
+    letter-spacing: 0.15rem;
+    margin: 1.5%;
+}
+
+.form-container > .note > a, .form-container > .note > a:active, .form-container > .note > a:visited {
+    color: #00ffff;
+}
+
+.message-box {
+    padding: 64px 80px;
+    background: #dddddd;
+    color: #444444;
+    font-size: 1.75rem;
+    letter-spacing: 0.1rem;
+    font-family: "Space Mono", sans-serif;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 3;
+    transform: translate(-50%, -50%);
+    display: none;
+}
+
+.message-box > img {
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+}
+
+
+@media (max-width: 600px) {
+    .form-container .heading {
+        font-size: 1.8rem;
+        letter-spacing: 0.3rem;
+        margin: 2.5vh 0;
+    }
+
+    .form-container .heading span {
+        padding: 0 12px;
+        border-left: 5px solid #ffffff;
+    }
+  
+    .form-container form {
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: center;
+    }
+  
+    .form-container form > * {
+        width: 100%;
+        font-size: 1.25rem;
+        letter-spacing: 0.1rem;
+        margin: 4% 0;
+        padding: 6px 12px;
+    }
+  
+    .form-container form .field-wrapper > input {
+        padding: 6px 12px;
+        font-size: 1.25rem;
+        letter-spacing: 0.1rem;
+    }
+  
+    .form-container form #email {
+        transform: translateY(calc(100% + 8vh));
+    }
+  
+    .form-container form .note {
+        transform: translateY(calc(-85%));
+    }
+  
+    .form-container form .field-wrapper .sub-field-wrapper input[type="radio"] + label:before {
+        height: 5px;
+        width: 5px;
+        margin-right: 10px;
+    }
+  
+    .form-container form .form-button-container input {
+        font-size: 1.25rem;
+        letter-spacing: 0.15rem;
+        padding: 4px 20px;
+        margin: 0 22px;
+        border: 4px solid #ffffff;
+    }
+  
+    .form-container form .form-button-container input[type="submit"] {
+        border: 4px solid #b02c8d;
+    }
+  
+    .form-container .back-button {
+        width: 25px;
+        height: 25px;
+        top: 2.5%;
+        right: 5vw;
+    }
+  
+    .form-container > .note {
+        font-size: 1.25rem;
+        letter-spacing: 0.1rem;
+        margin: 4% 0;
+        padding: 0 10%;
+        box-sizing: border-box;
+    }
+  
+    .message-box {
+        width: 50%;
+        padding: 60px;
+        font-size: 1.75rem;
+        letter-spacing: 0.1rem;
+    }
+  
+    .message-box > img {
+        width: 20px;
+        height: 20px;
+        top: 18px;
+        right: 18px;
+        cursor: pointer;
+    }
+}
+
+
+@media (max-width: 350px) {
+    .form-container .heading {
+        font-size: 1.7rem;
+        letter-spacing: 0.25rem;
+        margin: 2.25vh 0;
+    }
+
+    .form-container .heading span {
+        padding: 0 10px;
+        border-left: 4px solid #ffffff;
+    }
+
+    .form-container form > * {
+        font-size: 1rem;
+    }
+  
+    .form-container form .field-wrapper > input {
+        font-size: 1rem;
+    }
+  
+    .form-container form .field-wrapper .sub-field-wrapper input[type="radio"] + label:before {
+        height: 4px;
+        width: 4px;
+        margin-right: 8px;
+    }
+  
+    .form-container form .form-button-container input {
+        font-size: 1rem;
+        letter-spacing: 0.1rem;
+        padding: 4px 16px;
+        margin: 0 18px;
+        border: 3px solid #ffffff;
+    }
+  
+    .form-container form .form-button-container input[type="submit"] {
+        border: 3px solid #b02c8d;
+    }
+  
+    .form-container > .note {
+        font-size: 1rem;
+        letter-spacing: 0.1rem;
+    }
+}

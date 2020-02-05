@@ -31,7 +31,7 @@
 
 .workshop .body .card {
   width: 45%;
-  font-size: 0.9rem;
+  font-size: 1rem;
   color: #fafafa;
   letter-spacing: 0.25rem;
   margin: 40px 0;
@@ -52,15 +52,17 @@
 }
 
 .workshop .body .card .workshop-content img {
-  width: 200px;
-  height: 200px;
-  /* margin-left: 10%; */
+  width: 40%;
+  margin-left: 10%;
   margin-right: 7.5%;
 }
 
 .workshop .body .card .workshop-content span {
   display: inline-block;
-  width: 47.5%;
+  width: 42.5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .workshop .body .card .workshop-content span .workshop-details {
@@ -68,7 +70,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  height: 85%;
+  font-size: 0.8rem;
 }
 
 .workshop .body .card .workshop-content span .workshop-details .workshop-date {
@@ -78,6 +80,7 @@
 .workshop .body .card .workshop-content span .view-detail-button {
   width: 100%;
   height: 25%;
+  min-height: 25%;
   display: flex;
   justify-content: center;
   align-items: center;
