@@ -1,11 +1,11 @@
-.workshop {
+.events {
     width: 100%;
     padding: 128px 20%;
     box-sizing: border-box;
     position: relative;
 }
 
-.workshop .heading {
+.events .heading {
   width: 100%;
   text-align: end;
   color: #fafafa;
@@ -14,12 +14,12 @@
   font-family: "Space Mono Bold", serif;
 }
 
-.workshop .heading span {
+.events .heading span {
   padding-left: 1rem;
   border-left: 0.6rem solid #fafafa;
 }
 
-.workshop .body {
+.events .body {
   width: 100%;
   padding-top: 128px;
   box-sizing: border-box;
@@ -29,7 +29,7 @@
   align-items: center;
 }
 
-.workshop .body .card {
+.events .body .card {
   width: 45%;
   font-size: 1rem;
   color: #fafafa;
@@ -37,27 +37,27 @@
   margin: 40px 0;
 }
 
-.workshop .body .card > * {
+.events .body .card > * {
   width: 100%;
 }
 
-.workshop .body .card .workshop-name {
+.events .body .card .events-name {
   font-family: "Space Mono", serif;
   margin-bottom: 8px;
 }
 
-.workshop .body .card .workshop-content {
+.events .body .card .events-content {
   font-family: "Space Mono Bold", serif;
   display: flex;
 }
 
-.workshop .body .card .workshop-content img {
+.events .body .card .events-content img {
   width: 40%;
   margin-left: 10%;
   margin-right: 7.5%;
 }
 
-.workshop .body .card .workshop-content span {
+.events .body .card .events-content span {
   display: inline-block;
   width: 42.5%;
   display: flex;
@@ -65,7 +65,7 @@
   justify-content: space-between;
 }
 
-.workshop .body .card .workshop-content span .workshop-details {
+.events .body .card .events-content span .events-details {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -73,11 +73,11 @@
   font-size: 0.8rem;
 }
 
-.workshop .body .card .workshop-content span .workshop-details .workshop-date {
+.events .body .card .events-content span .events-details .events-date {
   margin-bottom: 12px;
 }
 
-.workshop .body .card .workshop-content span .view-detail-button {
+.events .body .card .events-content span .view-detail-button {
   width: 100%;
   height: 25%;
   min-height: 25%;
