@@ -23,7 +23,6 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    align-items: center;
 }
 
 .contact .contact-body .card {
@@ -40,7 +39,6 @@
 .contact .contact-body .card img {
     width: 60%;
     border-radius: 50%;
-    border: 2px solid #666666;
 }
 
 .contact .contact-body .card * {
@@ -76,16 +74,5 @@
         width: 45%;
         font-size: 0.7rem;
         margin: 16px 0;
-    }
-    
-    .contact .contact-body .card img {
-        width: 60%;
-        border-radius: 50%;
-        border: 2px solid #666666;
-    }
-    
-    .contact .contact-body .card * {
-        margin: 2px 0;
-        text-align: center;
     }
 }
