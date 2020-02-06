@@ -87,7 +87,7 @@ const contactData = {
     image: "assets/contact/Business_Man-512.png"
   },
   adp: {
-    name: "Lak",
+    name: "Lakshay Nagpal",
     post: "Publicity and Online Partnerships",
     phone: "+91-9803223248",
     email: "adp@bits-apogee.org",
