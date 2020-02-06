@@ -1,5 +1,6 @@
 // const REGISTRATIONS_URL = 'https://bits-apogee.org/registrations/register';
 const COLLEGE_URL = 'https://bits-apogee.org/registrations/get_college';
+const EVENT_URL = 'https://bits-apogee.org/registrations/events';
 
 
 const getCollegesList = () => {
@@ -16,6 +17,19 @@ const getCollegesList = () => {
             document.getElementById('college_input').appendChild(option);
         });
     });
+}
+
+const getEventsList = () => {
+    fetch(EVENT_URL).then(data => {
+        return data.json()
+    }).then(response => {
+        response.data.events.map(event => {
+            const option = document.createElement("option");
+            option.value = event.name;
+            option.id = event.id;
+            option.innerHTML = event.name;
+        })
+    }) 
 }
 
 
