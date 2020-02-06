@@ -7,7 +7,7 @@ const getCollegesList = () => {
     fetch(COLLEGE_URL).then(data => {
         return data.json();
     }).then(response => {
-        document.getElementsByTagName('datalist')[0].removeChild(document.getElementById('loading'));
+        document.getElementsByTagName('datalist')[0].removeChild(document.getElementById('loadingCollege'));
 
         response.data.map(college => {
             const option = document.createElement('option');
@@ -23,15 +23,28 @@ const getEventsList = () => {
     fetch(EVENT_URL).then(data => {
         return data.json()
     }).then(response => {
-        response.data.events.map(event => {
-            const option = document.createElement("option");
-            option.value = event.name;
-            option.id = event.id;
-            option.innerHTML = event.name;
+        document.getElementsByTagName('datalist')[1].removeChild(document.getElementById('loadingEvent'));
+        console.log(response.data);
+        response.data.map(category => {
+            category.events.map(event => {
+                const option = document.createElement("option");
+                option.value = event.name;
+                option.id = event.id;
+                option.innerHTML = event.name;
+                option.addEventListener("click", handleEventClick(event.name))
+                document.getElementById('event_input').appendChild(option);
+            })
         })
     }) 
 }
 
+const handleEventClick = (eventName) => {
+    // e.preventDefault();
+
+    const eventTag = document.createElement("span");
+    eventTag.classList.add("event-tag");
+    eventTag.innerHTML = eventName;
+}
 
 const getCollegeId = () => {
     const input = document.getElementById('college');
@@ -130,4 +143,5 @@ function showData(id) {
 
 window.onload = () => {
     getCollegesList();
+    getEventsList();
 }
