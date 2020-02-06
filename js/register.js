@@ -1,4 +1,4 @@
-const REGISTRATIONS_URL = 'https://bits-apogee.org/registrations/introreg';
+// const REGISTRATIONS_URL = 'https://bits-apogee.org/registrations/register';
 const COLLEGE_URL = 'https://bits-apogee.org/registrations/get_college';
 
 
@@ -68,7 +68,10 @@ form.addEventListener("submit", function(event) {
         body[entry[0]] = entry[1];
     };
 
-    body.college = getCollegeId();
+    body.college = parseInt(getCollegeId());
+    body.year = parseInt(body.year);
+
+    console.log(body);
 
     if(!body.gender || !body.year || !body.college) {
         showMessage('Incomplete form data! Please fill all the required fields.');
@@ -104,15 +107,12 @@ form.addEventListener("submit", function(event) {
 
 }, false);
 
-
-
 function showData(id) {
     const eOpts = document.querySelectorAll('#' + id + ' > option');
     for(i = 0; i < eOpts.length; i++) {
         eOpts[i].style.display = 'block';
     }
 }
-
 
 window.onload = () => {
     getCollegesList();
