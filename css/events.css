@@ -7,6 +7,7 @@
 
 .events .heading {
   width: 100%;
+  text-align: end;
   color: #fafafa;
   font-size: 3.5rem;
   letter-spacing: 1rem;
@@ -15,7 +16,7 @@
 
 .events .heading span {
   padding-left: 1rem;
-  border-left: 0.6rem solid #fafafa;
+  border-right: 0.6rem solid #fafafa;
 }
 
 .events .body {

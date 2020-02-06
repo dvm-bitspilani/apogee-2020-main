@@ -48,13 +48,17 @@
   justify-content: space-between;
   align-items: center;
   height: 5vh;
-  width: 32vw;
   align-self: center;
+}
+
+.home .navbar .nav-link-container a {
+  text-decoration: none;
 }
 
 .home .navbar .nav-link-container .nav-links {
   font: 20px/29px "Space Mono";
   letter-spacing: 1.64px;
+  margin-left: 32px;
   color: #fafafa;
   /* cursor: pointer; */
   transition: 0.1s ease;
