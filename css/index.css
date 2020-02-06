@@ -41,6 +41,12 @@
   color: #fafafa;
   /* cursor: pointer; */
   transition: 0.1s ease;
+  white-space: nowrap;
+}
+
+.home .navbar .nav-link-container .nav-links.register-button {
+  background: rgba(255, 255, 255, 0.4);
+  padding: 6px 12px;
 }
 
 .home .navbar .nav-link-container .nav-links:hover {
