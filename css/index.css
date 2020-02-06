@@ -1,5 +1,5 @@
 .home {
-  height: 100vh;
+  height: 120vh;
   width: 100%;
   display: flex;
   align-items: center;
@@ -67,7 +67,7 @@
 .home .footer {
   position: absolute;
   left: 0;
-  bottom: 2.5%;
+  bottom: 17.5%;
   width: 100%;
   padding: 16px 5%;
   box-sizing: border-box;
