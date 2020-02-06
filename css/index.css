@@ -7,6 +7,23 @@
   position: relative;
 }
 
+.warning {
+  height: 100px;
+  width: 90%;
+  background-color: lightgrey;
+  font-size: 20px;
+  font-family: sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  display: none;
+  position: absolute;
+  z-index: 2000;
+  top: 40%;
+  opacity: 0.9;
+  left: calc(50% - 45%);
+}
+
 .home .navbar {
   height: 15.5vh;
   width: 100%;
@@ -252,4 +269,10 @@ footer .icon.instagram {
 
 footer .icon.twitter {
   background-image: url("../assets/icons/twitter.png");
+}
+
+@media all and (max-width: 400px) {
+  .warning {
+    display: flex;
+  }
 }
