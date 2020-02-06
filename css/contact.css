@@ -6,7 +6,7 @@
 
 .contact .heading {
     width: 100%;
-    /* text-align: end; */
+    text-align: end;
     color: #fafafa;
     font-size: 3.5rem;
     letter-spacing: 1rem;
@@ -24,7 +24,7 @@
     box-sizing: border-box;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
 }
 
