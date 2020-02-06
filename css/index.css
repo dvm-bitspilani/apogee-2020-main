@@ -275,7 +275,7 @@ footer .icon.twitter {
   background-image: url("../assets/icons/twitter.png");
 }
 
-@media all and (max-width: 400px) {
+@media all and (max-width: 600px) {
   .warning {
     display: flex;
   }
