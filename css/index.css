@@ -8,7 +8,7 @@
 }
 
 .home .navbar {
-  height: 12.5vh;
+  height: 15.5vh;
   width: 100%;
   padding: 0 5%;
   display: flex;
@@ -23,7 +23,7 @@
   align-self: flex-end;
   width: 320px;
   height: 55px;
-  margin-bottom: 15px;
+  margin-bottom: 30px;
 }
 
 .home .navbar .nav-link-container {
