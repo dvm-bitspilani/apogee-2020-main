@@ -31,7 +31,10 @@ const getEventsList = () => {
                 option.value = event.name;
                 option.id = event.id;
                 option.innerHTML = event.name;
-                option.addEventListener("click", handleEventClick(event.name, event.id))
+                option.addEventListener("click", (e) => {
+                    e.preventDefault();
+                    handleEventClick(event.name, event.id)
+                })
                 document.getElementById('event_input').appendChild(option);
             })
         })
@@ -48,9 +51,9 @@ const handleEventClick = (eventName, eventId) => {
     const eventText = document.createElement("div");
     eventName.innerHTML = eventName;
     const removeButton = document.createElement("img");
-    img.src = "assets/icons/cancel.svg";
-    img.alt = "Remove";
-    img.class = "event-tag-remove";
+    removeButton.src = "assets/icons/cancel.svg";
+    removeButton.alt = "Remove";
+    removeButton.class = "event-tag-remove";
     // img.onclick = removeEvent();
 
     eventTag.appendChild(eventText);
