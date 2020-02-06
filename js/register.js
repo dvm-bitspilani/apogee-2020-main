@@ -16,7 +16,7 @@ const getCollegesList = () => {
             option.innerHTML = college.name;
             document.getElementById('college_input').appendChild(option);
         });
-    });
+    }, console.error);
 }
 
 const getEventsList = () => {
@@ -31,19 +31,31 @@ const getEventsList = () => {
                 option.value = event.name;
                 option.id = event.id;
                 option.innerHTML = event.name;
-                option.addEventListener("click", handleEventClick(event.name))
+                option.addEventListener("click", handleEventClick(event.name, event.id))
                 document.getElementById('event_input').appendChild(option);
             })
         })
-    }) 
+    }, console.error) 
 }
 
-const handleEventClick = (eventName) => {
+const handleEventClick = (eventName, eventId) => {
     // e.preventDefault();
 
-    const eventTag = document.createElement("span");
+    const eventTag = document.createElement("div");
     eventTag.classList.add("event-tag");
     eventTag.innerHTML = eventName;
+
+    const eventText = document.createElement("div");
+    eventName.innerHTML = eventName;
+    const removeButton = document.createElement("img");
+    img.src = "assets/icons/cancel.svg";
+    img.alt = "Remove";
+    img.class = "event-tag-remove";
+    // img.onclick = removeEvent();
+
+    eventTag.appendChild(eventText);
+    eventTag.appendChild(removeButton);
+    document.getElementById("events").appendChild(eventTag);
 }
 
 const getCollegeId = () => {
@@ -108,6 +120,11 @@ form.addEventListener("submit", function(event) {
     if (body.college == '%NOT_FOUND%') {
         showMessage('Invalid college name! Please select one from the list, if not found contact- PCr (+91-7838773681).');
         return;
+    }
+
+    if (!body.referral) {
+        //remove referral field from body if left empty
+        delete body.referral;
     }
 
     const params = {
