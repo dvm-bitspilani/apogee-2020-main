@@ -136,6 +136,34 @@
     border-radius: 50%;
 }
 
+.form-container form .field-wrapper .selected-events-container {
+    width: 100%;
+    padding: 24px;
+    margin-top: 28px;
+    border: 3px solid #b02c8d;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.form-container form .field-wrapper .selected-events-container .selected-events {
+    padding: 4px 16px;
+    font-size: 1.25rem;
+    color: #ffffff;
+    border: 2px solid #0fffff;
+    border-radius: 50px;
+    margin: 4px 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.form-container form .field-wrapper .selected-events-container .selected-events img {
+    width: 16px;
+    margin-left: 8px;
+    cursor: pointer;
+}
+
 .form-container form .form-button-container {
     width: 100%;
     display: flex;
@@ -160,6 +188,7 @@
 
 .form-container form .note {
     padding: 8px 0;
+    font-size: 1.25rem;
 }
 
 .form-container form .form-button-container input[type="submit"] {
@@ -257,19 +286,15 @@
         margin: 4% 0;
         padding: 6px 12px;
     }
-  
+
+    .form-container form .note {
+        font-size: 1rem;
+    }
+
     .form-container form .field-wrapper > input {
         padding: 6px 12px;
         font-size: 1.25rem;
         letter-spacing: 0.1rem;
-    }
-  
-    .form-container form #email {
-        transform: translateY(calc(100% + 8vh));
-    }
-  
-    .form-container form .note {
-        transform: translateY(calc(-85%));
     }
   
     .form-container form .field-wrapper .sub-field-wrapper input[type="radio"] + label:before {
@@ -336,6 +361,10 @@
 
     .form-container form > * {
         font-size: 1rem;
+    }
+
+    .form-container form .note {
+        font-size: 0.75rem;
     }
   
     .form-container form .field-wrapper > input {

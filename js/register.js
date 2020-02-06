@@ -1,7 +1,8 @@
-// const REGISTRATIONS_URL = 'https://bits-apogee.org/registrations/register';
+const REGISTRATIONS_URL = 'https://bits-apogee.org/registrations/Register/';
 const COLLEGE_URL = 'https://bits-apogee.org/registrations/get_college';
 const EVENT_URL = 'https://bits-apogee.org/registrations/events';
 
+const SELECTED_EVENTS = [];
 
 const getCollegesList = () => {
     fetch(COLLEGE_URL).then(data => {
@@ -31,35 +32,51 @@ const getEventsList = () => {
                 option.value = event.name;
                 option.id = event.id;
                 option.innerHTML = event.name;
-                option.addEventListener("click", (e) => {
-                    e.preventDefault();
-                    handleEventClick(event.name, event.id)
-                })
                 document.getElementById('event_input').appendChild(option);
             })
         })
     }, console.error) 
 }
 
-const handleEventClick = (eventName, eventId) => {
-    // e.preventDefault();
+const handleEventClick = (e) => {
+    const input = e.target;
+    const eventName = input.value;
+    e.target.value = "";
+    // e.target.blur();
+    const list = input.getAttribute('list');
+    const options = document.getElementById(list).childNodes;
 
     const eventTag = document.createElement("div");
-    eventTag.classList.add("event-tag");
+    eventTag.classList.add("selected-events");
     eventTag.innerHTML = eventName;
 
-    const eventText = document.createElement("div");
-    eventName.innerHTML = eventName;
     const removeButton = document.createElement("img");
-    removeButton.src = "assets/icons/cancel.svg";
+    removeButton.src = "assets/icons/red-close.png";
     removeButton.alt = "Remove";
-    removeButton.class = "event-tag-remove";
-    // img.onclick = removeEvent();
 
-    eventTag.appendChild(eventText);
+    for(var i = 0; i < options.length; i++) {
+        if(options[i].innerText === eventName) {
+            SELECTED_EVENTS.push(parseInt(options[i].id));
+            options[i].disabled = true;
+            const that = options[i];
+            removeButton.onclick = (e) => {
+                e.target.parentNode.remove();
+                for (let i = 0; i < SELECTED_EVENTS.length; i++) {
+                    if (SELECTED_EVENTS[i] == that.id) {
+                        SELECTED_EVENTS.splice(i, 1);
+                    }
+                }
+                that.disabled = false;
+            }
+        }
+    }
+
     eventTag.appendChild(removeButton);
-    document.getElementById("events").appendChild(eventTag);
+    document.getElementsByClassName("selected-events-container")[0].appendChild(eventTag);
+
 }
+
+document.querySelector('input[list="event_input"]').addEventListener('input', handleEventClick)
 
 const getCollegeId = () => {
     const input = document.getElementById('college');
@@ -110,17 +127,17 @@ form.addEventListener("submit", function(event) {
         body[entry[0]] = entry[1];
     };
 
-    body.college = parseInt(getCollegeId());
+    body.college_id = parseInt(getCollegeId());
     body.year = parseInt(body.year);
 
     console.log(body);
 
-    if(!body.gender || !body.year || !body.college) {
+    if(!body.gender || !body.year || !body.college_id) {
         showMessage('Incomplete form data! Please fill all the required fields.');
         return;
     }
 
-    if (body.college == '%NOT_FOUND%') {
+    if (body.college_id == '%NOT_FOUND%') {
         showMessage('Invalid college name! Please select one from the list, if not found contact- PCr (+91-7838773681).');
         return;
     }
@@ -129,6 +146,8 @@ form.addEventListener("submit", function(event) {
         //remove referral field from body if left empty
         delete body.referral;
     }
+
+    body.events = SELECTED_EVENTS;
 
     const params = {
         headers: {
@@ -147,7 +166,7 @@ form.addEventListener("submit", function(event) {
             return;
         }
         showMessage('Registration successfull!');
-        toogleRegisterForm();
+        // toogleRegisterForm();
     }).catch(error => {
         showMessage("ERROR: " + error + '\n Contact administrator');
     });

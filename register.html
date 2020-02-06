@@ -30,7 +30,7 @@
                     <option disabled id="loadingCollege">Loading...</option>
                     <!-- COLLEGES LIST GOES HERE -->
                 </datalist>
-            <div class="note">If you cannot find your college above, please contact- PCr (+91-7838773681)</div>
+                <div class="note">If you cannot find your college above, please contact- PCr (+91-7838773681)</div>
             </div>
             <div class="field-wrapper">
                 <input list="event_input" placeholder="Events*" autocomplete="off" onclick="this.focus()" id="events" onfocus="showData('event_input')">
@@ -38,10 +38,13 @@
                     <option disabled id="loadingEvent">Loading...</option>
                     <!-- EVENTS LIST GOES HERE -->
                 </datalist>
+                <div class="selected-events-container">
+                    <!-- SELECTED EVENTS GOES HERE -->
+                </div>
             </div>
-            <input type="email" name="email" id="email" placeholder="Email*" required>
+            <input type="email" name="email_id" id="email" placeholder="Email*" required>
             <input type="number" name="phone" id="phone" placeholder="Phone*" required>
-            <input type="number" name="referral" id="phone" placeholder="Referral Code*">
+            <input type="number" name="referral" id="phone" placeholder="Referral Code">
             <div class="field-wrapper">
                 <label>Gender*</label>
                 <div class="sub-field-wrapper"><input type="radio" name="gender" value="M" id="gender-male"><label for="gender-male">Male</label></div>
