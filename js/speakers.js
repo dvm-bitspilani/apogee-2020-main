@@ -39,4 +39,4 @@ function createCard(){
     }
 }
 
-createCard();
+// createCard();
