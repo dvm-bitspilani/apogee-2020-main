@@ -40,27 +40,3 @@ function createCard(){
 }
 
 createCard();
-
-// <section class="videos">
-// <div class="heading">
-//   <span>VIDEOS</span>
-// </div>
-// </section>
-
-// <section class="speakers">
-// <div class="heading">
-// <span>SPEAKERS</span>
-// </div>
-
-// <div class="speakers-body">
-// <div class="carousel"></div>
-// <div class="nav">
-//   <div class="buttons">
-//   <div class="l-arrow"></div>
-//     <div class="dot"></div>
-//     <div class="dot"></div>
-//   <div class="r-arrow"></div>
-//   </div>
-// </div>
-// </div>
-// </section>
