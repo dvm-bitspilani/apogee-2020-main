@@ -88,3 +88,49 @@
   font-size: 0.75rem;
   cursor: pointer;
 }
+
+
+@media (max-width: 600px) {
+  .events {
+    padding: 64px 5%;
+  }
+
+  .events .heading {
+    text-align: center;
+    font-size: 2.2rem;
+    letter-spacing: 0.5rem;
+  }
+
+  .events .heading span {
+    padding-left: 0.5rem;
+    border-right: 0.35rem solid #fafafa;
+  }
+
+  .events .body {
+    width: 100%;
+    padding: 40px 5%;
+  }
+
+  .events .body .card {
+    width: 95%;
+    font-size: 0.75rem;
+    letter-spacing: 0.15rem;
+    margin: 20px 0;
+  }
+
+  .events .body .card .events-name {
+    margin-bottom: 4px;
+  }
+
+  .events .body .card .events-content span .events-details {
+    font-size: 0.6rem;
+  }
+
+  .events .body .card .events-content span .events-details .events-date {
+    margin-bottom: 8px;
+  }
+
+  .events .body .card .events-content span .view-detail-button {
+    font-size: 0.6rem;
+  }
+}
