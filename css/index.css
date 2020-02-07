@@ -31,16 +31,11 @@
   display: flex;
   box-sizing: border-box;
   justify-content: space-between;
+  align-items: center;
 }
 
 .home .navbar .nav-logo {
-  background: url("../assets/backgrounds/Apogee.png");
-  background-repeat: no-repeat;
-  background-position: center;
-  align-self: flex-end;
-  width: 320px;
-  height: 55px;
-  margin-bottom: 30px;
+  width: 300px;
 }
 
 .home .navbar .nav-link-container {
@@ -282,6 +277,18 @@ footer .icon.twitter {
 
   .warning {
     display: flex;
+  }
+
+  .home .navbar {
+    height: 12.5vh;
+  }
+
+  .home .navbar .nav-logo {
+    width: 180px;
+  }
+
+  .home .navbar .nav-link-container {
+    display: none;
   }
 
   footer {
