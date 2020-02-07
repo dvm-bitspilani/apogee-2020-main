@@ -276,7 +276,36 @@ footer .icon.twitter {
 }
 
 @media all and (max-width: 600px) {
+  .home {
+    height: 100vh;
+  }
+
   .warning {
     display: flex;
+  }
+
+  footer {
+    justify-content: center;
+  }
+
+  footer > span:nth-of-type(2) {
+    display: none;
+  }
+  
+  footer a {
+    margin-left: 32px;
+  }
+  
+  footer .icon {
+    width: 25px;
+    height: 25px;
+  }
+
+  footer a:nth-of-type(1) {
+    margin-left: 0;
+  }
+
+  #follow-us-sapn {
+    display: none;
   }
 }
