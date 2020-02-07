@@ -14,7 +14,6 @@
     <link rel="stylesheet" href="css/aboutUs.css">
     <link rel="stylesheet" href="css/videos.css">
     <link rel="stylesheet" href="css/speakers.css">
-
     <link rel="shortcut icon" href="assets/icons/favicon.png" type="image/x-icon">
     <title>APOGEE'20 | The Glitch Repository</title>
   </head>
@@ -99,15 +98,15 @@
     </div>
 
     <div class="wrapper">
-      <section class="home">
+      <section class="home" id="home">
         <div class="navbar">
-          <img src="assets/backgrounds/Apogee.png" class="nav-logo" />
+          <div class="nav-logo"></div>
           <div class="nav-link-container">
-            <div class="nav-links">Home</div>
-            <div class="nav-links">About Us</div>
-            <div class="nav-links">Sponsors</div>
-            <div class="nav-links">Contact Us</div>
-            <div class="nav-links register-button">REGISTER</div>
+            <a href="#home"><div class="nav-links">Home</div></a>
+            <a href="#aboutUs"><div class="nav-links">About Us</div></a>
+            <a href="#events"><div class="nav-links">Events</div></a>
+            <a href="#contact"><div class="nav-links">Contact Us</div></a>
+            <a href="register.html"><div class="nav-links register-button">REGISTER</div></a>
           </div>
         </div>
         <div class="footer">
@@ -127,7 +126,7 @@
         </div>
       </section>
 
-      <section class="aboutUs">
+      <section class="aboutUs" id="aboutUs">
         <div class="heading">
           <span>About Us</span>
         </div>
@@ -145,7 +144,7 @@
           </div>
       </section> -->
 
-      <!-- <section class="speakers">
+       <!-- <section class="speakers">
         <div class="heading">
           <span>SPEAKERS</span>
         </div>
@@ -163,7 +162,7 @@
         </div>
       </section> -->
 
-      <section class="events">
+      <section class="events" id="events">
         <div class="heading">
           <span>Events</span>
         </div>
@@ -327,7 +326,7 @@
         </div>
       </section>
 
-        <section class="contact">
+        <section class="contact" id="contact">
             <div class="heading">
                 <span>Contact Us</span>
             </div>
@@ -356,6 +355,7 @@
     <script src="scripts/ui.js"></script>
     <script src="js/index.js"></script>
     <script src="js/speakers.js"></script>
-
+  </body>
+</html>
   </body>
 </html>
