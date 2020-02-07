@@ -63,3 +63,51 @@
   background: #ffffff 0% 0% no-repeat padding-box;
   opacity: 0.2;
 }
+
+@media (max-width: 600px) {
+  .aboutUs {
+    padding: 64px 5%;
+  }
+  
+  .aboutUs .heading {
+      font-size: 2.2rem;
+      letter-spacing: 0.5rem;
+      text-align: center;
+  }
+  
+  .aboutUs .heading span {
+    padding-left: 0.75rem;
+    border-left: 0.35rem solid #fafafa;
+  }
+  
+  .aboutUs .body {
+    padding: 40px 5%;
+    padding-bottom: 20px;
+    font: 0.9rem 'Space Mono';
+    letter-spacing: 0.1rem;
+    text-align: justify;
+  }
+  
+  .aboutUs .body .ele-1 {
+    top: 20px;
+    left: -5px;
+    width: 60px;
+    height: 60px;
+  }
+  
+  .aboutUs .body .ele-2 {
+    width: 2px;
+    height: 40px;
+  }
+  
+  .aboutUs .body .ele-3 {
+    width: 40px;
+    height: 2px;
+  }
+}
+
+@media (max-width: 350px) {
+  .aboutUs .body {
+    font-size: 0.75rem;
+  }
+}

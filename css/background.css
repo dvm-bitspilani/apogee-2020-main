@@ -143,6 +143,27 @@
     box-shadow: 532px 6512px #FFF, 1695px 1558px #FFF, 784px 988px #FFF, 1733px 1833px #FFF, 1263px 1636px #FFF, 707px 1175px #FFF, 1907px 1257px #FFF, 370px 378px #FFF, 1194px 1954px #FFF, 209px 747px #FFF, 872px 1073px #FFF, 1554px 366px #FFF, 1173px 1480px #FFF, 288px 340px #FFF, 17px 728px #FFF, 443px 1089px #FFF, 68px 892px #FFF, 496px 1465px #FFF, 1724px 332px #FFF, 535px 424px #FFF, 1411px 1326px #FFF, 1405px 274px #FFF, 1049px 281px #FFF, 907px 434px #FFF, 1885px 75px #FFF, 1518px 1825px #FFF, 6px 494px #FFF, 124px 1364px #FFF, 854px 574px #FFF, 652px 124px #FFF, 1884px 163px #FFF, 1033px 930px #FFF, 279px 1273px #FFF, 212px 37px #FFF, 1808px 1474px #FFF, 833px 99px #FFF, 1780px 1857px #FFF, 969px 1807px #FFF, 1675px 913px #FFF, 1391px 1173px #FFF, 68px 1164px #FFF, 45px 650px #FFF, 309px 830px #FFF, 1628px 1410px #FFF, 1025px 759px #FFF, 1218px 1622px #FFF, 1141px 1780px #FFF, 1883px 5px #FFF, 360px 1713px #FFF, 1332px 312px #FFF, 685px 1320px #FFF, 1244px 887px #FFF, 1339px 1571px #FFF, 1733px 840px #FFF, 1367px 1992px #FFF, 1596px 222px #FFF, 825px 199px #FFF, 1229px 1334px #FFF, 1004px 1121px #FFF, 1567px 564px #FFF, 484px 475px #FFF, 741px 428px #FFF, 1852px 489px #FFF, 355px 1965px #FFF, 846px 1278px #FFF, 391px 1382px #FFF, 1458px 852px #FFF, 1682px 594px #FFF, 1868px 1583px #FFF, 760px 485px #FFF, 813px 1270px #FFF, 1488px 1560px #FFF, 1281px 1054px #FFF, 1230px 1514px #FFF, 182px 293px #FFF, 1843px 1593px #FFF, 1724px 1720px #FFF, 626px 626px #FFF, 96px 800px #FFF, 1572px 268px #FFF, 714px 1940px #FFF, 855px 1610px #FFF, 1547px 1338px #FFF, 236px 1625px #FFF, 1911px 695px #FFF, 1574px 1970px #FFF, 1873px 1053px #FFF, 556px 1984px #FFF, 1299px 1012px #FFF, 764px 1478px #FFF, 1730px 949px #FFF, 668px 392px #FFF, 64px 517px #FFF, 715px 1245px #FFF, 821px 774px #FFF, 1385px 643px #FFF, 367px 688px #FFF, 246px 1678px #FFF, 962px 874px #FFF, 339px 1999px #FFF;
 }
 
+
+@media (max-width: 600px) {
+    .backgrounds .landing-background {
+        background-size: cover;
+        height: 100vh;
+    }
+    
+    .backgrounds .landing-background .background-ele {
+        width: 300%;
+        left: -100%;
+    }
+    
+    .backgrounds .landing-background .background-ele2 {
+        top: 70%;
+        left: -50%;
+        width: 200vw;
+        height: 200vw;
+    }
+}
+
+
 @keyframes noise-background-effect {
     0%,100% {
         transform: translate(0);
