@@ -1,0 +1,98 @@
+.speakers {
+    width: 100%;
+    padding: 128px 17.5%;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.speakers .heading {
+    width: 100%;
+    /* text-align: end; */
+    color: #fafafa;
+    font-size: 3.5rem;
+    letter-spacing: 1rem;
+    font-family: 'Space Mono Bold', serif;
+}
+
+.speakers .heading span {
+    padding-left: 1rem;
+    border-left: 0.6rem solid #fafafa;
+}
+
+.speakers .speakers-body {
+    width: 100%;
+    padding-top: 128px;
+    padding-left: 7%;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    color: azure;
+    color: #fafafa;
+    font: 1.4rem 'Space Mono';
+    letter-spacing: 0.2rem;
+}
+
+.speakers .speakers-body .carousel{
+    width: 100%;
+    border: 1px white;
+    display:flex;
+}
+
+.speakers .speakers-body .carousel .card{
+    width: 300px;
+    height: 600px;
+    margin: 0 10%;
+}
+
+.speakers .speakers-body .carousel .name{
+    font-size: 20px;
+}
+
+.speakers .speakers-body .carousel .image{
+    height: 240px;
+    background-size: cover;
+    width: 200px;
+    transform: translateX(40px);
+}
+.speakers .speakers-body .carousel .description{
+    font-size: 15px;
+    background: rgba(255,255,255,0.08);
+    transform: translate(148px,-30px);
+}
+.speakers .speakers-body .nav{
+    width: 100%;
+}
+.speakers .speakers-body .nav .buttons{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+.speakers .speakers-body .nav .buttons .dot{
+    border: 3px solid rgba(255,255,255,0.48);
+    border-radius: 50%;
+    height: 15px;
+    width: 15px;
+    margin: 8px;
+}
+.speakers .speakers-body .nav .buttons .l-arrow{
+    background-image: url("../assets/speakers/right-arrow\ \(1\).svg");
+    height: 50px;
+    width: 30px;
+    margin-right: 100px;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.speakers .speakers-body .nav .buttons .r-arrow{
+    background-image: url('../assets/speakers/right-arrow\ \(1\)\ \(1\).svg');
+    height: 50px;
+    width: 30px;
+    margin-left: 100px;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+

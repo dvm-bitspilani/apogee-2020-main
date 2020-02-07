@@ -61,64 +61,64 @@ const contactData = {
   dvm: {
     name: "Manish Thakur",
     post: "Website and Registrations",
-    phone: "+91-7989477976",
+    phone: "+91-9876543210",
     email: "webmaster@bits-apogee.org",
     image: "assets/contact/Business_Man-512.png"
   },
   pcr: {
-    name: "Piyush Bhatt",
-    post: "Registrations and Correspondence",
-    phone: "+91-8445006699",
-    email: "pcr@bits-apogee.org",
+    name: "Manish Thakur",
+    post: "Website and Registrations",
+    phone: "+91-9876543210",
+    email: "webmaster@bits-apogee.org",
     image: "assets/contact/Business_Man-512.png"
   },
   pep: {
-    name: "Yogyata Somani",
-    post: "Guest Lectures and Paper Presentation",
-    phone: "+91-9413965731",
-    email: "pep@bits-apogee.org guestlectures@bits-apogee.org",
+    name: "Manish Thakur",
+    post: "Website and Registrations",
+    phone: "+91-9876543210",
+    email: "webmaster@bits-apogee.org",
     image: "assets/contact/Business_Man-512.png"
   },
   spons: {
-    name: "Eshan Bhaskar",
-    post: "Sponsorship and Marketing",
-    phone: "+91-8861828086",
-    email: "sponsorship@bits-apogee.org",
-    image: "assets/contact/Business_Man-512.png"
-  },
-  adp: {
-    name: "Lak",
-    post: "Publicity and Online Partnerships",
-    phone: "+91-9803223248",
-    email: "adp@bits-apogee.org",
+    name: "Manish Thakur",
+    post: "Website and Registrations",
+    phone: "+91-9876543210",
+    email: "webmaster@bits-apogee.org",
     image: "assets/contact/Business_Man-512.png"
   },
   recnacc: {
-    name: "Achintya Tewari",
-    post: "Reception and Accomodation",
-    phone: "+91-9740650739",
-    email: "recnacc@bits-apogee.org",
+    name: "Manish Thakur",
+    post: "Website and Registrations",
+    phone: "+91-9876543210",
+    email: "webmaster@bits-apogee.org",
+    image: "assets/contact/Business_Man-512.png"
+  },
+  adp: {
+    name: "Manish Thakur",
+    post: "Website and Registrations",
+    phone: "+91-9876543210",
+    email: "webmaster@bits-apogee.org",
     image: "assets/contact/Business_Man-512.png"
   },
   controls: {
-    name: "Swaroop",
-    post: "Registration, Events and Projects",
-    phone: "+91-9652388604",
-    email: "controls@bits-apogee.org",
+    name: "Manish Thakur",
+    post: "Website and Registrations",
+    phone: "+91-9876543210",
+    email: "webmaster@bits-apogee.org",
     image: "assets/contact/Business_Man-512.png"
   },
   pres: {
-    name: "Rahul Bubna",
-    post: "President, Student Union",
-    phone: "+91-8952824766",
-    email: "president@pilani.bits-pilani.ac.in",
+    name: "Manish Thakur",
+    post: "Website and Registrations",
+    phone: "+91-9876543210",
+    email: "webmaster@bits-apogee.org",
     image: "assets/contact/Business_Man-512.png"
   },
   gensec: {
-    name: "V Abhishek Balaji",
-    post: "General Secretary, Student Union",
-    phone: "+91-9566142660",
-    email: "gensec@pilani.bits-pilani.ac.in",
+    name: "Manish Thakur",
+    post: "Website and Registrations",
+    phone: "+91-9876543210",
+    email: "webmaster@bits-apogee.org",
     image: "assets/contact/Business_Man-512.png"
   }
 }

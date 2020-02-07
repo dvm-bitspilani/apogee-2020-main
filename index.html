@@ -13,6 +13,8 @@
     <link rel="stylesheet" href="css/contact.css">
     <link rel="stylesheet" href="css/aboutUs.css">
     <link rel="stylesheet" href="css/videos.css">
+    <link rel="stylesheet" href="css/speakers.css">
+
     <link rel="shortcut icon" href="assets/icons/favicon.png" type="image/x-icon">
     <title>APOGEE'20 | The Glitch Repository</title>
   </head>
@@ -97,15 +99,15 @@
     </div>
 
     <div class="wrapper">
-      <section class="home" id="home">
+      <section class="home">
         <div class="navbar">
           <div class="nav-logo"></div>
           <div class="nav-link-container">
-            <a href="#home"><div class="nav-links">Home</div></a>
-            <a href="#aboutUs"><div class="nav-links">About Us</div></a>
-            <a href="#events"><div class="nav-links">Events</div></a>
-            <a href="#contact"><div class="nav-links">Contact Us</div></a>
-            <a href="register.html"><div class="nav-links register-button">REGISTER</div></a>
+            <div class="nav-links">Home</div>
+            <div class="nav-links">About Us</div>
+            <div class="nav-links">Sponsors</div>
+            <div class="nav-links">Contact Us</div>
+            <div class="nav-links register-button">REGISTER</div>
           </div>
         </div>
         <div class="footer">
@@ -125,7 +127,7 @@
         </div>
       </section>
 
-      <section class="aboutUs" id="aboutUs">
+      <section class="aboutUs">
         <div class="heading">
           <span>About Us</span>
         </div>
@@ -137,13 +139,31 @@
         </div>
       </section>
 
-      <!-- <section class="videos">
+      <section class="videos">
           <div class="heading">
             <span>VIDEOS</span>
           </div>
-      </section> -->
+      </section>
 
-      <section class="events" id="events">
+      <section class="speakers">
+        <div class="heading">
+          <span>SPEAKERS</span>
+        </div>
+
+        <div class="speakers-body">
+          <div class="carousel"></div>
+          <div class="nav">
+            <div class="buttons">
+            <div class="l-arrow"></div>
+              <div class="dot"></div>
+              <div class="dot"></div>
+            <div class="r-arrow"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="events">
         <div class="heading">
           <span>Events</span>
         </div>
@@ -307,7 +327,7 @@
         </div>
       </section>
 
-        <section class="contact" id="contact">
+        <section class="contact">
             <div class="heading">
                 <span>Contact Us</span>
             </div>
@@ -335,5 +355,7 @@
 
     <script src="scripts/ui.js"></script>
     <script src="js/index.js"></script>
+    <script src="js/speakers.js"></script>
+
   </body>
 </html>
