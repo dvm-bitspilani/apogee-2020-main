@@ -70,6 +70,41 @@
   cursor: pointer;
 }
 
+.hamburger-menu {
+  height: 100vh;
+  position: absolute;
+  z-index: 20;
+  background-color: #707070;
+  font-family: "Space Mono";
+  right: -300px;
+  top: 0;
+  transition: 0.3s ease;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;  
+  font-size: 2em;
+}
+
+.hamburger-menu .ham-item {
+  margin: 20px 0;
+  color: #fff;
+  cursor: pointer;
+}
+
+.hamburger-menu .close-ham {
+  position: absolute;
+  top: 45px;
+  right: 60px;
+  z-index: 21;
+  cursor: pointer;
+}
+
+.hamburger-menu .close-ham img {
+  height: 20px;
+}
+
 .home .heading {
   height: 60vh;
   display: flex;

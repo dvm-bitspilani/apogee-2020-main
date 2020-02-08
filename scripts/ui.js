@@ -154,3 +154,16 @@ for (let costaan in contactData) {
   card.appendChild(email);
   contactBody.appendChild(card);
 }
+
+// Control state of hamburger menu
+const closeButton = document.getElementsByClassName("close-ham")[0]; 
+const openButton = document.getElementsByClassName("hamburger")[0]; 
+const menu = document.getElementsByClassName("hamburger-menu")[0];
+
+openButton.addEventListener("click", () => {
+  menu.style.right = "0";
+})
+
+closeButton.addEventListener("click", () => {
+  menu.style.right = "-300px";
+})
