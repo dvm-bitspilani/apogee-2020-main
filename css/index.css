@@ -5,6 +5,7 @@
   align-items: center;
   flex-direction: column;
   position: relative;
+  box-shadow: 0 0px 100px 50px #151515;
 }
 
 .home .navbar {

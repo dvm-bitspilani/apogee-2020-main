@@ -20,4 +20,5 @@ const navigateTo = (id) => {
 
 window.onload = () => {
     setTime();
+    document.getElementsByClassName('grid-background')[0].style.height = document.body.scrollHeight - document.getElementById('home').clientHeight + 'px';
 }
