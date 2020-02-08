@@ -56,11 +56,12 @@
     height: 300vw;
     border-radius: 50%;
     overflow: hidden;
+    box-shadow: 0 0 100px 10px #cccccc;
 }
 
 .backgrounds .landing-background .background-ele2 img {
     width: 100vw;
-    transform: translateX(100%);
+    transform: translateX(99%);
     animation: rotateMoon 30s linear infinite;
 }
 
@@ -199,10 +200,10 @@
 
 @keyframes rotateMoon {
     from {
-        transform: translate(100%, 0%);
+        transform: translate(99%, 0%);
     }
 
     to {
-        transform: translate(100%, -55%);
+        transform: translate(99%, -55%);
     }
 }
