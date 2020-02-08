@@ -168,10 +168,21 @@
     }
     
     .backgrounds .landing-background .background-ele2 {
-        top: 70%;
+        top: 72.5%;
         left: -50%;
         width: 200vw;
         height: 200vw;
+    }
+
+    .backgrounds .landing-background .background-ele2 img {
+        transform: translateX(50%);
+        animation: none;
+    }
+
+    .backgrounds .landing-background .background-ele3 {
+        top: 72.5%;
+        height: 27.5%;
+        box-shadow: inset 0px -100px 100px -65px #151515;
     }
 }
 
@@ -205,5 +216,15 @@
 
     to {
         transform: translate(99%, -55%);
+    }
+}
+
+@keyframes rotateMoonPhone {
+    from {
+        transform: translate(50%, 0%);
+    }
+
+    to {
+        transform: translate(50%, -55%);
     }
 }
