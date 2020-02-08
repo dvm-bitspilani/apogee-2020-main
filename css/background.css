@@ -59,9 +59,9 @@
 }
 
 .backgrounds .landing-background .background-ele2 img {
-    width: 100%;
-    transform: translateX(-10%);
-    animation: rotateMoon 60s linear infinite;
+    width: 100vw;
+    transform: translateX(100%);
+    animation: rotateMoon 30s linear infinite;
 }
 
 .backgrounds .landing-background .background-ele3 {
@@ -199,10 +199,10 @@
 
 @keyframes rotateMoon {
     from {
-        transform: translate(-10%, 0%);
+        transform: translate(100%, 0%);
     }
 
     to {
-        transform: translate(-10%, -80%);
+        transform: translate(100%, -55%);
     }
 }
