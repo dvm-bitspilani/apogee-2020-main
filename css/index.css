@@ -50,6 +50,31 @@
 .home .navbar .nav-link-container .nav-links.register-button {
   background: rgba(255, 255, 255, 0.3);
   padding: 6px 25px;
+  position: relative;
+}
+
+.home .navbar .nav-link-container .nav-links.register-button::before {
+  position: absolute;
+  top: -6px;
+  left: -6px;
+  width: 16px;
+  height: 16px;
+  z-index: -1;
+  border-left: 1.5px solid rgba(255, 255, 255, 0.5);
+  border-top: 1.5px solid rgba(255, 255, 255, 0.5);
+  content: '';
+}
+
+.home .navbar .nav-link-container .nav-links.register-button::after {
+  position: absolute;
+  bottom: -6px;
+  right: -6px;
+  width: 16px;
+  height: 16px;
+  z-index: -1;
+  border-right: 1.5px solid rgba(255, 255, 255, 0.5);
+  border-bottom: 1.5px solid rgba(255, 255, 255, 0.5);
+  content: '';
 }
 
 .home .navbar .nav-link-container .nav-links.register-button a {
@@ -221,6 +246,31 @@
   background: rgba(255, 255, 255, 0.6);
   font: 1.5rem "Apex Medium", serif;
   letter-spacing: 0.25rem;
+  position: relative;
+}
+
+.home .footer .countdown::before {
+  position: absolute;
+  top: -8px;
+  left: -8px;
+  width: 20px;
+  height: 20px;
+  z-index: -1;
+  border-left: 1.5px solid rgba(255, 255, 255, 0.5);
+  border-top: 1.5px solid rgba(255, 255, 255, 0.5);
+  content: '';
+}
+
+.home .footer .countdown::after {
+  position: absolute;
+  bottom: -8px;
+  right: -8px;
+  width: 20px;
+  height: 20px;
+  z-index: -1;
+  border-right: 1.5px solid rgba(255, 255, 255, 0.5);
+  border-bottom: 1.5px solid rgba(255, 255, 255, 0.5);
+  content: '';
 }
 
 .home .footer img {

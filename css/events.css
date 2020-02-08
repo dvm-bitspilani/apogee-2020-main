@@ -65,7 +65,7 @@
 }
 
 .events .body .card .events-content span .events-details {
-  height: 75%;
+  height: 80%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -73,13 +73,9 @@
   font-size: 0.8rem;
 }
 
-.events .body .card .events-content span .events-details .events-date {
-  margin-bottom: 12px;
-}
-
 .events .body .card .events-content span .view-detail-button {
   width: 100%;
-  height: 25%;
+  height: 17.5%;
   min-height: 25%;
   display: flex;
   justify-content: center;
@@ -87,7 +83,32 @@
   background: rgba(255, 255, 255, 0.4);
   font-size: 0.75rem;
   cursor: pointer;
-  display: none;
+  position: relative;
+  margin-top: 5%;
+}
+
+.events .body .card .events-content span .view-detail-button::before {
+  position: absolute;
+  top: -6px;
+  left: -6px;
+  width: 16px;
+  height: 16px;
+  z-index: -1;
+  border-left: 1.5px solid rgba(255, 255, 255, 0.5);
+  border-top: 1.5px solid rgba(255, 255, 255, 0.5);
+  content: '';
+}
+
+.events .body .card .events-content span .view-detail-button::after {
+  position: absolute;
+  bottom: -6px;
+  right: -6px;
+  width: 16px;
+  height: 16px;
+  z-index: -1;
+  border-right: 1.5px solid rgba(255, 255, 255, 0.5);
+  border-bottom: 1.5px solid rgba(255, 255, 255, 0.5);
+  content: '';
 }
 
 
