@@ -154,4 +154,3 @@ for (let costaan in contactData) {
   card.appendChild(email);
   contactBody.appendChild(card);
 }
-

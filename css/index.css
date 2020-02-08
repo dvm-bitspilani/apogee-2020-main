@@ -1,5 +1,5 @@
 .home {
-  height: 120vh;
+  height: 130vh;
   width: 100%;
   display: flex;
   align-items: center;
@@ -36,24 +36,34 @@
 .home .navbar .nav-link-container .nav-links {
   font: 20px/29px "Space Mono";
   font-weight: 100;
+  letter-spacing: 1.44px;
+  margin-left: 45px;
+  color: #fafafa;
+  /* cursor: pointer; */
+  transition: 0.1s ease;
+  white-space: nowrap;
+  opacity: 0.85;
+}
+
+.home .navbar .nav-link-container .hamburger {
+  font: 20px/29px "Space Mono";
+  font-weight: 100;
   letter-spacing: 1.24px;
   margin-left: 45px;
   color: #fafafa;
   /* cursor: pointer; */
   transition: 0.1s ease;
   white-space: nowrap;
+  opacity: 0.85;
+  display: flex;
+  align-items: center;
 }
 
-.home .navbar .nav-link-container #hamburger {
-  margin-left: 40px;
-  height: 30px;
-  width: 30px;
-  background: url('assets/icons/ham.png');
-}
+.home .navbar .nav-link-container .hamburger img {cursor: pointer;}
 
 .home .navbar .nav-link-container .nav-links.register-button {
-  background: rgba(255, 255, 255, 0.4);
-  padding: 6px 12px;
+  background: rgba(255, 255, 255, 0.3);
+  padding: 6px 25px;
 }
 
 .home .navbar .nav-link-container .nav-links:hover {
@@ -73,7 +83,7 @@
 .home .footer {
   position: absolute;
   left: 0;
-  bottom: 17.5%;
+  bottom: 22.5%;
   width: 100%;
   padding: 16px 5%;
   box-sizing: border-box;
