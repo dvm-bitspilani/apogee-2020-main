@@ -33,7 +33,7 @@
   font: 20px/29px "Space Mono";
   font-weight: 100;
   letter-spacing: 1.44px;
-  margin-left: 45px;
+  margin-left: 28px;
   transition: 0.1s ease;
   white-space: nowrap;
   opacity: 0.85;
@@ -42,6 +42,9 @@
 .home .navbar .nav-link-container .nav-links span a {
   text-decoration: none;
   color: #fafafa;
+  padding: 4px 12px;
+  position: relative;
+  transition: 1s;
 }
 
 .home .navbar .nav-link-container .nav-links.register-button {
@@ -61,7 +64,7 @@
   height: 2px;
   bottom: 0;
   left: 0;
-  z-index: 5;
+  z-index: -1;
   background-color: #fff;
   visibility: hidden;
   -webkit-transform: scaleX(0);
@@ -70,9 +73,9 @@
   transition: all 0.2s ease-in-out 0s;
 }
 
-/* .home .navbar .nav-link-container .nav-links:hover {
-  cursor: pointer;
-} */
+.home .navbar .nav-link-container .nav-links > span > a:hover {
+  color: #151515;
+}
 
 .home .navbar .nav-link-container .nav-links > span > a:hover:before {
   visibility: visible;
