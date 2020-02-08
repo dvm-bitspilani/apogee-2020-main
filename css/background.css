@@ -35,7 +35,7 @@
     background-size: 100% 100%;
     background-position: 50% 50%;
     width: 100%;
-    height: 120vh;
+    height: 130vh;
     overflow: hidden;
     position: relative;
 }
@@ -43,14 +43,14 @@
 .backgrounds .landing-background .background-ele {
     width: 100%;
     position: absolute;
-    top: -25%;
+    top: -20%;
     z-index: 1;
 }
 
 .backgrounds .landing-background .background-ele2 {
     position: absolute;
     z-index: 2;
-    top: 65%;
+    top: 60%;
     left: -100%;
     width: 300vw;
     height: 300vw;
@@ -61,6 +61,17 @@
 .backgrounds .landing-background .background-ele2 img {
     width: 100%;
     transform: translateX(-10%);
+    animation: rotateMoon 60s linear infinite;
+}
+
+.backgrounds .landing-background .background-ele3 {
+    position: absolute;
+    z-index: 3;
+    top: 65%;
+    left: 0;
+    width: 100%;
+    height: 35%;
+    box-shadow: inset 0px -200px 100px -10px #151515;
 }
 
 .star-container {
@@ -183,5 +194,15 @@
 
     to {
         transform: translateY(-2000px);
+    }
+}
+
+@keyframes rotateMoon {
+    from {
+        transform: translate(-10%, 0%);
+    }
+
+    to {
+        transform: translate(-10%, -80%);
     }
 }
