@@ -390,7 +390,9 @@ footer .icon.twitter {
 }
 @media all and (max-width: 450px) {
   .backgrounds .landing-background {
-    background: url('../assets/backgrounds/mobile-back.png');
+    background: url('../assets/backgrounds/mobile-back.png') no-repeat;
+    background-size: cover;
+    background-position: center;
   }
 
   .backgrounds .landing-background .background-ele2 {
@@ -408,8 +410,8 @@ footer .icon.twitter {
 
   .backgrounds .landing-background .background-ele {
     width: 200%;
-    left: -50%;
-    top: 10%;
+    left: -52%;
+    top: 7%;
   }
 
   .home .footer {
