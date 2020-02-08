@@ -64,7 +64,7 @@
 .backgrounds .landing-background .background-ele2 img {
     width: 100vw;
     transform: translateX(99%);
-    /* animation: rotateMoon 30s linear infinite; */
+    animation: rotateMoon 30s linear infinite;
 }
 
 .backgrounds .landing-background .background-ele3 {
@@ -189,7 +189,7 @@
 }
 
 .background-ele {
-    animation: moveAstro 30s linear infinite;
+    /* animation: moveAstro 30s linear infinite; */
     animation-delay: 3s;
 }
 
