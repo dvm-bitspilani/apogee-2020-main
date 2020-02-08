@@ -45,6 +45,7 @@
   padding: 4px 12px;
   position: relative;
   transition: 1s;
+  cursor: pointer;
 }
 
 .home .navbar .nav-link-container .nav-links.register-button {
