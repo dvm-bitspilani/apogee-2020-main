@@ -7,23 +7,6 @@
   position: relative;
 }
 
-.warning {
-  height: 100px;
-  width: 90%;
-  background-color: lightgrey;
-  font-size: 20px;
-  font-family: sans-serif;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  display: none;
-  position: absolute;
-  z-index: 2000;
-  top: 40%;
-  opacity: 0.9;
-  left: calc(50% - 45%);
-}
-
 .home .navbar {
   height: 15.5vh;
   width: 100%;
@@ -52,12 +35,20 @@
 
 .home .navbar .nav-link-container .nav-links {
   font: 20px/29px "Space Mono";
-  letter-spacing: 1.64px;
-  margin-left: 32px;
+  font-weight: 100;
+  letter-spacing: 1.24px;
+  margin-left: 45px;
   color: #fafafa;
   /* cursor: pointer; */
   transition: 0.1s ease;
   white-space: nowrap;
+}
+
+.home .navbar .nav-link-container #hamburger {
+  margin-left: 40px;
+  height: 30px;
+  width: 30px;
+  background: url('assets/icons/ham.png');
 }
 
 .home .navbar .nav-link-container .nav-links.register-button {
@@ -66,7 +57,6 @@
 }
 
 .home .navbar .nav-link-container .nav-links:hover {
-  transform: scale(1.05);
   cursor: pointer;
 }
 
@@ -314,5 +304,31 @@ footer .icon.twitter {
 
   #follow-us-sapn {
     display: none;
+  }
+} 
+@media all and (max-width: 450px) {
+  .backgrounds .landing-background .background-ele2 {
+    top: 75%;
+    border-radius: 50%;
+
+  }
+
+  .backgrounds .landing-background .background-ele {
+    width: 200%;
+    left: -50%;
+    top: 10%;
+  }
+
+  .home .footer {
+    bottom: 0;
+  }
+
+  .home .footer img {display: none;}
+  .home .footer .social-icons {display: none;}
+
+  .home .footer .countdown {
+    width: 100%;
+    font-size: 1.3rem;
+    text-align: center;
   }
 }
