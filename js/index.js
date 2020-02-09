@@ -13,10 +13,35 @@ const setTime = () => {
 }
 
 
-// ——————————————————————————————————————————————————
-// TextScramble
-// ——————————————————————————————————————————————————
+// Control state of hamburger menu 
+const hamButton = document.getElementsByClassName("hamburger-icon")[0];
+const menu = document.getElementsByClassName("hamburger-menu")[0];
+const hamItem = document.getElementsByClassName("ham-item");
+menu.style.display = 'none';
 
+const toggleHamMenu = () => {
+  if (menu.style.display == 'none') {
+    menu.style.display = 'flex';
+    setTimeout(() => {
+      hamButton.className += ' close';
+      menu.style.opacity = 1;
+      for (let i = 0; i < hamItem.length; i++) {
+        hamItem[i].style.animation = 'slideIn 0.25s linear ' + (0.4 + 0.1 * i) + 's forwards';
+      }
+    }, 50);
+  } else {
+      hamButton.classList.remove('close');
+      menu.style.opacity = 0;
+    setTimeout(() => {
+      menu.style.display = 'none';
+    }, 500);
+  }
+}
+
+hamButton.addEventListener("click", toggleHamMenu);
+
+
+// TextScramble
 class TextScramble {
     constructor(el) {
       this.el = el;
@@ -133,6 +158,9 @@ window.addEventListener('wheel' ,function(e) {
 
 const navigateTo = (id) => {
     document.getElementById(id).scrollIntoView({ block: 'start',  behavior: 'smooth' });
+    if (menu.style.display == 'flex') {
+        toggleHamMenu();
+    }
     if (id == 'aboutUs' && !isAboutUsAnimated) {
         phrases = ['About Us']
         el = aboutUs;

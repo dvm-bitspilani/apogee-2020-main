@@ -154,28 +154,3 @@ for (let costaan in contactData) {
   card.appendChild(email);
   contactBody.appendChild(card);
 }
-
-// Control state of hamburger menu 
-const hamButton = document.getElementsByClassName("hamburger-icon")[0];
-const menu = document.getElementsByClassName("hamburger-menu")[0];
-const hamItem = document.getElementsByClassName("ham-item");
-menu.style.display = 'none';
-
-hamButton.addEventListener("click", () => {
-  if (menu.style.display == 'none') {
-    menu.style.display = 'flex';
-    setTimeout(() => {
-      hamButton.className += ' close';
-      menu.style.opacity = 1;
-      for (let i = 0; i < hamItem.length; i++) {
-        hamItem[i].style.animation = 'slideIn 0.25s linear ' + (0.4 + 0.1 * i) + 's forwards';
-      }
-    }, 50);
-  } else {
-      hamButton.classList.remove('close');
-      menu.style.opacity = 0;
-    setTimeout(() => {
-      menu.style.display = 'none';
-    }, 500);
-  }
-});

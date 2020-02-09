@@ -194,7 +194,7 @@
 .hamburger-menu {
   width: 100vw;
   height: 100vh;
-  position: absolute;
+  position: fixed;
   z-index: 20;
   background-color: rgba(0, 0, 0, 0.85);
   font-family: "Space Mono";
