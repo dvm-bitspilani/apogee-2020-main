@@ -44,16 +44,21 @@
 
 .events .body .card .events-name {
   margin-bottom: 8px;
+  opacity: 0.81;
+  font-size: 1.2rem;
 }
 
 .events .body .card .events-content {
   display: flex;
+  opacity: 0.81;
+  line-height: 1.3;
+  letter-spacing: 0.1rem;
 }
 
 .events .body .card .events-content img {
   width: 40%;
   margin-left: 10%;
-  margin-right: 7.5%;
+  margin-right: 4.5%;
 }
 
 .events .body .card .events-content span {
