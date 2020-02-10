@@ -19,7 +19,7 @@
 }
 
 .home .navbar .nav-logo {
-  width: 300px;
+  width: 200px;
 }
 
 .home .navbar .nav-link-container {
@@ -31,8 +31,8 @@
 }
 
 .home .navbar .nav-link-container .nav-links {
-  font: 20px/29px "Space Mono";
-  font-weight: 100;
+  font: 18px/27px "Space Mono";
+  font-weight: 100%;
   letter-spacing: 1.44px;
   margin-left: 28px;
   transition: 0.1s ease;
@@ -145,8 +145,8 @@
   z-index: 25;
   right: 5%;
   top: 7.75vh;
-  width: 30px;
-  height: 30px;
+  width: 27px;
+  height: 27px;
   transform: translateY(-50%);
   transition: 0.5s;
   cursor: pointer;
@@ -245,8 +245,8 @@
   display: inline;
   padding: 8px 16px;
   color: #3f3f3f;
-  background: rgba(255, 255, 255, 0.6);
-  font: 1.5rem "Apex Medium", serif;
+  background: rgba(255, 255, 255, 0.5);
+  font: 1.0rem "Apex Medium", serif;
   letter-spacing: 0.25rem;
   position: relative;
 }
@@ -276,8 +276,8 @@
 }
 
 .home .footer img {
-  width: 50px;
-  height: 50px;
+  width: 40px;
+  height: 40px;
 }
 
 .home .footer a {
@@ -286,8 +286,8 @@
 
 .home .footer .icon {
   display: inline-block;
-  width: 35px;
-  height: 35px;
+  width: 25px;
+  height: 25px;
   background-size: 100% 100%;
   background-repeat: no-repeat;
 }
@@ -302,6 +302,8 @@
 
 .home .footer .icon.twitter {
   background-image: url("../assets/icons/twitter.png");
+  width: 30px;
+  height: 25px;
 }
 
 .left-nav {
