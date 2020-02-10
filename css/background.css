@@ -188,6 +188,7 @@
     .backgrounds .landing-background .background-ele2 img {
         transform: translateX(50%);
         animation: none;
+        height: 25vh;
     }
 
     .backgrounds .landing-background .background-ele3 {
