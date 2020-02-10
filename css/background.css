@@ -167,20 +167,22 @@
 
 @media (max-width: 600px) {
     .backgrounds .landing-background {
+        background: url('../assets/backgrounds/mobile-back.png') no-repeat;
         background-size: cover;
-        height: 100vh;
+        background-position: center;
     }
-    
+
     .backgrounds .landing-background .background-ele {
-        width: 300%;
-        left: -100%;
+        width: 200%;
+        left: -52%;
+        top: 7%;
     }
-    
+
     .backgrounds .landing-background .background-ele2 {
-        top: 72.5%;
-        left: -50%;
+        top: 75%;
         width: 200vw;
         height: 200vw;
+        left: -50%;
     }
 
     .backgrounds .landing-background .background-ele2 img {

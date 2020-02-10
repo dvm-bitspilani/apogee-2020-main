@@ -449,16 +449,49 @@ footer .icon.twitter {
     height: 100vh;
   }
 
-  .warning {
-    display: flex;
-  }
-
   .home .navbar {
     height: 12.5vh;
   }
 
+  .home .navbar .nav-link-container .nav-links {
+    display: none;
+  }
+
+  .home .navbar .nav-link-container .hamburger {
+    opacity: 1;
+  }
+
   .home .navbar .nav-logo {
     width: 180px;
+  }
+
+  .home .navbar .nav-link-container .nav-links.register-button {
+    display: initial;
+    position: absolute;
+    font-size: 2rem;
+    padding: 12px 32px;
+    margin-left: 0;
+    top: 80%;
+    left: 50%;
+    background: rgba(255, 255, 255, 0.5);
+    transform: translate(-50%);
+  }
+  
+  .home .footer {
+    bottom: 0;
+  }
+
+  .home .footer img {
+    display: none;
+  }
+  .home .footer .social-icons {
+    display: none;
+  }
+
+  .home .footer .countdown {
+    width: 100%;
+    font-size: 1.3rem;
+    text-align: center;
   }
 
   footer {
@@ -487,48 +520,17 @@ footer .icon.twitter {
   }
 }
 
-
-@media all and (max-width: 450px) {
-  .backgrounds .landing-background {
-    background: url('../assets/backgrounds/mobile-back.png') no-repeat;
-    background-size: cover;
-    background-position: center;
-  }
-
-  .backgrounds .landing-background .background-ele2 {
-    top: 75%;
-    border-radius: 50%;
-  }
-
-  .navbar .nav-link-container .nav-links {
-    display: none;
-  }
-
-  .navbar .nav-link-container .hamburger {
-    opacity: 1;
-  }
-
-  .backgrounds .landing-background .background-ele {
-    width: 200%;
-    left: -52%;
-    top: 7%;
-  }
-
-  .home .footer {
-    bottom: 0;
-  }
-
-  .home .footer img {
-    display: none;
-  }
-  .home .footer .social-icons {
-    display: none;
-  }
-
-  .home .footer .countdown {
-    width: 100%;
-    font-size: 1.3rem;
-    text-align: center;
+@media (max-width: 350px) {
+  .home .navbar .nav-link-container .nav-links.register-button {
+    display: initial;
+    position: absolute;
+    font-size: 1.75rem;
+    padding: 10px 28px;
+    margin-left: 0;
+    top: 77.5%;
+    left: 50%;
+    background: rgba(255, 255, 255, 0.5);
+    transform: translate(-50%);
   }
 }
 
