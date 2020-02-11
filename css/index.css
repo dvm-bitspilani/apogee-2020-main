@@ -500,7 +500,7 @@ footer .icon.twitter {
     bottom: 0;
   }
 
-  .home .footer #mouse-svg {
+  .home .footer .mousey {
     display: none;
   }
   .home .footer .social-icons {

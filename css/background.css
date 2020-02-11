@@ -42,11 +42,12 @@
 }
 
 .backgrounds .landing-background .background-ele {
-    width: 90%;
+    width: 80%;
     position: absolute;
-    top: -30%;
-    left: 5%;
+    top: 37.5%;
+    left: 10%;
     z-index: 1;
+    transform: translateY(-50%);
 }
 
 .backgrounds .landing-background .background-ele2 {
