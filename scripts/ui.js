@@ -101,7 +101,7 @@ const contactData = {
     image: "assets/contact/Business_Man-512.png"
   },
   controls: {
-    name: "Swaroop",
+    name: "D. Krishna Swaroop",
     post: "Registration, Events and Projects",
     phone: "+91-9652388604",
     email: "controls@bits-apogee.org",
