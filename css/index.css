@@ -275,9 +275,26 @@
   content: '';
 }
 
-.home .footer img {
-  width: 40px;
-  height: 40px;
+.home .footer .mousey {
+  width: 20px;
+  height: 35px;
+  border: 2px solid #fff;
+  border-radius: 25px;
+  opacity: 0.75;
+  box-sizing: content-box;
+  display: flex;
+  justify-content: center;
+}
+
+.home .footer .mousey .scroller {
+  width: 3px;
+  height: 10px;
+  border-radius: 25%;
+  background-color: #fff;
+  animation-name: scroll;
+  animation-duration: 1.5s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
 }
 
 .home .footer a {
@@ -483,7 +500,7 @@ footer .icon.twitter {
     bottom: 0;
   }
 
-  .home .footer img {
+  .home .footer #mouse-svg {
     display: none;
   }
   .home .footer .social-icons {
@@ -545,5 +562,14 @@ footer .icon.twitter {
   to {
     transform: translateX(0);
     opacity: 1;
+  }
+}
+
+@keyframes scroll {
+  from {
+    transform: translateY(4px);
+  }
+  to {
+    transform: translateY(20px);
   }
 }
