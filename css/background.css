@@ -32,8 +32,8 @@
 
 .backgrounds .landing-background {
     background: url('../assets/backgrounds/Group\ 117.png');
-    background-size: 100% 100%;
-    background-position: 50% 50%;
+    background-size: cover;
+    background-position: 50% 30%;
     background-repeat: no-repeat;
     width: 100%;
     height: 100vh;
@@ -55,7 +55,7 @@
     top: 65%;
     left: -100%;
     width: 300vw;
-    height: 300vw;
+    height: 200vw;
     border-radius: 50%;
     overflow: hidden;
     box-shadow: 0 0 100px 6px #cccccc;
