@@ -29,6 +29,11 @@ input[type=number] {
 }
 
 @font-face {
+    font-family: 'Bebas Neue';
+    src: url(../assets//fonts/BebasNeue-Regular.otf);
+}
+
+@font-face {
     font-family: 'Space Mono Bold';
     src: url(../assets//fonts/space-mono.bold.ttf);
 }
