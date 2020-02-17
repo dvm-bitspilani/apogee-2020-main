@@ -177,7 +177,7 @@
   
   
   
-.deconstructed {
+/* .deconstructed {
     position: relative;
     margin-top: 40px;
     margin-bottom: 20px;
@@ -197,9 +197,9 @@
     bottom: 0;
     color: #ffffff;
     pointer-events: none;
-}
+} */
   
-.deconstructed > div:nth-child(1) {
+/* .deconstructed > div:nth-child(1) {
     -webkit-mask-image: linear-gradient(black 25%, transparent 25%);
     mask-image: linear-gradient(black 25%, transparent 25%);
     animation: deconstructed1 10s infinite;
@@ -221,9 +221,9 @@
      -webkit-mask-image: linear-gradient(transparent 75%, black 75%);
     mask-image: linear-gradient(transparent 75%, black 75%);
     animation: deconstructed4 10s infinite;
-}
+} */
   
-@keyframes deconstructed1 {
+/* @keyframes deconstructed1 {
     0%, 20% {
         transform: translateX(100%);
         opacity: 0;
@@ -297,52 +297,92 @@
         transform: translateX(-135%);
         opacity: 0;
     }
-}
+} */
   
   
 .typewriter {
     width: 100%;
     display: flex;
     justify-content: center;
+    margin-top: 12px;
 }
   
-  #parent {
-    height: 40px;
-    white-space: nowrap;
-    overflow: hidden;
-    font-family: 'Bebas Neue', cursive;
-    font-size: 28px;
-    color: rgba(255,255,255,.70);
+#parent {
+    height: 44.5px;
     position: relative;
+    overflow: hidden;
+}
+  
+#child::after {
+    white-space: nowrap;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 2.25rem;
+    color: rgba(255,255,255,.70);
+    content: "APOGEE'20";
     transform: translate(7px);
 }
-  
-  #border {
+
+#border {
     border-bottom: solid 3px rgba(0,255,0,.75);
     position: absolute;
     right: -7px;
     width: 20px;
 }
   
-  /* Animation */
+/* Animation */
 #parent {
     animation: animated-text 10s steps(40,end) infinite normal both
 }
+
+#child::after {
+    animation: change-text 10s steps(40,end) infinite normal both
+}
   
 #border {
-     animation: animated-cursor 800ms steps(40,end) infinite;
+    animation: animated-cursor 800ms steps(40,end) infinite;
 }
   
-  /* text animation */
+/* text animation */
   
-@keyframes animated-text{
-    0%, 40%, 90%, 100% { width: 0; }
-    50%, 80% { width: 215px; }
+@keyframes animated-text {
+    0%, 20%, 55%, 90%, 100% { width: 0; }
+    30%, 45% { width: 130px; }
+    65%, 80% { width: 270px; }
+} 
+@keyframes animated-text-phone {
+    0%, 20%, 55%, 90%, 100% { width: 0; }
+    30%, 45% { width: 95px; }
+    65%, 80% { width: 187.5px; }
 }
   
-  /* cursor animations */
+/* change text */
   
-@keyframes animated-cursor{
+@keyframes change-text {
+    0%, 50%, 100% { content: "APOGEE'20"; }
+    60%, 80% { content: "The Glitch Repository"; }
+}
+  
+/* cursor animations */
+  
+@keyframes animated-cursor {
     from { border-bottom-color: rgba(0,255,0,.75); }
     to { border-bottom-color: transparent; }
+}
+
+
+
+
+@media (max-width: 600px) {
+    .logo {
+        width: 150px;
+        height: 150px;
+    }
+  
+    #child::after {
+        font-size: 1.5rem;
+    }
+
+    #parent {
+        animation: animated-text-phone 10s steps(40,end) infinite normal both
+    }
 }
