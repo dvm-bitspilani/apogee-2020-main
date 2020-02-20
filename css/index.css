@@ -424,8 +424,8 @@ footer {
   width: 90%;
   margin: auto;
   padding: 16px 2.5%;
-  border-top: 2px solid #fafafa;
-  font-size: 1.25rem;
+  border-top: 1px solid #fafafa;
+  font-size: 1.00rem;
   font-family: "Space Mono", serif;
   color: #fafafa;
   display: flex;
@@ -445,8 +445,8 @@ footer a {
 
 footer .icon {
   display: inline-block;
-  width: 30px;
-  height: 30px;
+  width: 20px;
+  height: 20px;
   background-size: 100% 100%;
   background-repeat: no-repeat;
 }
@@ -461,6 +461,8 @@ footer .icon.instagram {
 
 footer .icon.twitter {
   background-image: url("../assets/icons/twitter.png");
+  width: 23px;
+  height: 20px;
 }
 
 @media all and (max-width: 600px) {
