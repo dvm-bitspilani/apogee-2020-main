@@ -464,6 +464,10 @@ footer .icon.twitter {
 }
 
 @media all and (max-width: 600px) {
+  .hamburger-menu {
+    font-size: 1.5rem;
+  }
+  
   .home {
     height: 100vh;
   }
