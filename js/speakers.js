@@ -41,13 +41,18 @@ function createCard(){
     }
 }
 createCard();
+
 var elem = document.querySelector('.carousel');
 var flkty = new Flickity( elem, {
   // options
+  cellAlign: 'left',
   contain: true,
   wrapAround: true,
-  groupcell: 3,
-  lazyload: 3 
+  //   groupcell: 3,
+  //   lazyload: 3 
+  pageDots: false,
+  // selectedAttraction: 0.01,
+  // friction: 0.1
 });
 
 // element argument can be a selector string
