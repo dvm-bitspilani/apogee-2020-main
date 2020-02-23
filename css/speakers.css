@@ -1,6 +1,7 @@
 .speakers {
     width: 100%;
     padding: 128px 17.5%;
+    padding-right: 0%;
     box-sizing: border-box;
     position: relative;
 }
@@ -22,7 +23,7 @@
 .speakers .speakers-body {
     width: 100%;
     padding-top: 128px;
-    padding-left: 7%;
+    /* padding-left: 7%; */
     box-sizing: border-box;
     display: flex;
     flex-wrap: wrap;
@@ -35,31 +36,33 @@
 }
 
 .speakers .speakers-body .carousel{
-    width: 100%;
+    width: 80%;
     border: 1px white;
-    display:flex;
+    /* display:flex; */
+    padding: 0 8%;
 }
 
 .speakers .speakers-body .carousel .card{
-    width: 300px;
-    height: 600px;
-    margin: 0 10%;
+    width: 22vw;
+    height: 24vw;
+    margin: 0 0%;
 }
 
 .speakers .speakers-body .carousel .name{
-    font-size: 20px;
+    font-size: 1.1vw;
 }
 
 .speakers .speakers-body .carousel .image{
-    height: 240px;
+    height: 14vw;
     background-size: cover;
-    width: 200px;
+    width: 11vw;
     transform: translateX(40px);
 }
 .speakers .speakers-body .carousel .description{
-    font-size: 15px;
+    font-size: 0.75vw;
     background: rgba(255,255,255,0.08);
-    transform: translate(148px,-30px);
+    transform: translate(98px,-30px);
+    width: 15vw;
 }
 .speakers .speakers-body .nav{
     width: 100%;
