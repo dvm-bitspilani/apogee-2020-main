@@ -1,6 +1,7 @@
 .speakers {
     width: 100%;
     padding: 128px 17.5%;
+    padding-right: 0%;
     box-sizing: border-box;
     position: relative;
 }
@@ -20,9 +21,9 @@
 }
 
 .speakers .speakers-body {
-    width: 100%;
+    width: 80%;
     padding-top: 128px;
-    padding-left: 7%;
+    /* padding-left: 7%; */
     box-sizing: border-box;
     display: flex;
     flex-wrap: wrap;
@@ -37,29 +38,31 @@
 .speakers .speakers-body .carousel{
     width: 100%;
     border: 1px white;
-    display:flex;
+    /* display:flex; */
+    /* padding: 0 8%; */
 }
 
 .speakers .speakers-body .carousel .card{
-    width: 300px;
-    height: 600px;
-    margin: 0 10%;
+    width: 22vw;
+    height: 24vw;
+    margin: 0 0%;
 }
 
 .speakers .speakers-body .carousel .name{
-    font-size: 20px;
+    font-size: 1.1vw;
 }
 
 .speakers .speakers-body .carousel .image{
-    height: 240px;
+    height: 14vw;
     background-size: cover;
-    width: 200px;
+    width: 11vw;
     transform: translateX(40px);
 }
 .speakers .speakers-body .carousel .description{
-    font-size: 15px;
+    font-size: 0.75vw;
     background: rgba(255,255,255,0.08);
-    transform: translate(148px,-30px);
+    transform: translate(98px,-30px);
+    width: 15vw;
 }
 .speakers .speakers-body .nav{
     width: 100%;
@@ -94,5 +97,88 @@
     background-size: contain;
     background-repeat: no-repeat;
 }
-
-
+.flickity-prev-next-button {
+    transform: translateY(17vw)!important;
+    z-index: 10;
+}
+.flickity-prev-next-button.next {
+    left: 40vw!important;
+}
+.flickity-prev-next-button.previous{
+    left: 22vw!important;
+}
+.flickity-page-dots .dot {
+    width: 10px;
+    height: 10px;
+    margin: 0 20px;
+    background: initial;
+    opacity: 1;
+    border: 2px white solid;
+}
+.flickity-page-dots .dot.is-selected {
+    background: white;
+}
+.flickity-page-dots {
+    bottom: -7.2vw!important;
+}
+@media (max-width: 600px){
+    .speakers {
+        padding: 41px 5% 0 5%;
+        height: 100vh;
+    }
+    .speakers .heading span{
+        padding-left: 0.75rem;
+        border-left: 0.35rem solid #fafafa;
+    }
+    .speakers .heading {
+        font-size: 2.2rem;
+        letter-spacing: 0.5rem;
+        text-align: center;
+    }
+    .speakers .speakers-body{
+        padding: 40px 5%;
+        padding-bottom: 20px;
+        font: 0.9rem 'Space Mono';
+        letter-spacing: 0.1rem;
+        text-align: justify;
+    }
+    .speakers .speakers-body .carousel {
+        width: 90%;
+        /* display: flex; */
+        padding: 0 16%;
+        margin: auto;
+        height: 77vh;
+    }
+    .speakers .speakers-body .carousel .card {
+        height: 77vh;
+        margin: 0px 0%;
+        width: 57vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .speakers .speakers-body .carousel .name {
+        font-size: 3vh;
+        margin-bottom: 1vh;
+    }
+    .speakers .speakers-body .carousel .image {
+        height: 60vw;
+        width: 46vw;
+        transform: translateX(0px);
+        margin-bottom: 3vh;
+    }
+    .speakers .speakers-body .carousel .description {
+        font-size: 1.75vh;
+        transform: translate(0,0px);
+        width: 46vw;
+        letter-spacing: 0;
+    }
+    .flickity-prev-next-button.previous {
+        height: 30px;
+        width: 30px;
+    }
+    .flickity-prev-next-button.next {
+        height: 30px;
+        width: 30px;
+    }
+}

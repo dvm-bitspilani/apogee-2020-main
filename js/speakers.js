@@ -1,4 +1,6 @@
-const speakersName = ["Alan Ematge","Stephen Morse","Alan Emtage"];
+// import Flickity from 'flickity';
+
+const speakersName = ["1 Alan Ematge","2Stephen Morse","3Alan Emtage","4Alan Ematge","5Stephen Morse","6Alan Emtage"];
 
 const speakerDetails = [
     "1The man who laid the foundation of the internet. Creator of world's first search engine - ARCHIE. I wrote a piece of code that gave birth to a multibillion-dollar industry.",
@@ -38,5 +40,23 @@ function createCard(){
     img[i].style.backgroundImage = `url(` + speakerImgUrl[i] + `)`;
     }
 }
+createCard();
 
-// createCard();
+var elem = document.querySelector('.carousel');
+var flkty = new Flickity( elem, {
+  // options
+  cellAlign: 'left',
+  contain: true,
+  wrapAround: true,
+  //   groupcell: 3,
+  //   lazyload: 3 
+  // pageDots: false,
+  // selectedAttraction: 0.01,
+  // friction: 0.1
+});
+
+// element argument can be a selector string
+//   for an individual element
+var flkty = new Flickity( '.carousel', {
+  // options
+});
