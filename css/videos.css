@@ -1,6 +1,7 @@
 .videos {
   width: 100%;
-  padding: 128px 20%;
+  height: 100vh;
+  padding: 100px 10%;
   box-sizing: border-box;
   position: relative;
 }
@@ -17,4 +18,89 @@
 .videos .heading span {
   padding-left: 1rem;
   border-right: 0.6rem solid #fafafa;
+}
+
+.videos > .video-div {
+  width: 100%;
+  height: 80%;
+  display: flex;
+  align-items: center;
+}
+
+.videos > .video-div > .video-section {
+  width: 100%;
+  height: 50%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 5%;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.videos > .video-div > .video-section > .thumbnail {
+  height: 100%;
+  width: 40%;
+  position: relative;
+}
+
+.videos > .video-div > .video-section > .thumbnail::before {
+  position: absolute;
+  top: -18px;
+  left: -18px;
+  width: 16px;
+  height: 16px;
+  z-index: -1;
+  content: "+";
+  font-size: 1.7em;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.videos > .video-div > .video-section > .thumbnail::after {
+  position: absolute;
+  bottom: -6px;
+  right: -6px;
+  width: 16px;
+  height: 16px;
+  z-index: -1;
+  content: "+";
+  font-size: 1.7em;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.videos > .video-div > .video-section > span {
+  font-family: "Space Mono", serif;
+  color: white;
+  font-size: 2em;
+}
+
+@media (max-width: 600px) {
+  .videos .heading {
+    text-align: center;
+    font-size: 2.2rem;
+  }
+  .videos > .video-div > .video-section {
+    width: 100%;
+    height: 50%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .videos > .video-div > .video-section > .thumbnail {
+    height: 80%;
+    width: 100%;
+  }
+  .videos > .video-div > .video-section > span {
+    font-size: 1.5em;
+  }
+}
+
+@media (max-width: 350px) {
+  .aboutUs .body {
+    font-size: 0.75rem;
+  }
 }
