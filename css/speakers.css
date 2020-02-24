@@ -21,7 +21,7 @@
 }
 
 .speakers .speakers-body {
-    width: 100%;
+    width: 80%;
     padding-top: 128px;
     /* padding-left: 7%; */
     box-sizing: border-box;
@@ -36,10 +36,10 @@
 }
 
 .speakers .speakers-body .carousel{
-    width: 80%;
+    width: 100%;
     border: 1px white;
     /* display:flex; */
-    padding: 0 8%;
+    /* padding: 0 8%; */
 }
 
 .speakers .speakers-body .carousel .card{
@@ -97,7 +97,30 @@
     background-size: contain;
     background-repeat: no-repeat;
 }
-
+.flickity-prev-next-button {
+    transform: translateY(17vw)!important;
+    z-index: 10;
+}
+.flickity-prev-next-button.next {
+    left: 40vw!important;
+}
+.flickity-prev-next-button.previous{
+    left: 22vw!important;
+}
+.flickity-page-dots .dot {
+    width: 10px;
+    height: 10px;
+    margin: 0 20px;
+    background: initial;
+    opacity: 1;
+    border: 2px white solid;
+}
+.flickity-page-dots .dot.is-selected {
+    background: white;
+}
+.flickity-page-dots {
+    bottom: -7.2vw!important;
+}
 @media (max-width: 600px){
     .speakers {
         padding: 41px 5% 0 5%;

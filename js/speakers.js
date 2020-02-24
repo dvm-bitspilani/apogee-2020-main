@@ -50,7 +50,7 @@ var flkty = new Flickity( elem, {
   wrapAround: true,
   //   groupcell: 3,
   //   lazyload: 3 
-  pageDots: false,
+  // pageDots: false,
   // selectedAttraction: 0.01,
   // friction: 0.1
 });
