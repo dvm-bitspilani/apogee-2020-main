@@ -1,14 +1,12 @@
 .videos {
   width: 100%;
-  height: 100vh;
-  padding: 100px 10%;
+  padding: 100px 15%;
   box-sizing: border-box;
   position: relative;
 }
 
 .videos .heading {
   width: 100%;
-  text-align: end;
   color: #fafafa;
   font-size: 3.5rem;
   letter-spacing: 1rem;
@@ -16,37 +14,37 @@
 }
 
 .videos .heading span {
-  padding-left: 1rem;
-  border-right: 0.6rem solid #fafafa;
+  padding: 0 1rem;
 }
 
-.videos > .video-div {
+.videos > .body {
   width: 100%;
-  height: 80%;
+  box-sizing: border-box;
   display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
   align-items: center;
 }
 
-.videos > .video-div > .video-section {
+.videos > .body > .video-section {
   width: 100%;
-  height: 50%;
   display: flex;
   justify-content: space-around;
   align-items: center;
-  padding: 5%;
-  position: relative;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  padding-top: 10%;
 }
 
-.videos > .video-div > .video-section > .thumbnail {
-  height: 100%;
+.videos > .body > .video-section:nth-of-type(2n + 1) {
+  flex-direction: row-reverse;
+}
+
+.videos > .body > .video-section > .thumbnail {
   width: 40%;
+  height: 15vw;
   position: relative;
 }
 
-.videos > .video-div > .video-section > .thumbnail::before {
+.videos > .body > .video-section > .thumbnail::before {
   position: absolute;
   top: -18px;
   left: -18px;
@@ -58,7 +56,7 @@
   color: rgba(255, 255, 255, 0.5);
 }
 
-.videos > .video-div > .video-section > .thumbnail::after {
+.videos > .body > .video-section > .thumbnail::after {
   position: absolute;
   bottom: -6px;
   right: -6px;
@@ -70,37 +68,41 @@
   color: rgba(255, 255, 255, 0.5);
 }
 
-.videos > .video-div > .video-section > span {
+.videos > .body > .video-section > span {
   font-family: "Space Mono", serif;
   color: white;
   font-size: 2em;
 }
 
 @media (max-width: 600px) {
-  .videos .heading {
-    text-align: center;
-    font-size: 2.2rem;
+  .videos {
+    padding: 64px 5%;
   }
-  .videos > .video-div > .video-section {
-    width: 100%;
-    height: 50%;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    flex-direction: row;
-    flex-wrap: wrap;
-  }
-  .videos > .video-div > .video-section > .thumbnail {
-    height: 80%;
-    width: 100%;
-  }
-  .videos > .video-div > .video-section > span {
-    font-size: 1.5em;
-  }
-}
 
-@media (max-width: 350px) {
-  .aboutUs .body {
-    font-size: 0.75rem;
+  .videos .heading {
+    font-size: 2.2rem;
+    letter-spacing: 0.5rem;
+  }
+
+  .videos .heading span {
+    padding: 0 0.75rem;
+  }
+  
+  .videos > .body > .video-section {
+    flex-direction: column;
+  }
+  
+  .videos > .body > .video-section:nth-of-type(2n + 1) {
+    flex-direction: column;
+  }
+
+  .videos > .body > .video-section > .thumbnail {
+    height: 40vw;
+    width: 80%;
+  }
+
+  .videos > .body > .video-section > span {
+    font-size: 1.5em;
+    margin: 5% 0;
   }
 }

@@ -28,6 +28,35 @@ input[type=number] {
   -moz-appearance:textfield;
 }
 
+section:nth-of-type(2n + 1) .heading {
+    text-align: end;
+}
+  
+section:nth-of-type(2n) .heading span {
+    border-left: 0.6rem solid #fafafa;
+}
+  
+section:nth-of-type(2n + 1) .heading span {
+    border-right: 0.6rem solid #fafafa;
+}
+
+@media (max-width: 600px) {
+    section .heading {
+        text-align: center;
+    }
+    section:nth-of-type(2n + 1) .heading {
+        text-align: center;
+    }
+  
+    section:nth-of-type(2n) .heading span {
+        border-left: 0.35rem solid #fafafa;
+    }
+      
+    section:nth-of-type(2n + 1) .heading span {
+        border-right: 0.35rem solid #fafafa;
+    }
+}
+
 @font-face {
     font-family: 'Bebas Neue';
     src: url(../assets//fonts/BebasNeue-Regular.otf);

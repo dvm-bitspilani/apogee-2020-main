@@ -1,13 +1,16 @@
 .events {
     width: 100%;
-    padding: 128px 20%;
+    padding: 128px 15%;
     box-sizing: border-box;
     position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .events .heading {
   width: 100%;
-  text-align: end;
   color: #fafafa;
   font-size: 3.5rem;
   letter-spacing: 1rem;
@@ -15,12 +18,11 @@
 }
 
 .events .heading span {
-  padding-left: 1rem;
-  border-right: 0.6rem solid #fafafa;
+  padding: 0 1rem;
 }
 
 .events .body {
-  width: 100%;
+  width: 80%;
   padding-top: 128px;
   box-sizing: border-box;
   display: flex;
@@ -123,14 +125,12 @@
   }
 
   .events .heading {
-    text-align: center;
     font-size: 2.2rem;
     letter-spacing: 0.5rem;
   }
 
   .events .heading span {
-    padding-left: 0.5rem;
-    border-right: 0.35rem solid #fafafa;
+    padding: 0 0.75rem;
   }
 
   .events .body {
