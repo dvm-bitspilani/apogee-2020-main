@@ -6,7 +6,6 @@
 
 .contact .heading {
     width: 100%;
-    /* text-align: end; */
     color: #fafafa;
     font-size: 3.5rem;
     letter-spacing: 1rem;
@@ -14,8 +13,7 @@
 }
 
 .contact .heading span {
-    padding-left: 1rem;
-    border-left: 0.6rem solid #fafafa;
+    padding: 0 1rem;
 }
 
 .contact .contact-body {
@@ -58,14 +56,12 @@
     }
     
     .contact .heading {
-        text-align: center;
         font-size: 2.2rem;
         letter-spacing: 0.5rem;
     }
     
     .contact .heading span {
-        padding-left: 0.75rem;
-        border-left: 0.35rem solid #fafafa;
+        padding: 0 0.75rem;
         white-space: nowrap;
     }
     

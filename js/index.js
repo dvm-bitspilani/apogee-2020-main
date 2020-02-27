@@ -107,7 +107,7 @@ const next = () => {
 const aboutUs = document.querySelector("#aboutUs > .heading > span");
 const events = document.querySelector("#events > .heading > span");
 const contact = document.querySelector("#contact > .heading > span");
-const videos = document.getElementById("videos");
+const videos = document.querySelector("#videos > .heading > span");
 
 let isAboutUsAnimated = false;
 let isEventsAnimated = false;

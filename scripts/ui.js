@@ -60,7 +60,7 @@ for (let i = 0; i < index.length; i++) {
 const contactData = {
   dvm: {
     name: "Manish Thakur",
-    post: "Website and Registrations",
+    post: "Website and Payments",
     phone: "+91-7989477976",
     email: "webmaster@bits-apogee.org",
     image: "assets/contact/Business_Man-512.png"
