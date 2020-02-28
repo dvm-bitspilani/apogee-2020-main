@@ -63,7 +63,7 @@ const contactData = {
     post: "Website and Payments",
     phone: "+91-7989477976",
     email: "webmaster@bits-apogee.org",
-    image: "assets/contact/Business_Man-512.png"
+    image: "assets/contact/manish.jpg"
   },
   pcr: {
     name: "Piyush Bhatt",
@@ -77,49 +77,49 @@ const contactData = {
     post: "Guest Lectures and Paper Presentation",
     phone: "+91-9413965731",
     email: "pep@bits-apogee.org guestlectures@bits-apogee.org",
-    image: "assets/contact/Business_Man-512.png"
+    image: "assets/contact/yogyata.jpg"
   },
   spons: {
     name: "Eshan Bhaskar",
     post: "Sponsorship and Marketing",
     phone: "+91-8861828086",
     email: "sponsorship@bits-apogee.org",
-    image: "assets/contact/Business_Man-512.png"
+    image: "assets/contact/eshan.jpg"
   },
   adp: {
     name: "Lakshay Nagpal",
     post: "Publicity and Online Partnerships",
     phone: "+91-9803223248",
     email: "adp@bits-apogee.org",
-    image: "assets/contact/Business_Man-512.png"
+    image: "assets/contact/lakshay.jpg"
   },
   recnacc: {
     name: "Achintya Tewari",
     post: "Reception and Accomodation",
     phone: "+91-9740650739",
     email: "recnacc@bits-apogee.org",
-    image: "assets/contact/Business_Man-512.png"
+    image: "assets/contact/achintya.jpg"
   },
   controls: {
     name: "D. Krishna Swaroop",
     post: "Registration, Events and Projects",
     phone: "+91-9652388604",
     email: "controls@bits-apogee.org",
-    image: "assets/contact/Business_Man-512.png"
+    image: "assets/contact/krishna.jpg"
   },
   pres: {
     name: "Rahul Bubna",
     post: "President, Student Union",
     phone: "+91-8952824766",
     email: "president@pilani.bits-pilani.ac.in",
-    image: "assets/contact/Business_Man-512.png"
+    image: "assets/contact/rahul.jpg"
   },
   gensec: {
     name: "V Abhishek Balaji",
     post: "General Secretary, Student Union",
     phone: "+91-9566142660",
     email: "gensec@pilani.bits-pilani.ac.in",
-    image: "assets/contact/Business_Man-512.png"
+    image: "assets/contact/abhishek.jpg"
   }
 }
 

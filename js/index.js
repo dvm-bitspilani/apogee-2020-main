@@ -193,10 +193,8 @@ const navigateTo = id => {
 
 window.onload = () => {
   setTime();
-  document.getElementsByClassName("grid-background")[0].style.height =
-    document.body.scrollHeight -
-    document.getElementById("home").clientHeight +
-    "px";
+  document.getElementsByClassName("grid-background")[0].style.height = document.body.scrollHeight - document.getElementById("home").clientHeight + "px";
+  document.getElementsByTagName("body")[0].style.height = document.getElementsByClassName("wrapper")[0].clientHeight + "px";
   setTimeout(() => {
     document.getElementById("loader").style.display = "none";
   }, 9000);
