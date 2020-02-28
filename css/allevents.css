@@ -1,36 +1,60 @@
 .events {
-<<<<<<< HEAD
   width: 100%;
-  padding: 128px 20%;
+  height: 100vh;
   box-sizing: border-box;
+  padding: 5% 10%;
   position: relative;
-=======
-    width: 100%;
-    padding: 128px 15%;
-    box-sizing: border-box;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
->>>>>>> fe8198b746aca784bbc6ac38cb4218a8f9fcd742
+  z-index: 3;
+  overflow: scroll;
+}
+
+.events .header {
+  width: 100%;
+  height: 10vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .events .heading {
-  width: 100%;
+  width: 50%;
+  text-align: center;
   color: #fafafa;
   font-size: 3.5rem;
   letter-spacing: 1rem;
   font-family: "Space Mono Bold", serif;
 }
 
+.events .header .filter {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+#yos {
+  width: 30%;
+  height: 30%;
+  background-color: lightgray;
+}
+#yos:focus {
+  outline: none;
+}
+
+.events .filter span {
+  font-family: "Space Mono Bold", serif;
+  font-size: 2em;
+  color: lightgray;
+}
+
 .events .heading span {
-  padding: 0 1rem;
+  padding-left: 1rem;
+  border-right: 0.6rem solid #fafafa;
 }
 
 .events .body {
-  width: 80%;
-  padding-top: 128px;
+  width: 100%;
   box-sizing: border-box;
   display: flex;
   flex-wrap: wrap;
@@ -131,12 +155,14 @@
   }
 
   .events .heading {
+    text-align: center;
     font-size: 2.2rem;
     letter-spacing: 0.5rem;
   }
 
   .events .heading span {
-    padding: 0 0.75rem;
+    padding-left: 0.5rem;
+    border-right: 0.35rem solid #fafafa;
   }
 
   .events .body {
