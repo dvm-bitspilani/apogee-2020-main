@@ -1,10 +1,4 @@
 .events {
-<<<<<<< HEAD
-  width: 100%;
-  padding: 128px 20%;
-  box-sizing: border-box;
-  position: relative;
-=======
     width: 100%;
     padding: 128px 15%;
     box-sizing: border-box;
@@ -13,7 +7,6 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
->>>>>>> fe8198b746aca784bbc6ac38cb4218a8f9fcd742
 }
 
 .events .heading {
