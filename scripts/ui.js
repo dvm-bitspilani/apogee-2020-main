@@ -70,7 +70,7 @@ const contactData = {
     post: "Registrations and Correspondence",
     phone: "+91-8445006699",
     email: "pcr@bits-apogee.org",
-    image: "assets/contact/Business_Man-512.png"
+    image: "assets/contact/custom – 1-min.jpg"
   },
   pep: {
     name: "Yogyata Somani",
