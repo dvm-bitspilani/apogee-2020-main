@@ -10,6 +10,14 @@
     <title>Events</title>
   </head>
   <body>
+    <div class="modal">
+      <div class="close-nav">
+        <span onclick="closemodal()">x</span>
+      </div>
+      <span id="details"></span>
+      <span id="contacts"></span>
+
+    </div>
     <section class="noise-container">
       <div class="noise-background"></div>
     </section>
@@ -49,7 +57,7 @@
                 Gaming extravaganza . Featured games - CSGO, COD 4,Fifa 18/19,
                 Blur
               </div>
-              <!-- <div class="view-detail-button">View Details</div> -->
+              <div class="view-detail-button" onclick="openmodal(95)">View Details</div>
             </span>
           </div>
         </div>
@@ -63,7 +71,7 @@
                 Talk is Cheap. Show me the code- Linus Torvalds Do you think you
                 have mastered Competitive coding?
               </div>
-              <!-- <div class="view-detail-button">View Details</div> -->
+              <div class="view-detail-button" onclick="openmodal(25)">View Details</div>
             </span>
           </div>
         </div>
@@ -77,7 +85,7 @@
                 In this event participants have to design a remote controlled
                 robot to combat with others.
               </div>
-              <!-- <div class="view-detail-button">View Details</div> -->
+              <div class="view-detail-button" onclick="openmodal(23)">View Details</div>
             </span>
           </div>
         </div>
@@ -91,7 +99,7 @@
                 Each team is required to design, construct and operate a
                 prototype meeting the requirements of the p...
               </div>
-              <!-- <div class="view-detail-button">View Details</div> -->
+              <div class="view-detail-button" onclick="openmodal(24)">View Details</div>
             </span>
           </div>
         </div>
@@ -119,7 +127,7 @@
                 Have you ever dreamt of exploring the world of Artificial
                 Intelligence by solving a real-life proble...
               </div>
-              <!-- <div class="view-detail-button">View Details</div> -->
+              <div class="view-detail-button" onclick="openmodal(17)">View Details</div>
             </span>
           </div>
         </div>
@@ -133,7 +141,7 @@
                 Do you have the imagination and will power to transform useless
                 things into some great mechanisms? T...
               </div>
-              <!-- <div class="view-detail-button">View Details</div> -->
+              <div class="view-detail-button" onclick="openmodal(18)">View Details</div>
             </span>
           </div>
         </div>
@@ -147,7 +155,7 @@
                 In this event, we provide used motorcycle or scooter engines to
                 the teams, they have to disassemble ...
               </div>
-              <!-- <div class="view-detail-button">View Details</div> -->
+              <div class="view-detail-button" onclick="openmodal(13)">View Details</div>
             </span>
           </div>
         </div>
@@ -161,7 +169,7 @@
                 The event aims to connect industry to college students. The
                 students get a chance to apply theoretic...
               </div>
-              <!-- <div class="view-detail-button">View Details</div> -->
+              <div class="view-detail-button" onclick="openmodal(10)">View Details</div>
             </span>
           </div>
         </div>
@@ -174,7 +182,7 @@
               <div class="events-details">
                 Parliamentary Debate
               </div>
-              <!-- <div class="view-detail-button">View Details</div> -->
+              <div class="view-detail-button" onclick="openmodal(87)">View Details</div>
             </span>
           </div>
         </div>
@@ -854,4 +862,5 @@ Got good hands in Coding?? Ever thought of...
       </div>
     </section>
   </body>
+  <script src="./js/allevents.js"></script>
 </html>
