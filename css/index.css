@@ -544,7 +544,12 @@ footer .icon.twitter {
     display: none;
   }
 }
-
+@media (max-width: 400px) {
+  .hamburger-menu .ham-item {
+    font-size: 1.2rem;
+    margin: 4.6% 0;
+  }
+}
 @media (max-width: 350px) {
   .home .navbar .nav-link-container .nav-links.register-button {
     display: initial;
