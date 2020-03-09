@@ -81,3 +81,11 @@ section:nth-of-type(2n + 1) .heading span {
     font-family: 'Apex Medium';
     src: url(../assets/fonts/Apex\ Mk3-Medium.otf);
 }
+@font-face {
+    font-family: 'Teko Medium';
+    src: url(../assets/fonts/teko/Teko-Medium.ttf);
+}
+@font-face{
+    font-family: 'Teko Regular';
+    src: url(../assets/fonts/teko/Teko-Regular.ttf);
+}
