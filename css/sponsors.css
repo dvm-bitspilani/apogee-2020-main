@@ -129,33 +129,23 @@
 }
 
 @media (max-width: 600px) {
-    .spons-wrapper {
+    .spons-wrapper {  
         height: 100vh;
+        width: 100vw;
         padding-bottom: 0vh;
-        background: url('../images/assets/sponsors.jpg') no-repeat center center/cover;
     }
     .spons-heading {
-        margin-top: 10vh;
+        margin-top: 5vh;
     }
     .spons-wrapper span {
         font-size: 2.5rem;
         text-align: center;
     }
-    .spons-wrapper .spons-heading span::after {
-        position: absolute;
-        left: 87%;
-        bottom: 0;
-        transform: translateX(-50%);
-        content: "";
-        height: 2px;
-        width: 20%;
-        border-bottom: 2px solid #768ad9;
-    }
     .spons-container {
         width: 90%;
-        height: 66%;
+        height: 80%;
         overflow-y: scroll;
-        margin: 0 auto;
+        margin-top: 3vh;
     }
     .sponsor {
         width: 100%;
@@ -163,11 +153,11 @@
     }
     .sponsor-heading {
         height: 3vh;
-        font-size: 3vh;
-        margin-bottom: 3vh;
+        font-size: 2.2vh;
+        margin-bottom: 1vh;
     }
     .sponsor-card-container {
-        width: 100%;
+            /* width: 100%; */
         display: flex;
         justify-content: center;
         align-content: center;
@@ -180,14 +170,14 @@
         font-family: "Ikaros-Sans";
         text-align: center;
         height: fit-content;
-        margin-bottom: 7vh;
+        margin-bottom: 3vh;
     }
     .sponsor-card-container .spons-details .name {
         width: 100%;
-        font-size: 4.75vw;
+        font-size: 3.25vh;
         font-family: "Ikaros-Sans";
         text-align: center;
-        padding-top: 1.5vh;
+        /* padding-top: 1.5vh;*/
     }
     .sponsor-card-container img {
         width: 45vw;
