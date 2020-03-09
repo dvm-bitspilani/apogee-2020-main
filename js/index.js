@@ -162,6 +162,7 @@ window.addEventListener(
 );
 
 const navigateTo = id => {
+  // window.location.replace('file:///mnt/Softwares/DVM/apogee-2020-main/index.html');
   document
     .getElementById(id)
     .scrollIntoView({ block: "start", behavior: "smooth" });
