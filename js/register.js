@@ -3,6 +3,8 @@ const COLLEGE_URL = 'https://bits-apogee.org/registrations/get_college';
 const EVENT_URL = 'https://bits-apogee.org/registrations/events';
 
 const SELECTED_EVENTS = [];
+const noEventMessage = document.getElementById('no-event-message');
+const selectedEventsContainer = document.getElementsByClassName('selected-events-container')[0];
 
 const getCollegesList = () => {
     fetch(COLLEGE_URL).then(data => {
@@ -25,15 +27,15 @@ const getEventsList = () => {
         return data.json()
     }).then(response => {
         document.getElementsByTagName('datalist')[1].removeChild(document.getElementById('loadingEvent'));
-        console.log(response.data);
         response.data.map(category => {
-            category.events.map(event => {
-                const option = document.createElement("option");
-                option.value = event.name;
-                option.id = event.id;
-                option.innerHTML = event.name;
-                document.getElementById('event_input').appendChild(option);
-            })
+            if (category.category_name === 'Registration')
+                category.events.map(event => {
+                    const option = document.createElement("option");
+                    option.value = event.name;
+                    option.id = event.id;
+                    option.innerHTML = event.name;
+                    document.getElementById('event_input').appendChild(option);
+                })
         })
     }, console.error) 
 }
@@ -65,6 +67,10 @@ const handleEventClick = (e) => {
                     if (SELECTED_EVENTS[i] == that.id) {
                         SELECTED_EVENTS.splice(i, 1);
                     }
+                    if (SELECTED_EVENTS.length === 0) {
+                        noEventMessage.style.display = 'initial';
+                        selectedEventsContainer.style.border = '3px solid #0fffff';
+                    }
                 }
                 that.disabled = false;
             }
@@ -74,6 +80,14 @@ const handleEventClick = (e) => {
     eventTag.appendChild(removeButton);
     document.getElementsByClassName("selected-events-container")[0].appendChild(eventTag);
 
+    if (SELECTED_EVENTS.length === 0) {
+        noEventMessage.style.display = 'initial';
+        selectedEventsContainer.style.border = '3px solid #0fffff';
+    }
+    if (SELECTED_EVENTS.length !== 0) {
+        noEventMessage.style.display = 'none';
+        selectedEventsContainer.style.border = '3px solid #b02c8d';
+    }
 }
 
 document.querySelector('input[list="event_input"]').addEventListener('input', handleEventClick)
@@ -129,8 +143,6 @@ form.addEventListener("submit", function(event) {
 
     body.college_id = parseInt(getCollegeId());
     body.year = parseInt(body.year);
-
-    console.log(body);
 
     if(!body.gender || !body.year || !body.college_id) {
         showMessage('Incomplete form data! Please fill all the required fields.');
