@@ -129,6 +129,16 @@
     flex-direction: column;
 }
 
+.back{
+    position: absolute;
+    top: 2.45vw;
+    left: 5vw;
+    height: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
 @media (max-width: 600px) {
     .spons-wrapper {  
         height: 100vh;
@@ -197,5 +207,13 @@
         white-space: nowrap;
         letter-spacing: 1px;
         padding-bottom: 0.5px;
+    }
+    .back{
+        top: 4.45vh;
+        left: 5vw;
+        height: 4rem;
+    }
+    .back  img{
+        width: 4vh;
     }
 }
