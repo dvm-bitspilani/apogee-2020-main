@@ -162,10 +162,12 @@ window.addEventListener(
 );
 
 const navigateTo = id => {
-  // window.location.replace('file:///mnt/Softwares/DVM/apogee-2020-main/index.html');
-  document
-    .getElementById(id)
-    .scrollIntoView({ block: "start", behavior: "smooth" });
+  if (document.getElementById('allEvents').display !== 'none') {
+    togglePage('allEvents', 'main', true);
+    setTimeout(() => document.getElementById(id).scrollIntoView({ block: "start", behavior: "smooth" }), 1000);
+    return;
+  }
+  document.getElementById(id).scrollIntoView({ block: "start", behavior: "smooth" });
   if (menu.style.display == "flex") {
     toggleHamMenu();
   }
@@ -192,10 +194,54 @@ const navigateTo = id => {
   }
 };
 
+
+const togglePage = (from, to, bgToggle) => {
+  toggleHamMenu();
+  const fromPage = document.getElementById(from);
+  const toPage = document.getElementById(to);
+  const background = document.getElementsByClassName('backgrounds')[0];
+  fromPage.style.animation = 'glitch-transition 0.5s';
+  if (bgToggle) {
+    if (background.style.display !== 'none') {
+      background.style.animation = 'glitch-transition 0.5s';
+    }
+  }
+
+  setTimeout(() => {
+    fromPage.style.display = 'none';
+    if (bgToggle) {
+      if (background.style.display !== 'none') {
+        background.style.display = 'none';
+      } else {
+        background.style.display = 'initial';
+        background.style.animation = 'glitch-transition 0.5s';
+      }
+    }
+    toPage.style.display = 'inherit';
+    toPage.style.animation = 'glitch-transition 0.5s';
+    setTimeout(() => {
+      toPage.style.animation = 'none';
+      fromPage.style.animation = 'none';
+      background.style.animation = 'none';
+    }, 500)
+  }, 500);
+}
+
+
 window.onload = () => {
   setTime();
-  document.getElementsByClassName("grid-background")[0].style.height = (document.body.scrollHeight - document.getElementById("home").clientHeight) + "px";
   setTimeout(() => {
     document.getElementById("loader").style.display = "none";
-  }, 9000);
+  }, 5400);
+  fetch("https://bits-apogee.org/registrations/events/Registration")
+  .then(data => {
+    return data.json();
+  })
+  .then(response => {
+    console.log(response);
+    ALL_EVENTS = [...response.events];
+    ALL_EVENTS.map(event => {
+      mapEvents(event.name, (event.about.substring(event.about.indexOf('DESCRIPTION') + 11, 150) || event.about) + '...', event.id)
+    })
+  }, console.error);
 };

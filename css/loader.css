@@ -37,7 +37,7 @@
     position: relative;
     background: transparent;
     height: 100% !important;
-    animation: fill-bg 10s ease-in infinite;
+    animation: fill-bg 7s ease-in infinite;
 }
   
 .logo .row:nth-of-type(1) > div {
@@ -115,7 +115,7 @@
     height: 1px;
     top: 0;
     left: 0;
-    animation: left-enter 10s ease-out infinite;
+    animation: left-enter 7s ease-out infinite;
 }
   
 .logo .row > div > div:nth-of-type(2) {
@@ -123,7 +123,7 @@
     height: 100%;
     top: 0;
     right: 0;
-    animation: down-enter 10s ease-out infinite;
+    animation: down-enter 7s ease-out infinite;
 }
   
 .logo .row > div > div:nth-of-type(3) {
@@ -131,7 +131,7 @@
     height: 1px;
     bottom: 0;
     right: 0;
-    animation: right-enter 10s ease-out infinite;
+    animation: right-enter 7s ease-out infinite;
 }
   
 .logo .row > div > div:nth-of-type(4) {
@@ -139,7 +139,7 @@
     height: 100%;
     bottom: 0;
     left: 0;
-    animation: up-enter 10s ease-out infinite;
+    animation: up-enter 7s ease-out infinite;
 }
   
   
@@ -202,25 +202,25 @@
 /* .deconstructed > div:nth-child(1) {
     -webkit-mask-image: linear-gradient(black 25%, transparent 25%);
     mask-image: linear-gradient(black 25%, transparent 25%);
-    animation: deconstructed1 10s infinite;
+    animation: deconstructed1 7s infinite;
 }
   
 .deconstructed > div:nth-child(2) {
     -webkit-mask-image: linear-gradient(transparent 25%, black 25%, black 50%, transparent 50%);
     mask-image: linear-gradient(transparent 25%, black 25%, black 50%, transparent 50%);
-    animation: deconstructed2 10s infinite;
+    animation: deconstructed2 7s infinite;
 }
   
 .deconstructed > div:nth-child(3) {
      -webkit-mask-image: linear-gradient(transparent 50%, black 50%, black 75%, transparent 75%);
     mask-image: linear-gradient(transparent 50%, black 50%, black 75%, transparent 75%);
-    animation: deconstructed3 10s infinite;
+    animation: deconstructed3 7s infinite;
 }
   
 .deconstructed > div:nth-child(4) {
      -webkit-mask-image: linear-gradient(transparent 75%, black 75%);
     mask-image: linear-gradient(transparent 75%, black 75%);
-    animation: deconstructed4 10s infinite;
+    animation: deconstructed4 7s infinite;
 } */
   
 /* @keyframes deconstructed1 {
@@ -331,11 +331,11 @@
   
 /* Animation */
 #parent {
-    animation: animated-text 10s steps(40,end) infinite normal both
+    animation: animated-text 7s steps(40,end) infinite normal both
 }
 
 #child::after {
-    animation: change-text 10s steps(40,end) infinite normal both
+    animation: change-text 7s steps(40,end) infinite normal both
 }
   
 #border {
@@ -383,6 +383,6 @@
     }
 
     #parent {
-        animation: animated-text-phone 10s steps(40,end) infinite normal both
+        animation: animated-text-phone 7s steps(40,end) infinite normal both
     }
 }
