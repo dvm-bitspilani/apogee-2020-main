@@ -8,6 +8,29 @@
   box-shadow: 0 0px 100px 50px #151515;
 }
 
+.notif {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  height: 10vh;
+  background-color: #151515;
+  z-index: 80;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.notif marquee {
+  text-align: center;
+  width: 95%;
+  font-family: "Space Mono";
+  font-size: 1em;
+  color: white;
+}
+
 .home .navbar {
   height: 15.5vh;
   width: 100%;
@@ -64,7 +87,7 @@
   z-index: -1;
   border-left: 1.5px solid rgba(255, 255, 255, 0.5);
   border-top: 1.5px solid rgba(255, 255, 255, 0.5);
-  content: '';
+  content: "";
 }
 
 .home .navbar .nav-link-container .nav-links.register-button::after {
@@ -76,7 +99,7 @@
   z-index: -1;
   border-right: 1.5px solid rgba(255, 255, 255, 0.5);
   border-bottom: 1.5px solid rgba(255, 255, 255, 0.5);
-  content: '';
+  content: "";
 }
 
 .home .navbar .nav-link-container .nav-links.register-button a {
@@ -156,7 +179,7 @@
   transform: translateY(-50%) rotateZ(-45deg);
 }
 
-.hamburger-icon.close > div:nth-of-type(2n+1) {
+.hamburger-icon.close > div:nth-of-type(2n + 1) {
   transform: rotateZ(-90deg);
 }
 
@@ -246,7 +269,7 @@
   padding: 8px 16px;
   color: #3f3f3f;
   background: rgba(255, 255, 255, 0.5);
-  font: 1.0rem "Apex Medium", serif;
+  font: 1rem "Apex Medium", serif;
   letter-spacing: 0.25rem;
   position: relative;
 }
@@ -260,7 +283,7 @@
   z-index: -1;
   border-left: 1.5px solid rgba(255, 255, 255, 0.5);
   border-top: 1.5px solid rgba(255, 255, 255, 0.5);
-  content: '';
+  content: "";
 }
 
 .home .footer .countdown::after {
@@ -272,7 +295,7 @@
   z-index: -1;
   border-right: 1.5px solid rgba(255, 255, 255, 0.5);
   border-bottom: 1.5px solid rgba(255, 255, 255, 0.5);
-  content: '';
+  content: "";
 }
 
 .home .footer .mousey {
@@ -425,7 +448,7 @@ footer {
   margin: auto;
   padding: 16px 2.5%;
   border-top: 1px solid #fafafa;
-  font-size: 1.00rem;
+  font-size: 1rem;
   font-family: "Space Mono", serif;
   color: #fafafa;
   display: flex;
@@ -469,7 +492,7 @@ footer .icon.twitter {
   .hamburger-menu {
     font-size: 1.5rem;
   }
-  
+
   .home {
     height: 100vh;
   }
@@ -501,7 +524,7 @@ footer .icon.twitter {
     background: rgba(255, 255, 255, 0.5);
     transform: translate(-50%);
   }
-  
+
   .home .footer {
     bottom: 0;
   }
@@ -563,7 +586,6 @@ footer .icon.twitter {
     transform: translate(-50%);
   }
 }
-
 
 @keyframes slideIn {
   from {
