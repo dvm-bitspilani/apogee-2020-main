@@ -229,7 +229,7 @@ const togglePage = (from, to, bgToggle) => {
 
 
 window.onload = () => {
-  setTime();
+  // setTime();
   setTimeout(() => {
     document.getElementById("loader").style.display = "none";
   }, 5400);
