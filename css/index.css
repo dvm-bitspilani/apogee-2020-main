@@ -8,10 +8,6 @@
   box-shadow: 0 0px 100px 50px #151515;
 }
 
-/* body::-webkit-scrollbar {
-  z-index: 99999;
-} */
-
 .notif {
   position: fixed;
   top: 0;
