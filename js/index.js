@@ -48,7 +48,7 @@ class TextScramble {
   setText(newText) {
     const oldText = this.el.innerText;
     const length = Math.max(oldText.length, newText.length);
-    const promise = new Promise(resolve => (this.resolve = resolve));
+    const promise = new Promise((resolve) => (this.resolve = resolve));
     this.queue = [];
     for (let i = 0; i < length; i++) {
       const from = oldText[i] || "";
@@ -114,7 +114,7 @@ let isEventsAnimated = false;
 let isContactAnimated = false;
 let isVideoAnimated = false;
 
-const isInViewport = function(elem) {
+const isInViewport = function (elem) {
   const bounding = elem.getBoundingClientRect();
   return (
     bounding.top >= 0 &&
@@ -128,7 +128,7 @@ const isInViewport = function(elem) {
 
 window.addEventListener(
   "wheel",
-  function(e) {
+  function (e) {
     if (isInViewport(aboutUs) && !isAboutUsAnimated) {
       phrases = ["About Us"];
       el = aboutUs;
@@ -161,13 +161,26 @@ window.addEventListener(
   false
 );
 
-const navigateTo = id => {
-  if (document.getElementById('allEvents').display !== 'none') {
-    togglePage('allEvents', 'main', true);
-    setTimeout(() => document.getElementById(id).scrollIntoView({ block: "start", behavior: "smooth" }), 1000);
+const navigateTo = (id) => {
+  console.log(document.getElementById("allEvents").style.display)
+  if (
+    document.getElementById("allEvents").style.display &&
+    document.getElementById("allEvents").style.display !== "none"
+  ) {
+    console.log("hey");
+    togglePage("allEvents", "main", true);
+    setTimeout(
+      () =>
+        document
+          .getElementById(id)
+          .scrollIntoView({ block: "start", behavior: "smooth" }),
+      1000
+    );
     return;
   }
-  document.getElementById(id).scrollIntoView({ block: "start", behavior: "smooth" });
+  document
+    .getElementById(id)
+    .scrollIntoView({ block: "start", behavior: "smooth" });
   if (menu.style.display == "flex") {
     toggleHamMenu();
   }
@@ -194,39 +207,37 @@ const navigateTo = id => {
   }
 };
 
-
 const togglePage = (from, to, bgToggle) => {
   toggleHamMenu();
   const fromPage = document.getElementById(from);
   const toPage = document.getElementById(to);
-  const background = document.getElementsByClassName('backgrounds')[0];
-  fromPage.style.animation = 'glitch-transition 0.5s';
+  const background = document.getElementsByClassName("backgrounds")[0];
+  fromPage.style.animation = "glitch-transition 0.5s";
   if (bgToggle) {
-    if (background.style.display !== 'none') {
-      background.style.animation = 'glitch-transition 0.5s';
+    if (background.style.display !== "none") {
+      background.style.animation = "glitch-transition 0.5s";
     }
   }
 
   setTimeout(() => {
-    fromPage.style.display = 'none';
+    fromPage.style.display = "none";
     if (bgToggle) {
-      if (background.style.display !== 'none') {
-        background.style.display = 'none';
+      if (background.style.display !== "none") {
+        background.style.display = "none";
       } else {
-        background.style.display = 'initial';
-        background.style.animation = 'glitch-transition 0.5s';
+        background.style.display = "initial";
+        background.style.animation = "glitch-transition 0.5s";
       }
     }
-    toPage.style.display = 'inherit';
-    toPage.style.animation = 'glitch-transition 0.5s';
+    toPage.style.display = "inherit";
+    toPage.style.animation = "glitch-transition 0.5s";
     setTimeout(() => {
-      toPage.style.animation = 'none';
-      fromPage.style.animation = 'none';
-      background.style.animation = 'none';
-    }, 500)
+      toPage.style.animation = "none";
+      fromPage.style.animation = "none";
+      background.style.animation = "none";
+    }, 500);
   }, 500);
-}
-
+};
 
 window.onload = () => {
   // setTime();
@@ -234,14 +245,21 @@ window.onload = () => {
     document.getElementById("loader").style.display = "none";
   }, 5400);
   fetch("https://bits-apogee.org/registrations/events/Registration")
-  .then(data => {
-    return data.json();
-  })
-  .then(response => {
-    console.log(response);
-    ALL_EVENTS = [...response.events];
-    ALL_EVENTS.map(event => {
-      mapEvents(event.name, (event.about.substring(event.about.indexOf('DESCRIPTION') + 11, 150) || event.about) + '...', event.id)
+    .then((data) => {
+      return data.json();
     })
-  }, console.error);
+    .then((response) => {
+      console.log(response);
+      ALL_EVENTS = [...response.events];
+      ALL_EVENTS.map((event) => {
+        mapEvents(
+          event.name,
+          (event.about.substring(
+            event.about.indexOf("DESCRIPTION") + 11,
+            150
+          ) || event.about) + "...",
+          event.id
+        );
+      });
+    }, console.error);
 };
