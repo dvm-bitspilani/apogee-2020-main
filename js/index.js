@@ -1,4 +1,4 @@
-const EVENT_DATE = new Date("March 27, 2020 23:59:59").getTime();
+const EVENT_DATE = new Date("March 20, 2021 23:59:59").getTime();
 
 const setTime = () => {
   const timeNow = new Date().getTime();
@@ -240,7 +240,7 @@ const togglePage = (from, to, bgToggle) => {
 };
 
 window.onload = () => {
-  // setTime();
+  setTime();
   setTimeout(() => {
     document.getElementById("loader").style.display = "none";
   }, 5400);

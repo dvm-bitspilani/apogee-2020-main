@@ -130,6 +130,16 @@
   color: #151515;
 }
 
+.theme-text {
+  background-color: transparent;
+  font-family: "Bebas Neue";
+  font-size: 53px;
+  color: #430732;
+  letter-spacing: 26.5px;
+  text-align: center;
+  margin-top: 10vh;
+}
+
 .home .navbar .nav-link-container .nav-links > span > a:hover:before {
   visibility: visible;
   -webkit-transform: scaleX(1);
@@ -500,6 +510,10 @@ footer .icon.twitter {
 
   .home {
     height: 100vh;
+  }
+
+  .theme-text {
+    display: none;
   }
 
   .home .navbar {

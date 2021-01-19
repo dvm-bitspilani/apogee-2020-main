@@ -66,7 +66,7 @@
 }
 
 .backgrounds .landing-background {
-    background: url('../assets/backgrounds/Group\ 117.png');
+    background: url('../assets/backgrounds/BG@2x.png');
     background-size: cover;
     background-position: 50% 30%;
     background-repeat: no-repeat;
@@ -78,12 +78,13 @@
 }
 
 .backgrounds .landing-background .background-ele {
-    width: 80%;
+    width: 50%;
     position: absolute;
-    top: 37.5%;
-    left: 10%;
+    top: 10%;
+    left: 25%;
     z-index: 1;
-    transform: translateY(-50%);
+    /* transform: translateY(-50%); */
+    animation: float 12s ease-in-out infinite;
 }
 
 .backgrounds .landing-background .background-ele2 {
@@ -244,9 +245,9 @@
     }
 
     .backgrounds .landing-background .background-ele {
-        width: 200%;
-        left: -52%;
-        top: 50%;
+        width: 100%;
+        left: 0%;
+        top: 47.5%;
     }
 
     .backgrounds .landing-background .background-ele2 {
@@ -420,5 +421,17 @@
     95% {
         -webkit-clip-path: polygon(0 72%, 100% 72%, 100% 78%, 0 78%);
         clip-path: polygon(0 72%, 100% 72%, 100% 78%, 0 78%);
+    }
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-30px);
+    }
+    100% {
+        transform: translateY(0);
     }
 }
