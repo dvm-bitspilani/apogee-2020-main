@@ -84,7 +84,7 @@
     left: 25%;
     z-index: 1;
     /* transform: translateY(-50%); */
-    animation: float 12s ease-in-out infinite;
+    animation: float 6s ease-in-out infinite;
 }
 
 .backgrounds .landing-background .background-ele2 {

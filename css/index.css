@@ -34,7 +34,7 @@
 }
 
 .home .navbar {
-  margin-top: 5vh;
+  margin-top: 2vh;
   height: 15.5vh;
   width: 100%;
   padding: 0 5%;
@@ -177,7 +177,7 @@
 }
 
 .hamburger-icon {
-  margin-top: 5vh;
+  margin-top: 2vh;
   position: absolute;
   z-index: 95;
   right: 5%;
