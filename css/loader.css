@@ -347,19 +347,19 @@
 @keyframes animated-text {
     0%, 20%, 55%, 90%, 100% { width: 0; }
     30%, 45% { width: 130px; }
-    65%, 80% { width: 270px; }
+    65%, 80% { width: 300px; }
 } 
 @keyframes animated-text-phone {
     0%, 20%, 55%, 90%, 100% { width: 0; }
     30%, 45% { width: 95px; }
-    65%, 80% { width: 187.5px; }
+    65%, 80% { width: 208.5px; }
 }
   
 /* change text */
   
 @keyframes change-text {
-    0%, 50%, 100% { content: "APOGEE'20"; }
-    60%, 80% { content: "The Glitch Repository"; }
+    0%, 50%, 100% { content: "APOGEE'21"; }
+    60%, 80% { content: "The Digitized Renaissance"; }
 }
   
 /* cursor animations */
