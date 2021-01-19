@@ -240,15 +240,20 @@ const togglePage = (from, to, bgToggle) => {
 };
 
 window.onload = () => {
-  setTime();
+  console.log("hey1")
   setTimeout(() => {
     document.getElementById("loader").style.display = "none";
+    console.log("hey2")
+    setTime();
   }, 5400);
+  console.log("hey3")
   fetch("https://bits-apogee.org/registrations/events/Registration")
     .then((data) => {
+      console.log("hey4")
       return data.json();
     })
     .then((response) => {
+      console.log("hey5")
       console.log(response);
       ALL_EVENTS = [...response.events];
       ALL_EVENTS.map((event) => {
