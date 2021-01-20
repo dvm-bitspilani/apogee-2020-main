@@ -80,7 +80,7 @@
 .backgrounds .landing-background .background-ele {
     width: 50%;
     position: absolute;
-    top: 12.5%;
+    top: 10%;
     left: 25%;
     z-index: 1;
     /* transform: translateY(-50%); */
