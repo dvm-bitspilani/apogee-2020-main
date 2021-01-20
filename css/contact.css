@@ -7,9 +7,9 @@
 .contact .heading {
     width: 100%;
     color: #fafafa;
-    font-size: 3.5rem;
-    letter-spacing: 1rem;
-    font-family: 'Space Mono Bold', serif;
+    font-size: 5rem;
+    letter-spacing: 0.5rem;
+    font-family: 'Teko Medium', serif;
 }
 
 .contact .heading span {

@@ -12,9 +12,9 @@
 .aboutUs .heading {
     width: 100%;
     color: #fafafa;
-    font-size: 3.5rem;
-    letter-spacing: 1rem;
-    font-family: 'Space Mono Bold', serif;
+    font-size: 5rem;
+    letter-spacing: 0.5rem;
+    font-family: 'Teko Medium', serif;
 }
 
 .aboutUs .heading span {
@@ -22,9 +22,9 @@
 }
 
 .aboutUs .body {
-  width: 80%;
+  width: 100%;
   padding-top: 100px;
-  padding-left: 32.5%;
+  padding-left: 22.5%;
   padding-right: 40px;
   padding-bottom: 28px;
   box-sizing: border-box;
@@ -37,7 +37,7 @@
 .aboutUs .body .ele-1 {
   position: absolute;
   top: 70px;
-  left: calc(40% - 50px);
+  left: calc(30% - 100px);
   width: 100px;
   height: 100px;
   border: none;
@@ -67,6 +67,11 @@
   opacity: 0.2;
 }
 
+@font-face {
+  font-family: 'Teko Medium';
+  src: url(../assets/fonts/teko/Teko-Medium.ttf);
+}
+
 @media (max-width: 600px) {
   .aboutUs {
     padding: 64px 5%;
@@ -82,6 +87,7 @@
   }
   
   .aboutUs .body {
+    width: 80%;
     padding: 40px 5%;
     padding-bottom: 20px;
     font: 0.9rem 'Space Mono';
