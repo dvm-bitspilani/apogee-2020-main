@@ -108,11 +108,13 @@ const aboutUs = document.querySelector("#aboutUs > .heading > span");
 const events = document.querySelector("#events > .heading > span");
 const contact = document.querySelector("#contact > .heading > span");
 const videos = document.querySelector("#videos > .heading > span");
+const speakers = document.querySelector("#speakers > .heading > span");
 
 let isAboutUsAnimated = false;
 let isEventsAnimated = false;
 let isContactAnimated = false;
 let isVideoAnimated = false;
+let isSpeakersAnimated = false;
 
 const isInViewport = function (elem) {
   const bounding = elem.getBoundingClientRect();
@@ -157,12 +159,20 @@ window.addEventListener(
       isVideoAnimated = true;
       next();
     }
+    if (isInViewport(speakers) && !isSpeakersAnimated) {
+      phrases = ["Speakers"];
+      el = speakers;
+      fx = new TextScramble(el);
+      isSpeakersAnimated = true;
+      next();
+    }
+    
   },
   false
 );
 
 const navigateTo = (id) => {
-  console.log(document.getElementById("allEvents").style.display)
+  console.log(document.getElementById("allEvents").style.display);
   if (
     document.getElementById("allEvents").style.display &&
     document.getElementById("allEvents").style.display !== "none"
@@ -240,20 +250,20 @@ const togglePage = (from, to, bgToggle) => {
 };
 
 window.onload = () => {
-  console.log("hey1")
+  console.log("hey1");
   setTimeout(() => {
     document.getElementById("loader").style.display = "none";
-    console.log("hey2")
+    console.log("hey2");
     setTime();
   }, 5400);
-  console.log("hey3")
+  console.log("hey3");
   fetch("https://bits-apogee.org/registrations/events/Registration")
     .then((data) => {
-      console.log("hey4")
+      console.log("hey4");
       return data.json();
     })
     .then((response) => {
-      console.log("hey5")
+      console.log("hey5");
       console.log(response);
       ALL_EVENTS = [...response.events];
       ALL_EVENTS.map((event) => {
