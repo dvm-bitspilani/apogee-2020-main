@@ -46,33 +46,37 @@
     text-align: center;
 }
 
+.name {
+    font-size: .9vw;
+    margin-top: 0.5vh !important;
+    font-weight: bolder;
+}
 
 @media (max-width: 600px) {
     .contact {
         padding: 64px 3%;
         padding-bottom: 24px;
     }
-    
     .contact .heading {
         font-size: 2.2rem;
         letter-spacing: 0.5rem;
     }
-    
     .contact .heading span {
         padding: 0 0.75rem;
         white-space: nowrap;
     }
-    
     .contact .contact-body {
         width: 100%;
         padding: 40px 0;
         padding-bottom: 0;
         justify-content: space-evenly;
     }
-    
     .contact .contact-body .card {
         width: 45%;
         font-size: 0.7rem;
         margin: 16px 0;
+    }
+    .name {
+        font-size: 1.4em;
     }
 }
