@@ -19,9 +19,25 @@
   border-left: 0.6rem solid #fafafa;
 }
 
+.speakers .subheading {
+  width: 100%;
+  color: #fafafa;
+  font-size: 2.5rem;
+  letter-spacing: 0.5rem;
+  font-family: "Teko Medium", serif;
+  margin-left: 3rem;
+  margin-top: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.speakers .subheading span {
+  padding-left: 1rem;
+  border-left: 0.6rem solid #fafafa;
+}
+
 .speakers .speakers-body {
   width: 80%;
-  padding-top: 128px;
+  padding-top: 5vh;
   /* padding-left: 7%; */
   box-sizing: border-box;
   display: flex;
@@ -34,9 +50,14 @@
   letter-spacing: 0.2rem;
 }
 
+.speakers .speakers-body:nth-of-type(3) {
+  padding-top: 20vh;
+}
+
 .speakers .speakers-body .carousel {
   width: 100%;
   border: 1px white;
+  margin-left: 3rem;
   /* display:flex; */
   /* padding: 0 8%; */
 }
@@ -124,7 +145,7 @@
   bottom: -7.2vw !important;
 }
 
-@media(min-width:601px) {
+@media (min-width: 601px) {
   .flickity-prev-next-button.next {
     left: 40vw !important;
   }
@@ -150,6 +171,10 @@
     letter-spacing: 0.5rem;
     text-align: center;
   }
+  .speakers .subheading {
+    font-size: 1.5rem;
+    margin-left: 20%;
+  }
   .heading2 {
     margin-top: 9vh;
   }
@@ -160,6 +185,9 @@
     letter-spacing: 0.1rem;
     text-align: justify;
     width: 100%;
+  }
+  .speakers .speakers-body:nth-of-type(3) {
+    padding: 40px 5%;
   }
   .speakers .speakers-body .carousel {
     width: 90%;

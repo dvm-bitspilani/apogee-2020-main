@@ -246,6 +246,7 @@
         width: 100%;
         left: 0%;
         top: 47.5%;
+        animation: none;
     }
     .backgrounds .landing-background .background-ele2 {
         top: 75%;
