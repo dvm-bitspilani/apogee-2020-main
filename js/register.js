@@ -6,6 +6,20 @@ const SELECTED_EVENTS = [];
 const noEventMessage = document.getElementById('no-event-message');
 const selectedEventsContainer = document.getElementsByClassName('selected-events-container')[0];
 
+console.log(document.getElementById("events"));
+document.getElementById("events").addEventListener("keypress", function(e) {
+    console.log("yeah");
+    e.preventDefault();
+});
+
+document.getElementById("events").addEventListener("keyup", function(e) {
+    e.preventDefault();
+});
+
+document.getElementById("events").addEventListener("keydown", function(e) {
+    e.preventDefault();
+});
+
 const getCollegesList = () => {
     fetch(COLLEGE_URL).then(data => {
         return data.json();
@@ -28,7 +42,7 @@ const getEventsList = () => {
     }).then(response => {
         document.getElementsByTagName('datalist')[1].removeChild(document.getElementById('loadingEvent'));
         response.data.map(category => {
-            if (category.category_name === 'Registration')
+            // if (category.category_name === 'Movie (Test)')
                 category.events.map(event => {
                     const option = document.createElement("option");
                     option.value = event.name;
@@ -41,6 +55,7 @@ const getEventsList = () => {
 }
 
 const handleEventClick = (e) => {
+    console.log("cross trigerred");
     const input = e.target;
     const eventName = input.value;
     e.target.value = "";
@@ -63,6 +78,7 @@ const handleEventClick = (e) => {
             const that = options[i];
             removeButton.onclick = (e) => {
                 e.target.parentNode.remove();
+                console.log(e.target.parentNode);
                 for (let i = 0; i < SELECTED_EVENTS.length; i++) {
                     if (SELECTED_EVENTS[i] == that.id) {
                         SELECTED_EVENTS.splice(i, 1);
@@ -170,10 +186,13 @@ form.addEventListener("submit", function(event) {
         method: "POST"
     }
 
+    console.log(params);
+
     fetch(REGISTRATIONS_URL, params).then(data => {
         return data.json();
     }).then(response => {
         if (response.message) {
+            console.log(response);
             showMessage(response.message);
             return;
         }
