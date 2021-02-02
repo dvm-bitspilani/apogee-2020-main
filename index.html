@@ -33,10 +33,120 @@
     gtag("js", new Date());
     gtag("config", "UA-153506436-1");
   </script>
+  <style>
+    #pagination {
+      position: fixed;
+      left: 5vw;
+      top: calc(50vh - 125px);
+      min-height: 250px;
+      z-index: 200;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      font-family: 'Space Mono';
+    }
+
+    .line {
+      position: absolute;
+      left: 0;
+      height: 100%;
+      border-left: 1px solid #FAFAFA;
+      width: 0;
+      box-sizing: border-box;
+      background-color: #FAFAFA;
+      opacity: 0.3;
+    }
+
+    .individual:hover {
+      opacity: 1;
+      cursor: pointer;
+    }
+
+    .individual:hover .name {
+      opacity: 1;
+    }
+
+    .individual>*:hover .name {
+      opacity: 1;
+    }
+
+    .individual {
+      display: flex;
+      transition: 0.2s all ease;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: center;
+      width: 100%;
+      opacity: 0.6;
+    }
+
+    .rectangle {
+      display: block;
+      margin-left: -10px;
+      border: 1px solid #FAFAFA;
+      opacity: inherit;
+      padding: 4px;
+    }
+
+    .dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background-color: #FAFAFA;
+      opacity: inherit;
+    }
+
+    .name {
+      color: #FAFAFA;
+      opacity: 0;
+      transition: 0.2s all ease;
+      margin-left: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 0 !important;
+    }
+  </style>
   <title>APOGEE'21 | The Digitized Renaissance</title>
 </head>
 
 <body>
+  <div id="pagination">
+    <div class="line"></div>
+      <div class="individual" onclick="navigateTo('home')">
+        <div class="rectangle">
+          <div class="dot"></div>
+        </div>
+        <div class="name">Home</div>
+      </div>
+    <div class="individual" onclick="navigateTo('aboutUs')">
+      <div class="rectangle">
+        <div class="dot"></div>
+      </div>
+      <div class="name">About Us</div>
+    </div>
+    <div class="individual" onclick="navigateTo('videos')">
+      <div class="rectangle">
+        <div class="dot"></div>
+      </div>
+      <div class="name">Videos</div>
+    </div>
+    <div class="individual" onclick="navigateTo('speakers')">
+      <div class="rectangle">
+        <div class="dot"></div>
+      </div>
+      <div class="name">Speakers</div>
+    </div>
+    <div class="individual" onclick="navigateTo('contact')">
+      <div class="rectangle">
+        <div class="dot"></div>
+      </div>
+      <div class="name">Contact Us</div>
+    </div>
+
+  </div>
+
   <!-- <section class="notif">
       <marquee scrollamount='12'>Due to the unfortunate spread of COVID-19 in various parts of the country, APOGEE'20 is postponed until further notice.</marquee>
     </section> -->
