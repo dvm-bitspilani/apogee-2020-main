@@ -504,8 +504,8 @@ footer .icon.twitter {
 #pagination {
   position: fixed;
   left: 5vw;
-  top: calc(50vh - 125px);
-  min-height: 250px;
+  top: 30vh;
+  min-height: 40vh;
   z-index: 200;
   display: flex;
   flex-direction: column;
@@ -554,6 +554,7 @@ footer .icon.twitter {
   border: 1px solid #FAFAFA;
   opacity: inherit;
   padding: 4px;
+  border-radius: 50%;;
 }
 
 .dot {
