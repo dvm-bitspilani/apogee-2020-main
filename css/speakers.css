@@ -52,7 +52,7 @@
 
 .speakers .speakers-body:nth-of-type(3) {
   /* padding-top: 20vh; */
-  display: none
+  display: none /* when removing this line, search "line to be removed" in contact.css, and remove it */
 }
 
 .speakers .speakers-body .carousel {

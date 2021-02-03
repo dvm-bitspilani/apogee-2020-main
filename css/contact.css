@@ -56,10 +56,16 @@
     opacity: 1;
 }
 
+.contact-body a {
+    text-decoration: none;
+    color: white;
+}
+
 @media (max-width: 600px) {
     .contact {
         padding: 64px 3%;
         padding-bottom: 24px;
+        margin-top: -77vh; /* line to be removed */
     }
     .contact .heading {
         font-size: 2.2rem;
