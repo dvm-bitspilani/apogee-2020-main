@@ -3,7 +3,7 @@
   padding: 128px 15%;
   box-sizing: border-box;
   position: relative;
-  display: flex;
+  display: none;
   flex-direction: column;
   justify-content: center;
   align-items: center;
