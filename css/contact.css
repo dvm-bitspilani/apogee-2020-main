@@ -37,7 +37,7 @@
 }
 
 .contact .contact-body .card img {
-    width: 60%;
+    width: 50%;
     border-radius: 50%;
 }
 
@@ -50,6 +50,10 @@
     font-size: .9vw;
     margin-top: 0.5vh !important;
     font-weight: bolder;
+}
+
+.contact-name {
+    opacity: 1;
 }
 
 @media (max-width: 600px) {

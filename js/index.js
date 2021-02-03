@@ -166,7 +166,6 @@ window.addEventListener(
       isSpeakersAnimated = true;
       next();
     }
-    
   },
   false
 );
@@ -278,3 +277,13 @@ window.onload = () => {
       });
     }, console.error);
 };
+
+const sections = [...document.getElementsByTagName("section")];
+sections.filter((item) => {
+  switch(item.id) {
+    case "loader":
+      
+  }
+});
+
+console.log(sections);
