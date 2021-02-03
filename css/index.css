@@ -538,6 +538,12 @@ footer .icon.twitter {
   opacity: 1;
 }
 
+/* will add these class with js */
+/* .opacity1Class .name{
+  opacity: 1;
+} */
+
+
 .individual {
   display: flex;
   transition: 0.2s all ease;
@@ -574,6 +580,10 @@ footer .icon.twitter {
   justify-content: center;
   align-items: center;
   margin-top: 0 !important;
+}
+
+.opacity1Class{
+  opacity: 1;
 }
 
 @media all and (max-width: 600px) {

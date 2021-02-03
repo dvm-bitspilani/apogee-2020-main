@@ -100,7 +100,7 @@ let fx;
 
 let counter = 0;
 const next = () => {
-  fx.setText(phrases[counter]).then(() => {});
+  fx.setText(phrases[counter]).then(() => { });
   counter = (counter + 1) % phrases.length;
 };
 
@@ -109,6 +109,7 @@ const events = document.querySelector("#events > .heading > span");
 const contact = document.querySelector("#contact > .heading > span");
 const videos = document.querySelector("#videos > .heading > span");
 const speakers = document.querySelector("#speakers > .heading > span");
+const home = document.querySelector("#home .register-button");
 
 let isAboutUsAnimated = false;
 let isEventsAnimated = false;
@@ -116,55 +117,149 @@ let isContactAnimated = false;
 let isVideoAnimated = false;
 let isSpeakersAnimated = false;
 
+let activePage = "home";
+
 const isInViewport = function (elem) {
   const bounding = elem.getBoundingClientRect();
   return (
     bounding.top >= 0 &&
     bounding.left >= 0 &&
     bounding.bottom <=
-      (window.innerHeight || document.documentElement.clientHeight) &&
+    (window.innerHeight || document.documentElement.clientHeight) &&
     bounding.right <=
-      (window.innerWidth || document.documentElement.clientWidth)
+    (window.innerWidth || document.documentElement.clientWidth)
   );
 };
+
+const setActivePage = (idAsString) => {
+  activePage = idAsString;
+  str = activePage + "Pagination"
+  document.querySelectorAll(".individual").forEach(ele => {
+    if (ele.id == str) {
+      ele.classList.add("opacity1Class");
+    }
+    else{
+      ele.classList.remove("opacity1Class");
+    }
+  })
+  // console.log(activePage);
+}
 
 window.addEventListener(
   "wheel",
   function (e) {
-    if (isInViewport(aboutUs) && !isAboutUsAnimated) {
-      phrases = ["About Us"];
-      el = aboutUs;
-      fx = new TextScramble(el);
-      isAboutUsAnimated = true;
-      next();
+    if (isInViewport(aboutUs)) {
+      setActivePage("aboutUs");
+      if (!isAboutUsAnimated) {
+        phrases = ["About Us"];
+        el = aboutUs;
+        fx = new TextScramble(el);
+        isAboutUsAnimated = true;
+        next();
+      }
     }
-    if (isInViewport(events) && !isEventsAnimated) {
-      phrases = ["Events"];
-      el = events;
-      fx = new TextScramble(el);
-      isEventsAnimated = true;
-      next();
+    else if (isInViewport(contact)) {
+      setActivePage("contact");
+      if (!isContactAnimated) {
+        phrases = ["Contact Us"];
+        el = contact;
+        fx = new TextScramble(el);
+        isContactAnimated = true;
+        next();
+      }
     }
-    if (isInViewport(contact) && !isContactAnimated) {
-      phrases = ["Contact Us"];
-      el = contact;
-      fx = new TextScramble(el);
-      isContactAnimated = true;
-      next();
+    else if (isInViewport(videos)) {
+      setActivePage("videos");
+      if (!isVideoAnimated) {
+        phrases = ["Videos"];
+        el = videos;
+        fx = new TextScramble(el);
+        isVideoAnimated = true;
+        next();
+      }
     }
-    if (isInViewport(videos) && !isVideoAnimated) {
-      phrases = ["Videos"];
-      el = videos;
-      fx = new TextScramble(el);
-      isVideoAnimated = true;
-      next();
+    else if (isInViewport(speakers)) {
+      setActivePage("speakers");
+      if (!isSpeakersAnimated) {
+        phrases = ["Speakers"];
+        el = speakers;
+        fx = new TextScramble(el);
+        isSpeakersAnimated = true;
+        next();
+      }
     }
-    if (isInViewport(speakers) && !isSpeakersAnimated) {
-      phrases = ["Speakers"];
-      el = speakers;
-      fx = new TextScramble(el);
-      isSpeakersAnimated = true;
-      next();
+    else if (isInViewport(home)) {
+      setActivePage("home");
+    }
+    else if (isInViewport(events)) {
+      setActivePage("events");
+      if (!isEventsAnimated) {
+        phrases = ["Events"];
+        el = events;
+        fx = new TextScramble(el);
+        isEventsAnimated = true;
+        next();
+      }
+    }
+  },
+  false
+);
+
+window.addEventListener(
+  "scroll",
+  function (e) {
+    if (isInViewport(aboutUs)) {
+      setActivePage("aboutUs");
+      if (!isAboutUsAnimated) {
+        phrases = ["About Us"];
+        el = aboutUs;
+        fx = new TextScramble(el);
+        isAboutUsAnimated = true;
+        next();
+      }
+    }
+    else if (isInViewport(contact)) {
+      setActivePage("contact");
+      if (!isContactAnimated) {
+        phrases = ["Contact Us"];
+        el = contact;
+        fx = new TextScramble(el);
+        isContactAnimated = true;
+        next();
+      }
+    }
+    else if (isInViewport(videos)) {
+      setActivePage("videos");
+      if (!isVideoAnimated) {
+        phrases = ["Videos"];
+        el = videos;
+        fx = new TextScramble(el);
+        isVideoAnimated = true;
+        next();
+      }
+    }
+    else if (isInViewport(speakers)) {
+      setActivePage("speakers");
+      if (!isSpeakersAnimated) {
+        phrases = ["Speakers"];
+        el = speakers;
+        fx = new TextScramble(el);
+        isSpeakersAnimated = true;
+        next();
+      }
+    }
+    else if (isInViewport(home)) {
+      setActivePage("home");
+    }
+    else if (isInViewport(events)) {
+      setActivePage("events");
+      if (!isEventsAnimated) {
+        phrases = ["Events"];
+        el = events;
+        fx = new TextScramble(el);
+        isEventsAnimated = true;
+        next();
+      }
     }
   },
   false
@@ -193,27 +288,63 @@ const navigateTo = (id) => {
   if (menu.style.display == "flex") {
     toggleHamMenu();
   }
-  if (id == "aboutUs" && !isAboutUsAnimated) {
-    phrases = ["About Us"];
-    el = aboutUs;
-    fx = new TextScramble(el);
-    isAboutUsAnimated = true;
-    next();
+
+
+  if (id == "aboutUs") {
+    setActivePage("aboutUs");
+    if (!isAboutUsAnimated) {
+      phrases = ["About Us"];
+      el = aboutUs;
+      fx = new TextScramble(el);
+      isAboutUsAnimated = true;
+      next();
+    }
   }
-  if (id == "events" && !isEventsAnimated) {
-    phrases = ["Events"];
-    el = events;
-    fx = new TextScramble(el);
-    isEventsAnimated = true;
-    next();
+  else if (id == "contact") {
+    setActivePage("contact");
+    if (!isContactAnimated) {
+      phrases = ["Contact Us"];
+      el = contact;
+      fx = new TextScramble(el);
+      isContactAnimated = true;
+      next();
+    }
   }
-  if (id == "contact" && !isContactAnimated) {
-    phrases = ["Contact Us"];
-    el = contact;
-    fx = new TextScramble(el);
-    isContactAnimated = true;
-    next();
+  else if (id == "videos") {
+    setActivePage("videos");
+    if (!isVideoAnimated) {
+      phrases = ["Videos"];
+      el = videos;
+      fx = new TextScramble(el);
+      isVideoAnimated = true;
+      next();
+    }
   }
+  else if (id == "speakers") {
+    setActivePage("speakers");
+    if (!isSpeakersAnimated) {
+      phrases = ["Speakers"];
+      el = speakers;
+      fx = new TextScramble(el);
+      isSpeakersAnimated = true;
+      next();
+    }
+  }
+  else if (id == "home") {
+    setActivePage("home");
+  }
+  else if (id = "events") {
+    setActivePage("events");
+    if (!isEventsAnimated) {
+      phrases = ["Events"];
+      el = events;
+      fx = new TextScramble(el);
+      isEventsAnimated = true;
+      next();
+    }
+  }
+
+
 };
 
 const togglePage = (from, to, bgToggle) => {
