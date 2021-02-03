@@ -9,6 +9,16 @@
   align-items: center;
 }
 
+.events-dialogue-box{
+  position: absolute;
+  background-color: white;
+  padding: 50px 50px;
+  width: 40vw;
+  visibility: hidden;
+  font-family: "Space Mono", serif;
+  z-index: 100;
+}
+
 .events .heading {
   width: 100%;
   color: #fafafa;
@@ -210,9 +220,40 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: flex-start;
+  align-items: stretch;
   font-size: 0.8rem;
 }
+
+.events-details-button-container{
+  /* background: red; */
+  border: 1px solid white;
+  height: 20%;
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.events-details-button{
+  width:90%;
+  height: 70%;
+  background: white;
+  opacity: 0.5;
+  color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: 0.1s;
+}
+
+.events-details-button:hover{
+  opacity: 1;
+  width: 100%;
+  height: 100%;
+}
+
+
 
 .events .body .card .events-content span .view-detail-button {
   width: 100%;
