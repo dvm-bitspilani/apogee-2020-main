@@ -14,7 +14,7 @@
   background-color: white;
   padding: 50px 50px;
   width: 40vw;
-  visibility: visible;
+  visibility: hidden;
   font-family: "Space Mono", serif;
   z-index: 100;
 }
