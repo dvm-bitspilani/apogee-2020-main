@@ -71,6 +71,11 @@
 
 .speakers .speakers-body .carousel .name {
   font-size: 1.1vw;
+  margin-left: -11vw;
+}
+
+.speakers .speakers-body .carousel .speakers-name {
+  opacity: 1;
 }
 
 .speakers .speakers-body .carousel .image {
