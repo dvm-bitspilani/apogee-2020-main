@@ -205,6 +205,66 @@ window.addEventListener(
   false
 );
 
+window.addEventListener(
+  "scroll",
+  function (e) {
+    if (isInViewport(aboutUs)) {
+      setActivePage("aboutUs");
+      if (!isAboutUsAnimated) {
+        phrases = ["About Us"];
+        el = aboutUs;
+        fx = new TextScramble(el);
+        isAboutUsAnimated = true;
+        next();
+      }
+    }
+    else if (isInViewport(contact)) {
+      setActivePage("contact");
+      if (!isContactAnimated) {
+        phrases = ["Contact Us"];
+        el = contact;
+        fx = new TextScramble(el);
+        isContactAnimated = true;
+        next();
+      }
+    }
+    else if (isInViewport(videos)) {
+      setActivePage("videos");
+      if (!isVideoAnimated) {
+        phrases = ["Videos"];
+        el = videos;
+        fx = new TextScramble(el);
+        isVideoAnimated = true;
+        next();
+      }
+    }
+    else if (isInViewport(speakers)) {
+      setActivePage("speakers");
+      if (!isSpeakersAnimated) {
+        phrases = ["Speakers"];
+        el = speakers;
+        fx = new TextScramble(el);
+        isSpeakersAnimated = true;
+        next();
+      }
+    }
+    else if (isInViewport(home)) {
+      setActivePage("home");
+    }
+    else if (isInViewport(events)) {
+      setActivePage("events");
+      if (!isEventsAnimated) {
+        phrases = ["Events"];
+        el = events;
+        fx = new TextScramble(el);
+        isEventsAnimated = true;
+        next();
+      }
+    }
+  },
+  false
+);
+
 const navigateTo = (id) => {
   console.log(document.getElementById("allEvents").style.display);
   if (
