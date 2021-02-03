@@ -21,18 +21,18 @@
 
 .speakers .subheading {
   width: 100%;
-  color: #fafafa;
-  font-size: 2.5rem;
+  color: #b3b3b3;
+  font-size: 1.7rem;
   letter-spacing: 0.5rem;
-  font-family: "Teko Medium", serif;
-  margin-left: 3rem;
+  font-family: "Teko Regular", serif;
+  /* margin-left: 3rem; */
   margin-top: 2rem;
   margin-bottom: 1.5rem;
 }
 
 .speakers .subheading span {
   padding-left: 1rem;
-  border-left: 0.6rem solid #fafafa;
+  /* border-left: 0.6rem solid #fafafa; */
 }
 
 .speakers .speakers-body {
@@ -51,7 +51,8 @@
 }
 
 .speakers .speakers-body:nth-of-type(3) {
-  padding-top: 20vh;
+  /* padding-top: 20vh; */
+  display: none /* when removing this line, search "line to be removed" in contact.css, and remove it */
 }
 
 .speakers .speakers-body .carousel {
@@ -70,6 +71,11 @@
 
 .speakers .speakers-body .carousel .name {
   font-size: 1.1vw;
+  margin-left: -11vw;
+}
+
+.speakers .speakers-body .carousel .speakers-name {
+  opacity: 1;
 }
 
 .speakers .speakers-body .carousel .image {
@@ -172,8 +178,10 @@
     text-align: center;
   }
   .speakers .subheading {
-    font-size: 1.5rem;
-    margin-left: 20%;
+    font-size: 1.4rem;
+    /* margin-left: 15%;
+    width: 100%; */
+    text-align: center;
   }
   .heading2 {
     margin-top: 9vh;
@@ -187,7 +195,7 @@
     width: 100%;
   }
   .speakers .speakers-body:nth-of-type(3) {
-    padding: 40px 5%;
+    /* padding: 40px 5%; */
   }
   .speakers .speakers-body .carousel {
     width: 90%;

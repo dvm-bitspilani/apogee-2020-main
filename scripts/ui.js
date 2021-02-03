@@ -1,14 +1,14 @@
 /* handle mouseover on side menu */
-let index = []
-let navtext = []
+let index = [];
+let navtext = [];
 
-document.querySelectorAll(".index").forEach(item => {
+document.querySelectorAll(".index").forEach((item) => {
   index.push(item);
-})
+});
 
-document.querySelectorAll(".left-nav-text").forEach(item => {
+document.querySelectorAll(".left-nav-text").forEach((item) => {
   navtext.push(item);
-})
+});
 
 for (let i = 0; i < index.length; i++) {
   index[i].onmouseover = () => {
@@ -17,7 +17,7 @@ for (let i = 0; i < index.length; i++) {
 
     navtext[i].style.opacity = "1";
     navtext[i].style.color = "#fff";
-  }
+  };
 
   navtext[i].onmouseover = () => {
     index[i].style.opacity = "1";
@@ -25,7 +25,7 @@ for (let i = 0; i < index.length; i++) {
 
     navtext[i].style.opacity = "1";
     navtext[i].style.color = "#fff";
-  }
+  };
 
   index[i].onmouseout = () => {
     index[i].style.opacity = "0.6";
@@ -33,7 +33,7 @@ for (let i = 0; i < index.length; i++) {
 
     navtext[i].style.opacity = "0.6";
     navtext[i].style.color = "rgb(223, 223, 223)";
-  }
+  };
 
   navtext[i].onmouseout = () => {
     index[i].style.opacity = "0.6";
@@ -41,7 +41,7 @@ for (let i = 0; i < index.length; i++) {
 
     navtext[i].style.opacity = "0.6";
     navtext[i].style.color = "rgb(223, 223, 223)";
-  }
+  };
 }
 
 // navtext.forEach((item) => {
@@ -55,73 +55,72 @@ for (let i = 0; i < index.length; i++) {
 //   }
 // })
 
-
 /* Generate contacts and inject into HTML */
 const contactData = {
   dvm: {
-    name: "Manish Thakur",
+    name: "Devansh Agarwal",
     post: "Website and Payments",
-    phone: "+91-7989477976",
+    phone: "+91-9897940889",
     email: "webmaster@bits-apogee.org",
-    image: "assets/contact/manish.jpg"
+    image: "assets/icons/profile.png",
   },
   pcr: {
-    name: "Piyush Bhatt",
+    name: "Spandan Gupta",
     post: "Registrations and Correspondence",
-    phone: "+91-8445006699",
+    phone: "+91-9560955649",
     email: "pcr@bits-apogee.org",
-    image: "assets/contact/custom – 1-min.jpg"
+    image: "assets/icons/profile.png",
   },
   pep: {
-    name: "Yogyata Somani",
+    name: "Kishan Panpalia",
     post: "Guest Lectures and Paper Presentation",
-    phone: "+91-9413965731",
+    phone: "+91-8830002504",
     email: "pep@bits-apogee.org guestlectures@bits-apogee.org",
-    image: "assets/contact/yogyata.jpg"
+    image: "assets/icons/profile.png",
   },
   spons: {
-    name: "Eshan Bhaskar",
+    name: "Aakash Shankar",
     post: "Sponsorship and Marketing",
-    phone: "+91-8861828086",
+    phone: "+91-9900376968",
     email: "sponsorship@bits-apogee.org",
-    image: "assets/contact/eshan.jpg"
+    image: "assets/icons/profile.png",
   },
   adp: {
-    name: "Lakshay Nagpal",
+    name: "Vaibhav Bansal",
     post: "Publicity and Online Partnerships",
-    phone: "+91-9803223248",
+    phone: "+91-8805711081",
     email: "adp@bits-apogee.org",
-    image: "assets/contact/lakshay.jpg"
+    image: "assets/icons/profile.png",
   },
   recnacc: {
-    name: "Achintya Tewari",
+    name: "Sunidhi Garg",
     post: "Reception and Accomodation",
-    phone: "+91-9740650739",
+    phone: "+91-9319762194",
     email: "recnacc@bits-apogee.org",
-    image: "assets/contact/achintya.jpg"
+    image: "assets/icons/profile.png",
   },
   controls: {
-    name: "D. Krishna Swaroop",
+    name: "Darsh Shah",
     post: "Registration, Events and Projects",
-    phone: "+91-9652388604",
+    phone: "+91-9480150305",
     email: "controls@bits-apogee.org",
-    image: "assets/contact/krishna.jpg"
+    image: "assets/icons/profile.png",
   },
   pres: {
     name: "Rahul Bubna",
     post: "President, Student Union",
     phone: "+91-8952824766",
     email: "president@pilani.bits-pilani.ac.in",
-    image: "assets/contact/rahul.jpg"
+    image: "assets/icons/profile.png",
   },
   gensec: {
     name: "V Abhishek Balaji",
     post: "General Secretary, Student Union",
     phone: "+91-9566142660",
     email: "gensec@pilani.bits-pilani.ac.in",
-    image: "assets/contact/abhishek.jpg"
-  }
-}
+    image: "assets/icons/profile.png",
+  },
+};
 
 let contactBody = document.querySelector(".contact-body");
 for (let costaan in contactData) {
@@ -133,6 +132,7 @@ for (let costaan in contactData) {
 
   let name = document.createElement("div");
   name.classList.add("name");
+  name.classList.add("contact-name");
   name.innerHTML = contactData[costaan].name;
 
   let department = document.createElement("div");
@@ -141,11 +141,11 @@ for (let costaan in contactData) {
 
   let phone = document.createElement("div");
   phone.classList.add("phone");
-  phone.innerHTML = contactData[costaan].phone;
+  phone.innerHTML = `<a href="tel:${contactData[costaan].phone}">${contactData[costaan].phone}<a>`;
 
   let email = document.createElement("div");
   email.classList.add("email");
-  email.innerHTML = contactData[costaan].email;
+  email.innerHTML = `<a href="mailto:"${contactData[costaan].email}">${contactData[costaan].email}</a>`;
 
   card.appendChild(img);
   card.appendChild(name);

@@ -348,3 +348,44 @@ window.onload = () => {
       });
     }, console.error);
 };
+
+// const sections = [...document.getElementsByTagName("section")];
+// const newSections = sections.filter((item) => {
+//   switch (item.id) {
+//     case "loader":
+//       //console.log(item.id);
+//       break;
+//     case "":
+//       //console.log(item.id);
+//       break;
+//     case "events":
+//       //console.log(item.id);
+//       break;
+//     case "allEvents":
+//       //console.log(item.id);
+//       break;
+//     default:
+//       return item;
+//   }
+// });
+
+// const dots = document.getElementsByClassName("rectangle");
+
+// const activateDots = () => {
+  
+//   for (let [index, section] of newSections.entries()) {
+//     if (
+//       section.getBoundingClientRect().top <= document.documentElement.clientHeight/4 &&
+//       section.getBoundingClientRect().bottom >= document.documentElement.clientHeight/4
+//     ) {
+//       for (let dot of dots) dot.style.opacity = "0.6";
+//       dots[index].style.opacity = "1";
+//     }
+      
+//   }
+// };
+
+// window.addEventListener("scroll", (event) => {
+//   activateDots();
+//   //console.log(newSections[2].getBoundingClientRect().top, newSections[1].getBoundingClientRect().bottom)
+// });
