@@ -51,86 +51,169 @@ h1 {
       margin-top: -3rem;
     position: relative;
   }
-  span {
+   
+  
+  .let1 {
     position: relative;
     top: 0.63em;  
     display: inline-block;
     text-transform: uppercase;  
     opacity: 0;
     transform: rotateX(-90deg);
-  }
-  
-  .let1 {
     animation: drop 2.4s ease-in-out infinite;
     animation-delay: 1.2s;
   }
   
   .let2 {
+    position: relative;
+    top: 0.63em;  
+    display: inline-block;
+    text-transform: uppercase;  
+    opacity: 0;
+    transform: rotateX(-90deg);
     animation: drop 2.4s ease-in-out infinite;
     animation-delay: 1.3s;
   }
   
   .let3 {
+    position: relative;
+    top: 0.63em;  
+    display: inline-block;
+    text-transform: uppercase;  
+    opacity: 0;
+    transform: rotateX(-90deg);
     animation: drop 2.4s ease-in-out infinite;
     animation-delay: 1.4s;
   }
   
   .let4 {
+    position: relative;
+    top: 0.63em;  
+    display: inline-block;
+    text-transform: uppercase;  
+    opacity: 0;
+    transform: rotateX(-90deg);
     animation: drop 2.4s ease-in-out infinite;
     animation-delay: 1.5s;
   
   }
   
   .let5 {
+    position: relative;
+    top: 0.63em;  
+    display: inline-block;
+    text-transform: uppercase;  
+    opacity: 0;
+    transform: rotateX(-90deg);
     animation: drop 2.4s ease-in-out infinite;
     animation-delay: 1.6s;
   }
   
   .let6 {
+    position: relative;
+    top: 0.63em;  
+    display: inline-block;
+    text-transform: uppercase;  
+    opacity: 0;
+    transform: rotateX(-90deg);
     animation: drop 2.4s ease-in-out infinite;
     animation-delay: 1.7s;
   }
   
   .let7 {
+    position: relative;
+    top: 0.63em;  
+    display: inline-block;
+    text-transform: uppercase;  
+    opacity: 0;
+    transform: rotateX(-90deg);
     animation: drop 2.4s ease-in-out infinite;
     animation-delay: 1.8s;
   }
   .let8 {
+    position: relative;
+    top: 0.63em;  
+    display: inline-block;
+    text-transform: uppercase;  
+    opacity: 0;
+    transform: rotateX(-90deg);
     animation: drop 2.4s ease-in-out infinite;
     animation-delay: 2.4s;
   }
   
   .let9 {
+    position: relative;
+    top: 0.63em;  
+    display: inline-block;
+    text-transform: uppercase;  
+    opacity: 0;
+    transform: rotateX(-90deg);
     animation: drop 2.4s ease-in-out infinite;
     animation-delay: 2.5s;
   }
   
   .let10 {
+    position: relative;
+    top: 0.63em;  
+    display: inline-block;
+    text-transform: uppercase;  
+    opacity: 0;
+    transform: rotateX(-90deg);
     animation: drop 2.4s ease-in-out infinite;
     animation-delay: 2.6s;
   }
   
   .let11 {
+    position: relative;
+    top: 0.63em;  
+    display: inline-block;
+    text-transform: uppercase;  
+    opacity: 0;
+    transform: rotateX(-90deg);
     animation: drop 2.4s ease-in-out infinite;
     animation-delay: 2.7s;
   
   }
   
   .let12 {
+    position: relative;
+    top: 0.63em;  
+    display: inline-block;
+    text-transform: uppercase;  
+    opacity: 0;
+    transform: rotateX(-90deg);
     animation: drop 2.4s ease-in-out infinite;
     animation-delay: 2.8s;
   }
   
   .let13 {
+    position: relative;
+    top: 0.63em;  
+    display: inline-block;
+    text-transform: uppercase;  
+    opacity: 0;
+    transform: rotateX(-90deg);
     animation: drop 2.4s ease-in-out infinite;
     animation-delay: 2.9s;
   }
   
   .let14 {
+    position: relative;
+    top: 0.63em;  
+    display: inline-block;
+    text-transform: uppercase;  
+    opacity: 0;
+    transform: rotateX(-90deg);
     animation: drop 2.4s ease-in-out infinite;
     animation-delay: 3.0s;
   }
   .let15 {
+    position: relative;
+    top: 0.63em;  
+    display: inline-block;
+    text-transform: uppercase;  
+    opacity: 0;
+    transform: rotateX(-90deg);
     animation: drop 2.4s ease-in-out infinite;
     animation-delay: 3.1s;
   }
@@ -142,14 +225,7 @@ h1 {
     height: 100%;
   }
   
-  /* body {
-    background: radial-gradient(#222922, #000500);
-    font-family: 'Source Code Pro', monospace;
-    font-weight: 400;
-    overflow: hidden;
-    padding: 30px 0 0 30px;
-    text-align: center;
-  } */
+ 
   
   .word {
     font-family: "Bebas Neue";
@@ -180,7 +256,7 @@ h1 {
   }
   
   .overlay {
-    background-image: linear-gradient(transparent 0%, rgba(10, 16, 10, 0.5) 50%);
+    /* background-image: linear-gradient(transparent 0%, rgba(10, 16, 10, 0.5) 50%); */
     background-size: 1000px 2px;
     bottom: 0;
     content: '';
@@ -202,7 +278,7 @@ h1 {
     justify-content: center; */
 }
   
-.logo {
+/* .logo {
     width: 250px;
     height: 250px;
     display: flex;
@@ -360,7 +436,7 @@ h1 {
 }
   
   
-  
+   */
 /* .deconstructed {
     position: relative;
     margin-top: 40px;
