@@ -1,7 +1,7 @@
 #loader {
     width: 100vw;
     height: 100vh;
-    overflow: hidden;
+    /* overflow: hidden; */
     position: fixed;
     top: 0;
     left: 0;
@@ -144,7 +144,7 @@ h1 {
     background: radial-gradient(#222922, #000500);
     font-family: 'Source Code Pro', monospace;
     font-weight: 400;
-    overflow: hidden;
+    /* overflow: hidden; */
     padding: 30px 0 0 30px;
     text-align: center;
   }
