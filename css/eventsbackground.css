@@ -111,7 +111,7 @@ body{
     position: absolute;
     z-index: 3;
     top: 65%;
-    left: -100%;
+    left: -100vw;
     width: 300vw;
     height: 450vw;
     border-radius: 50%;
