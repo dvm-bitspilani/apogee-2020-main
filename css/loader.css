@@ -559,7 +559,7 @@ h1 {
     }
 } */
   
-  
+/*   
 .typewriter {
     width: 100%;
     display: flex;
@@ -588,9 +588,9 @@ h1 {
     right: -7px;
     width: 20px;
 }
-  
+   */
 /* Animation */
-#parent {
+/* #parent {
     animation: animated-text 7s steps(40,end) infinite normal both
 }
 
@@ -600,10 +600,10 @@ h1 {
   
 #border {
     animation: animated-cursor 800ms steps(40,end) infinite;
-}
+} */
   
 /* text animation */
-  
+/*   
 @keyframes animated-text {
     0%, 20%, 55%, 90%, 100% { width: 0; }
     30%, 45% { width: 130px; }
@@ -614,26 +614,26 @@ h1 {
     30%, 45% { width: 95px; }
     65%, 80% { width: 208.5px; }
 }
-  
+   */
 /* change text */
-  
+/*   
 @keyframes change-text {
     0%, 50%, 100% { content: "APOGEE'21"; }
     60%, 80% { content: "The Digitized Renaissance"; }
-}
+} */
   
 /* cursor animations */
-  
+/*   
 @keyframes animated-cursor {
     from { border-bottom-color: rgba(0,255,0,.75); }
     to { border-bottom-color: transparent; }
-}
+} */
 
 
 
 
 @media (max-width: 600px) {
-    .logo {
+    /* .logo {
         width: 150px;
         height: 150px;
     }
@@ -644,5 +644,21 @@ h1 {
 
     #parent {
         animation: animated-text-phone 7s steps(40,end) infinite normal both
+    } */
+    h1{
+        font-size: 2em;
+    }
+    .first{
+        top: 6%;
+    }
+    .second{
+        top: 6%;
+    }
+    .word{
+        margin-top: 40vh;
+        font-size: 30px;
+        line-height: 46px;
+        letter-spacing: 15px;
+        text-align: center;
     }
 }
