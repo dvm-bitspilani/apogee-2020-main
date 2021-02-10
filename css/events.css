@@ -3,18 +3,17 @@
   padding: 128px 15%;
   box-sizing: border-box;
   position: relative;
-  display: none;
+  /* display: none; */
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
-.events-dialogue-box{
+.events-dialogue-box {
   position: absolute;
   background-color: white;
   padding: 50px 50px;
   width: 40vw;
-  visibility: hidden;
   font-family: "Space Mono", serif;
   z-index: 100;
 }
@@ -51,7 +50,7 @@
   height: 25vh;
 }
 
-.events .body .card > * {
+.events .body .card>* {
   width: 100%;
 }
 
@@ -77,18 +76,18 @@
 
 .glitchy_image_cont {
   --gap-horizontal: 3px;
-	--gap-vertical: 70px;
-	--time-anim: 2.25s;
-	--blend-mode-1: none;
-	--blend-mode-2: none;
-	--blend-mode-3: overlay;
-	--blend-mode-4: none;
-	--blend-mode-5: none;
-	--blend-color-1: transparent;
-	--blend-color-2: transparent;
-	--blend-color-3: rgba(255,255,255,0.2);
-	--blend-color-4: transparent;
-	--blend-color-5: transparent;
+  --gap-vertical: 70px;
+  --time-anim: 2.25s;
+  --blend-mode-1: none;
+  --blend-mode-2: none;
+  --blend-mode-3: overlay;
+  --blend-mode-4: none;
+  --blend-mode-5: none;
+  --blend-color-1: transparent;
+  --blend-color-2: transparent;
+  --blend-color-3: rgba(255, 255, 255, 0.2);
+  --blend-color-4: transparent;
+  --blend-color-5: transparent;
 }
 
 .glitchy_image_cont {
@@ -113,27 +112,35 @@
 #cont-2 .glitchy_image {
   background-image: url(../assets/kernel-events/icl.jpg);
 }
+
 #cont-3 .glitchy_image {
   background-image: url(../assets/kernel-events/raw.jpg);
 }
+
 #cont-4 .glitchy_image {
   background-image: url(../assets/kernel-events/robosoc.jpg);
 }
+
 #cont-5 .glitchy_image {
   background-image: url(../assets/kernel-events/sms.jpg);
 }
+
 #cont-6 .glitchy_image {
   background-image: url(../assets/kernel-events/ml.png);
 }
+
 #cont-7 .glitchy_image {
   background-image: url(../assets/kernel-events/junky.jpg);
 }
+
 #cont-8 .glitchy_image {
   background-image: url(../assets/kernel-events/reveng.jpg);
 }
+
 #cont-9 .glitchy_image {
   background-image: url(../assets/kernel-events/aic.png);
 }
+
 #cont-10 .glitchy_image {
   background-image: url(../assets/kernel-events/qed.jpg);
 }
@@ -167,41 +174,42 @@
 }
 
 /* Hover animations for horizontal case */
+
 .glitchy_image_cont:hover .glitchy_image:nth-child(2) {
   transform: translate3d(var(--gap-horizontal), 0, 0);
   animation: glitch-anim-1-horizontal var(--time-anim) infinite linear alternate;
 }
 
-.glitchy_image_cont:hover > .glitchy_image:nth-child(3) {
+.glitchy_image_cont:hover>.glitchy_image:nth-child(3) {
   transform: translate3d(calc(-1 * var(--gap-horizontal)), 0, 0);
   animation: glitch-anim-2-horizontal var(--time-anim) infinite linear alternate;
 }
 
-.glitchy_image_cont:hover > .glitchy_image:nth-child(4) {
-  transform: translate3d(0, calc(-1 * var(--gap-vertical)), 0)
-    scale3d(-1, -1, 1);
+.glitchy_image_cont:hover>.glitchy_image:nth-child(4) {
+  transform: translate3d(0, calc(-1 * var(--gap-vertical)), 0) scale3d(-1, -1, 1);
   animation: glitch-anim-3-horizontal var(--time-anim) infinite linear alternate;
 }
 
 /* Hover animations for vertical case */
+
 .glitch--vertical:hover .glitchy_image:nth-child(2) {
   transform: translate3d(0, var(--gap-vertical), 0);
   animation: glitch-anim-1-vertical var(--time-anim) infinite linear alternate;
 }
 
-.glitch--vertical:hover > .glitchy_image:nth-child(3) {
+.glitch--vertical:hover>.glitchy_image:nth-child(3) {
   transform: translate3d(0, calc(-1 * var(--gap-vertical)), 0);
   animation: glitch-anim-2-vertical var(--time-anim) infinite linear alternate;
 }
 
-.glitch--vertical:hover > .glitchy_image:nth-child(4) {
-  transform: translate3d(calc(-1 * var(--gap-horizontal)), 0, 0)
-    scale3d(-1, -1, 1);
+.glitch--vertical:hover>.glitchy_image:nth-child(4) {
+  transform: translate3d(calc(-1 * var(--gap-horizontal)), 0, 0) scale3d(-1, -1, 1);
   animation: glitch-anim-3-vertical var(--time-anim) infinite linear alternate;
 }
 
 /* Hover flash animation on last image */
-.glitchy_image_cont:hover > .glitchy_image:nth-child(5) {
+
+.glitchy_image_cont:hover>.glitchy_image:nth-child(5) {
   animation: glitch-anim-flash 0.5s steps(1, end) infinite;
 }
 
@@ -224,7 +232,7 @@
   font-size: 0.8rem;
 }
 
-.events-details-button-container{
+.events-details-button-container {
   /* background: red; */
   border: 1px solid white;
   height: 20%;
@@ -234,8 +242,8 @@
   align-items: center;
 }
 
-.events-details-button{
-  width:90%;
+.events-details-button {
+  width: 90%;
   height: 70%;
   background: white;
   opacity: 0.5;
@@ -247,13 +255,11 @@
   transition: 0.1s;
 }
 
-.events-details-button:hover{
+.events-details-button:hover {
   opacity: 1;
   width: 100%;
   height: 100%;
 }
-
-
 
 .events .body .card .events-content span .view-detail-button {
   width: 100%;
@@ -297,40 +303,32 @@
   .events {
     padding: 64px 5%;
   }
-
   .events .heading {
     font-size: 2.2rem;
     letter-spacing: 0.5rem;
   }
-
   .events .heading span {
     padding: 0 0.75rem;
   }
-
   .events .body {
     width: 100%;
     padding: 40px 5%;
   }
-
   .events .body .card {
     width: 95%;
     font-size: 0.75rem;
     letter-spacing: 0.15rem;
     margin: 20px 0;
   }
-
   .events .body .card .events-name {
     margin-bottom: 4px;
   }
-
   .events .body .card .events-content span .events-details {
     font-size: 0.6rem;
   }
-
   .events .body .card .events-content span .events-details .events-date {
     margin-bottom: 8px;
   }
-
   .events .body .card .events-content span .view-detail-button {
     font-size: 0.6rem;
   }
@@ -510,6 +508,7 @@
 }
 
 /* Vertical */
+
 @keyframes glitch-anim-1-vertical {
   0% {
     -webkit-clip-path: polygon(2% 0, 5% 0, 5% 100%, 2% 100%);
@@ -730,13 +729,13 @@
 }
 
 /* Flash */
+
 @keyframes glitch-anim-flash {
   0% {
     opacity: 0.2;
     transform: translate3d(var(--gap-horizontal), var(--gap-vertical), 0);
   }
-  33%,
-  100% {
+  33%, 100% {
     opacity: 0;
     transform: translate3d(0, 0, 0);
   }
