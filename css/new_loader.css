@@ -67,6 +67,9 @@
 }
 
 @media(max-width:600px) {
+    #loader {
+        transition: opacity 0.2s ease-in-out;
+    }
     .robot_body {
         width: 20vw;
     }
