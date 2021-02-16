@@ -33,7 +33,7 @@
     max-width: 90vw;
     white-space: nowrap;
     color: #DEDAD8;
-    animation: loading 2s infinite;
+    animation: loading 3s infinite;
 }
 
 @keyframes loading {
