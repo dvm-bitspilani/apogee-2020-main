@@ -1,0 +1,80 @@
+.heading_container {
+    position: absolute;
+    z-index: 4;
+    top: 65%;
+    left: 0;
+    width: 100%;
+    height: 35%;
+    box-shadow: inset 0px -200px 100px -65px #151515;
+}
+
+.robot_container {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.body {
+    margin-top: 30vh;
+    width: 8vw;
+    animation-name: hover;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+
+.loading-text:before {
+    content: attr(data-text);
+    position: absolute;
+    overflow: hidden;
+    max-width: 90vw;
+    white-space: nowrap;
+    color: #DEDAD8;
+    animation: loading 2s infinite;
+}
+
+@keyframes loading {
+    0% {
+        max-width: 0;
+    }
+    100% {
+        max-width: 90vw;
+    }
+}
+
+@keyframes hover {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@media(max-width:600px) {
+    .body {
+        width: 20vw;
+    }
+    .loading-text {
+        display: block !important;
+        font-size: 1.8em !important;
+        letter-spacing: 0.1em !important;
+    }
+    @keyframes hover {
+        0% {
+            transform: translateY(0);
+        }
+        50% {
+            transform: translateY(-40px);
+        }
+        100% {
+            transform: translateY(0);
+        }
+    }
+}
