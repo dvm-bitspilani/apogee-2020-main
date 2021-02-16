@@ -460,11 +460,13 @@ document.getElementsByClassName('wrapper')[0].style.display = 'none'
 window.onload = () => {
   console.log("hey1");
   setTimeout(() => {
-    document.getElementsByClassName('robot_body')[0].style.position = 'absolute'
+
     document.getElementsByClassName('robot_body')[0].style.marginTop = '-1000vh'
 
     document.getElementsByClassName('robot_base')[0].style.opacity = '0'
+    document.getElementsByClassName('robot_body')[0].style.position = 'absolute'
     setTimeout(() => {
+
       document.getElementsByClassName('wrapper')[0].style.display = ''
       document.getElementById("loader").style.opacity = '0'
       setTimeout(() => {

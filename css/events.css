@@ -18,6 +18,11 @@
   position: absolute;
 }
 
+.events-dialogue-text {
+  transform: translateY(-100vh);
+  transition: transform 1s ease-out;
+}
+
 .close_button_container {
   width: 40vw;
   display: flex;

@@ -1,10 +1,16 @@
 function events_dialog(input) {
     document.getElementsByClassName('events-dialogue-container')[0].style.top = window.pageYOffset + 'px'
     document.getElementsByClassName('events-dialogue-container')[0].style.display = 'flex'
+    setTimeout(() => {
+        document.getElementsByClassName('events-dialogue-text')[0].style.transform = 'translateY(0vh)'
+    }, 100)
+    // document.getElementsByClassName('events-dialogue-text')[0].style.transform = 'translateY(0vh)'
     disableScroll()
 }
 function close_events() {
     document.getElementsByClassName('events-dialogue-container')[0].style.display = 'none'
+    document.getElementsByClassName('events-dialogue-text')[0].style.transform = 'translateY(-100vh)'
+
     enableScroll()
 }
 
