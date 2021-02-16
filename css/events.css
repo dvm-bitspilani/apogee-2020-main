@@ -9,8 +9,26 @@
   align-items: center;
 }
 
-.events-dialogue-box {
+.events-dialogue-container {
+  height: 100vh;
+  width: 100vw;
+  display: none;
+  justify-content: center;
+  align-items: center;
   position: absolute;
+}
+
+.close_button_container {
+  width: 40vw;
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 2vh;
+  margin-top: -25px;
+}
+
+.events-dialogue-box {
+  display: flex;
+  flex-direction: column;
   background-color: white;
   padding: 50px 50px;
   width: 40vw;
@@ -31,7 +49,7 @@
 }
 
 .events .body {
-  width: 80%;
+  width: 100%;
   padding-top: 128px;
   box-sizing: border-box;
   display: flex;
@@ -220,7 +238,7 @@
   flex-direction: column;
   justify-content: space-between;
   height: 100%;
-  margin-left: .5vw;
+  margin-left: 5vw;
 }
 
 .events .body .card .events-content span .events-details {

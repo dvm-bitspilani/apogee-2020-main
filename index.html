@@ -228,10 +228,12 @@
     <div class="robot_container">
 
       <div>
-        <img src='assets/loader/Without Eyes.svg' class="body">
+        <img src='assets/loader/With Eyes.svg' class="robot_body">
 
       </div>
-
+      <div>
+        <img src="assets/loader/Base.svg" class="robot_base">
+      </div>
     </div>
     <div class="background-ele4 heading_container">
       <div class="theme-text loading-text" id="theme-text-landing" data-text="THE DIGITIZED RENAISSANCE"
@@ -242,7 +244,17 @@
 
   </section>
 
-
+  <div class="events-dialogue-container">
+    <div class="events-dialogue-box">
+      <div class="close_button_container">
+        <div style='cursor: pointer;' onclick="close_events()">Close</div>
+      </div>
+      <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste sapiente molestiae eligendi blanditiis!
+        Cupiditate, voluptas numquam? Eligendi libero ratione iste deserunt quae accusantium quasi repellat.
+        Doloremque
+        esse mollitia eligendi odio?</div>
+    </div>
+  </div>
   -->
   <!-- <section class="noise-container">
       <div class="noise-background"></div>
@@ -430,11 +442,8 @@
     </section>
 
     <section class="events" id="events">
-      <div class="events-dialogue-box">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste sapiente molestiae eligendi blanditiis!
-        Cupiditate, voluptas numquam? Eligendi libero ratione iste deserunt quae accusantium quasi repellat. Doloremque
-        esse mollitia eligendi odio?
-      </div>
+
+
       <div class="heading">
         <span>Events</span>
       </div>
@@ -457,7 +466,7 @@
                 Blur
               </div>
               <div class="events-details-button-container">
-                <div class="events-details-button">Details</div>
+                <div class="events-details-button" onclick="events_dialog()">Details</div>
               </div>
               <!-- <div class="view-detail-button">View Details</div> -->
             </span>
@@ -483,7 +492,7 @@
               </div>
               <!-- <div class="view-detail-button">View Details</div> -->
               <div class="events-details-button-container">
-                <div class="events-details-button">Details</div>
+                <div class="events-details-button" onclick="events_dialog()">Details</div>
               </div>
             </span>
           </div>
@@ -506,7 +515,7 @@
                 robot to combat with others.
               </div>
               <div class="events-details-button-container">
-                <div class="events-details-button">Details</div>
+                <div class="events-details-button" onclick="events_dialog()">Details</div>
               </div>
               <!-- <div class="view-detail-button">View Details</div> -->
             </span>
@@ -531,7 +540,7 @@
                 prototype meeting the requirements of the p...
               </div>
               <div class="events-details-button-container">
-                <div class="events-details-button">Details</div>
+                <div class="events-details-button" onclick="events_dialog()">Details</div>
               </div>
               <!-- <div class="view-detail-button">View Details</div> -->
             </span>
@@ -555,7 +564,7 @@
                 Finance Association in joint-collabor...
               </div>
               <div class="events-details-button-container">
-                <div class="events-details-button">Details</div>
+                <div class="events-details-button" onclick="events_dialog()">Details</div>
               </div>
               <!-- <div class="view-detail-button">View Details</div> -->
             </span>
@@ -579,7 +588,7 @@
                 Intelligence by solving a real-life proble...
               </div>
               <div class="events-details-button-container">
-                <div class="events-details-button">Details</div>
+                <div class="events-details-button" onclick="events_dialog()">Details</div>
               </div>
               <!-- <div class="view-detail-button">View Details</div> -->
             </span>
@@ -603,7 +612,7 @@
                 useless things into some great mechanisms? T...
               </div>
               <div class="events-details-button-container">
-                <div class="events-details-button">Details</div>
+                <div class="events-details-button" onclick="events_dialog()">Details</div>
               </div>
               <!-- <div class="view-detail-button">View Details</div> -->
             </span>
@@ -627,7 +636,7 @@
                 to the teams, they have to disassemble ...
               </div>
               <div class="events-details-button-container">
-                <div class="events-details-button">Details</div>
+                <div class="events-details-button" onclick="events_dialog()">Details</div>
               </div>
               <!-- <div class="view-detail-button">View Details</div> -->
             </span>
@@ -651,7 +660,7 @@
                 students get a chance to apply theoretic...
               </div>
               <div class="events-details-button-container">
-                <div class="events-details-button">Details</div>
+                <div class="events-details-button" onclick="events_dialog()">Details</div>
               </div>
               <!-- <div class="view-detail-button">View Details</div> -->
             </span>
@@ -672,7 +681,7 @@
             <span>
               <div class="events-details">Parliamentary Debate</div>
               <div class="events-details-button-container">
-                <div class="events-details-button">Details</div>
+                <div class="events-details-button" onclick="events_dialog()">Details</div>
               </div>
               <!-- <div class="view-detail-button">View Details</div> -->
             </span>

@@ -138,7 +138,7 @@ const setActivePage = (idAsString) => {
     if (ele.id == str) {
       ele.classList.add("opacity1Class");
     }
-    else{
+    else {
       ele.classList.remove("opacity1Class");
     }
   })
@@ -379,86 +379,99 @@ const togglePage = (from, to, bgToggle) => {
   }, 500);
 };
 
-function Ticker( elem ) {
-	elem.lettering();
-	this.done = false;
-	this.cycleCount = 5;
-	this.cycleCurrent = 0;
-	this.chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890!@#$%^&*()-_=+{}|[]\\;\':"<>?,./`~'.split('');
-	this.charsCount = this.chars.length;
-	this.letters = elem.find( 'span' );
-	this.letterCount = this.letters.length;
-	this.letterCurrent = 0;
+function Ticker(elem) {
+  elem.lettering();
+  this.done = false;
+  this.cycleCount = 5;
+  this.cycleCurrent = 0;
+  this.chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890!@#$%^&*()-_=+{}|[]\\;\':"<>?,./`~'.split('');
+  this.charsCount = this.chars.length;
+  this.letters = elem.find('span');
+  this.letterCount = this.letters.length;
+  this.letterCurrent = 0;
 
-	this.letters.each( function() {
-		var $this = $( this );
-		$this.attr( 'data-orig', $this.text() );
-		$this.text( '-' );
-	});
+  this.letters.each(function () {
+    var $this = $(this);
+    $this.attr('data-orig', $this.text());
+    $this.text('-');
+  });
 }
 
-Ticker.prototype.getChar = function() {
-	return this.chars[ Math.floor( Math.random() * this.charsCount ) ];
+Ticker.prototype.getChar = function () {
+  return this.chars[Math.floor(Math.random() * this.charsCount)];
 };
 
-Ticker.prototype.reset = function() {
-	this.done = false;
-	this.cycleCurrent = 0;
-	this.letterCurrent = 0;
-	this.letters.each( function() {
-		var $this = $( this );
-		$this.text( $this.attr( 'data-orig' ) );
-		$this.removeClass( 'done' );
-	});
-	this.loop();
+Ticker.prototype.reset = function () {
+  this.done = false;
+  this.cycleCurrent = 0;
+  this.letterCurrent = 0;
+  this.letters.each(function () {
+    var $this = $(this);
+    $this.text($this.attr('data-orig'));
+    $this.removeClass('done');
+  });
+  this.loop();
 };
 
-Ticker.prototype.loop = function() {
-	var self = this;
+Ticker.prototype.loop = function () {
+  var self = this;
 
-	this.letters.each( function( index, elem ) {
-		var $elem = $( elem );
-		if( index >= self.letterCurrent ) {
-			if( $elem.text() !== ' ' ) {
-				$elem.text( self.getChar() );
-				$elem.css( 'opacity', Math.random() );
-			}
-		}
-	});
+  this.letters.each(function (index, elem) {
+    var $elem = $(elem);
+    if (index >= self.letterCurrent) {
+      if ($elem.text() !== ' ') {
+        $elem.text(self.getChar());
+        $elem.css('opacity', Math.random());
+      }
+    }
+  });
 
-	if( this.cycleCurrent < this.cycleCount ) {
-		this.cycleCurrent++;
-	} else if( this.letterCurrent < this.letterCount ) {
-		var currLetter = this.letters.eq( this.letterCurrent );
-		this.cycleCurrent = 0;
-		currLetter.text( currLetter.attr( 'data-orig' ) ).css( 'opacity', 1 ).addClass( 'done' );
-		this.letterCurrent++;
-	} else {
-		this.done = true;
-	}
+  if (this.cycleCurrent < this.cycleCount) {
+    this.cycleCurrent++;
+  } else if (this.letterCurrent < this.letterCount) {
+    var currLetter = this.letters.eq(this.letterCurrent);
+    this.cycleCurrent = 0;
+    currLetter.text(currLetter.attr('data-orig')).css('opacity', 1).addClass('done');
+    this.letterCurrent++;
+  } else {
+    this.done = true;
+  }
 
-	if( !this.done ) {
-		requestAnimationFrame( function() {
-			self.loop();
-		});
-	} else {
-		setTimeout( function() {
-			self.reset();
-		}, 750 );
-	}
+  if (!this.done) {
+    requestAnimationFrame(function () {
+      self.loop();
+    });
+  } else {
+    setTimeout(function () {
+      self.reset();
+    }, 750);
+  }
 };
 
-$words = $( '.word' );
+$words = $('.word');
 
-$words.each( function() {
-	var $this = $( this ),
-		ticker = new Ticker( $this ).reset();
-	$this.data( 'ticker', ticker  );
+$words.each(function () {
+  var $this = $(this),
+    ticker = new Ticker($this).reset();
+  $this.data('ticker', ticker);
 });
+
+document.getElementsByClassName('wrapper')[0].style.display = 'none'
 window.onload = () => {
   console.log("hey1");
   setTimeout(() => {
-    document.getElementById("loader").style.display = "none";
+    document.getElementsByClassName('robot_body')[0].style.position = 'absolute'
+    document.getElementsByClassName('robot_body')[0].style.marginTop = '-1000vh'
+
+    document.getElementsByClassName('robot_base')[0].style.opacity = '0'
+    setTimeout(() => {
+      document.getElementsByClassName('wrapper')[0].style.display = ''
+      document.getElementById("loader").style.opacity = '0'
+      setTimeout(() => {
+        document.getElementById("loader").style.display = "none";
+      }, 1000)
+
+    }, 1000)
     console.log("hey2");
     setTime();
   }, 5400);
@@ -508,7 +521,7 @@ window.onload = () => {
 // const dots = document.getElementsByClassName("rectangle");
 
 // const activateDots = () => {
-  
+
 //   for (let [index, section] of newSections.entries()) {
 //     if (
 //       section.getBoundingClientRect().top <= document.documentElement.clientHeight/4 &&
@@ -517,7 +530,7 @@ window.onload = () => {
 //       for (let dot of dots) dot.style.opacity = "0.6";
 //       dots[index].style.opacity = "1";
 //     }
-      
+
 //   }
 // };
 

@@ -1,3 +1,7 @@
+#loader {
+    transition: opacity 1.5s ease-in-out;
+}
+
 .heading_container {
     position: absolute;
     z-index: 4;
@@ -17,13 +21,18 @@
     justify-content: flex-start;
 }
 
-.body {
+.robot_body {
     margin-top: 30vh;
     width: 8vw;
     animation-name: hover_robot;
     animation-duration: 4s;
     animation-iteration-count: infinite;
     animation-timing-function: ease-in-out;
+    transition: margin-top 1s ease-in-out;
+}
+
+.robot_base {
+    width: 4vw;
 }
 
 .loading-text:before {
@@ -58,8 +67,11 @@
 }
 
 @media(max-width:600px) {
-    .body {
+    .robot_body {
         width: 20vw;
+    }
+    .robot_base {
+        width: 10vw;
     }
     .loading-text {
         display: block !important;
