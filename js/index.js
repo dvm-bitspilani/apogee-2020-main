@@ -100,7 +100,7 @@ let fx;
 
 let counter = 0;
 const next = () => {
-  fx.setText(phrases[counter]).then(() => { });
+  fx.setText(phrases[counter]).then(() => {});
   counter = (counter + 1) % phrases.length;
 };
 
@@ -125,25 +125,24 @@ const isInViewport = function (elem) {
     bounding.top >= 0 &&
     bounding.left >= 0 &&
     bounding.bottom <=
-    (window.innerHeight || document.documentElement.clientHeight) &&
+      (window.innerHeight || document.documentElement.clientHeight) &&
     bounding.right <=
-    (window.innerWidth || document.documentElement.clientWidth)
+      (window.innerWidth || document.documentElement.clientWidth)
   );
 };
 
 const setActivePage = (idAsString) => {
   activePage = idAsString;
-  str = activePage + "Pagination"
-  document.querySelectorAll(".individual").forEach(ele => {
+  str = activePage + "Pagination";
+  document.querySelectorAll(".individual").forEach((ele) => {
     if (ele.id == str) {
       ele.classList.add("opacity1Class");
-    }
-    else {
+    } else {
       ele.classList.remove("opacity1Class");
     }
-  })
+  });
   // console.log(activePage);
-}
+};
 
 window.addEventListener(
   "wheel",
@@ -157,8 +156,7 @@ window.addEventListener(
         isAboutUsAnimated = true;
         next();
       }
-    }
-    else if (isInViewport(contact)) {
+    } else if (isInViewport(contact)) {
       setActivePage("contact");
       if (!isContactAnimated) {
         phrases = ["Contact Us"];
@@ -167,8 +165,7 @@ window.addEventListener(
         isContactAnimated = true;
         next();
       }
-    }
-    else if (isInViewport(videos)) {
+    } else if (isInViewport(videos)) {
       setActivePage("videos");
       if (!isVideoAnimated) {
         phrases = ["Videos"];
@@ -177,8 +174,7 @@ window.addEventListener(
         isVideoAnimated = true;
         next();
       }
-    }
-    else if (isInViewport(speakers)) {
+    } else if (isInViewport(speakers)) {
       setActivePage("speakers");
       if (!isSpeakersAnimated) {
         phrases = ["Speakers"];
@@ -187,11 +183,9 @@ window.addEventListener(
         isSpeakersAnimated = true;
         next();
       }
-    }
-    else if (isInViewport(home)) {
+    } else if (isInViewport(home)) {
       setActivePage("home");
-    }
-    else if (isInViewport(events)) {
+    } else if (isInViewport(events)) {
       setActivePage("events");
       if (!isEventsAnimated) {
         phrases = ["Events"];
@@ -217,8 +211,7 @@ window.addEventListener(
         isAboutUsAnimated = true;
         next();
       }
-    }
-    else if (isInViewport(contact)) {
+    } else if (isInViewport(contact)) {
       setActivePage("contact");
       if (!isContactAnimated) {
         phrases = ["Contact Us"];
@@ -227,8 +220,7 @@ window.addEventListener(
         isContactAnimated = true;
         next();
       }
-    }
-    else if (isInViewport(videos)) {
+    } else if (isInViewport(videos)) {
       setActivePage("videos");
       if (!isVideoAnimated) {
         phrases = ["Videos"];
@@ -237,8 +229,7 @@ window.addEventListener(
         isVideoAnimated = true;
         next();
       }
-    }
-    else if (isInViewport(speakers)) {
+    } else if (isInViewport(speakers)) {
       setActivePage("speakers");
       if (!isSpeakersAnimated) {
         phrases = ["Speakers"];
@@ -247,11 +238,9 @@ window.addEventListener(
         isSpeakersAnimated = true;
         next();
       }
-    }
-    else if (isInViewport(home)) {
+    } else if (isInViewport(home)) {
       setActivePage("home");
-    }
-    else if (isInViewport(events)) {
+    } else if (isInViewport(events)) {
       setActivePage("events");
       if (!isEventsAnimated) {
         phrases = ["Events"];
@@ -289,7 +278,6 @@ const navigateTo = (id) => {
     toggleHamMenu();
   }
 
-
   if (id == "aboutUs") {
     setActivePage("aboutUs");
     if (!isAboutUsAnimated) {
@@ -299,8 +287,7 @@ const navigateTo = (id) => {
       isAboutUsAnimated = true;
       next();
     }
-  }
-  else if (id == "contact") {
+  } else if (id == "contact") {
     setActivePage("contact");
     if (!isContactAnimated) {
       phrases = ["Contact Us"];
@@ -309,8 +296,7 @@ const navigateTo = (id) => {
       isContactAnimated = true;
       next();
     }
-  }
-  else if (id == "videos") {
+  } else if (id == "videos") {
     setActivePage("videos");
     if (!isVideoAnimated) {
       phrases = ["Videos"];
@@ -319,8 +305,7 @@ const navigateTo = (id) => {
       isVideoAnimated = true;
       next();
     }
-  }
-  else if (id == "speakers") {
+  } else if (id == "speakers") {
     setActivePage("speakers");
     if (!isSpeakersAnimated) {
       phrases = ["Speakers"];
@@ -329,11 +314,9 @@ const navigateTo = (id) => {
       isSpeakersAnimated = true;
       next();
     }
-  }
-  else if (id == "home") {
+  } else if (id == "home") {
     setActivePage("home");
-  }
-  else if (id = "events") {
+  } else if ((id = "events")) {
     setActivePage("events");
     if (!isEventsAnimated) {
       phrases = ["Events"];
@@ -343,8 +326,6 @@ const navigateTo = (id) => {
       next();
     }
   }
-
-
 };
 
 const togglePage = (from, to, bgToggle) => {
@@ -384,16 +365,18 @@ function Ticker(elem) {
   this.done = false;
   this.cycleCount = 5;
   this.cycleCurrent = 0;
-  this.chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890!@#$%^&*()-_=+{}|[]\\;\':"<>?,./`~'.split('');
+  this.chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890!@#$%^&*()-_=+{}|[]\\;':\"<>?,./`~".split(
+    ""
+  );
   this.charsCount = this.chars.length;
-  this.letters = elem.find('span');
+  this.letters = elem.find("span");
   this.letterCount = this.letters.length;
   this.letterCurrent = 0;
 
   this.letters.each(function () {
     var $this = $(this);
-    $this.attr('data-orig', $this.text());
-    $this.text('-');
+    $this.attr("data-orig", $this.text());
+    $this.text("-");
   });
 }
 
@@ -407,8 +390,8 @@ Ticker.prototype.reset = function () {
   this.letterCurrent = 0;
   this.letters.each(function () {
     var $this = $(this);
-    $this.text($this.attr('data-orig'));
-    $this.removeClass('done');
+    $this.text($this.attr("data-orig"));
+    $this.removeClass("done");
   });
   this.loop();
 };
@@ -419,9 +402,9 @@ Ticker.prototype.loop = function () {
   this.letters.each(function (index, elem) {
     var $elem = $(elem);
     if (index >= self.letterCurrent) {
-      if ($elem.text() !== ' ') {
+      if ($elem.text() !== " ") {
         $elem.text(self.getChar());
-        $elem.css('opacity', Math.random());
+        $elem.css("opacity", Math.random());
       }
     }
   });
@@ -431,7 +414,10 @@ Ticker.prototype.loop = function () {
   } else if (this.letterCurrent < this.letterCount) {
     var currLetter = this.letters.eq(this.letterCurrent);
     this.cycleCurrent = 0;
-    currLetter.text(currLetter.attr('data-orig')).css('opacity', 1).addClass('done');
+    currLetter
+      .text(currLetter.attr("data-orig"))
+      .css("opacity", 1)
+      .addClass("done");
     this.letterCurrent++;
   } else {
     this.done = true;
@@ -448,32 +434,44 @@ Ticker.prototype.loop = function () {
   }
 };
 
-$words = $('.word');
+$words = $(".word");
 
 $words.each(function () {
   var $this = $(this),
     ticker = new Ticker($this).reset();
-  $this.data('ticker', ticker);
+  $this.data("ticker", ticker);
 });
 
-document.getElementsByClassName('wrapper')[0].style.display = 'none'
+const EVENTS_URL = "https://www.bits-apogee.org/registrations/events_details/";
+
+const getAllEvents = async () => {
+  fetch(EVENTS_URL)
+    .then((res) => {
+      return res.json();
+    })
+    .then((response) => {
+      console.log("------------------");
+      console.log(response);
+    }, console.error);
+};
+
+document.getElementsByClassName("wrapper")[0].style.display = "none";
 window.onload = () => {
   console.log("hey1");
   setTimeout(() => {
+    document.getElementsByClassName("robot_body")[0].style.marginTop =
+      "-1000vh";
 
-    document.getElementsByClassName('robot_body')[0].style.marginTop = '-1000vh'
-
-    document.getElementsByClassName('robot_base')[0].style.opacity = '0'
-    document.getElementsByClassName('robot_body')[0].style.position = 'absolute'
+    document.getElementsByClassName("robot_base")[0].style.opacity = "0";
+    document.getElementsByClassName("robot_body")[0].style.position =
+      "absolute";
     setTimeout(() => {
-
-      document.getElementsByClassName('wrapper')[0].style.display = ''
-      document.getElementById("loader").style.opacity = '0'
+      document.getElementsByClassName("wrapper")[0].style.display = "";
+      document.getElementById("loader").style.opacity = "0";
       setTimeout(() => {
         document.getElementById("loader").style.display = "none";
-      }, 1000)
-
-    }, 1000)
+      }, 1000);
+    }, 1000);
     console.log("hey2");
     setTime();
   }, 5400);
@@ -498,6 +496,7 @@ window.onload = () => {
         );
       });
     }, console.error);
+  getAllEvents();
 };
 
 // const sections = [...document.getElementsByTagName("section")];

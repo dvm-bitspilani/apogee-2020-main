@@ -1,88 +1,116 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta
+      name="description"
+      content="The annual Technical festival of BITS Pilani, Pilani campus featuring participation from all over India."
+    />
+    <meta
+      name="keywords"
+      content="apogee, bits, pilani, tech, festival, fest, 2021"
+    />
+    <meta name="author" content="DVM" />
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/loader.css" />
+    <link rel="stylesheet" href="css/new_loader.css" />
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/background.css" />
+    <link rel="stylesheet" href="css/index.css" />
+    <link rel="stylesheet" href="css/events.css" />
+    <link rel="stylesheet" href="css/contact.css" />
+    <link rel="stylesheet" href="css/aboutUs.css" />
+    <link rel="stylesheet" href="css/videos.css" />
+    <link rel="stylesheet" href="css/speakers.css" />
+    <link rel="stylesheet" href="css/allevents.css" />
+    <link
+      rel="shortcut icon"
+      href="assets/icons/favicon.png"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="css/flickity.css" />
+    <script src="js/flickity.js"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-153506436-1"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "UA-153506436-1");
+    </script>
+    <title>APOGEE'21 | The Digitized Renaissance</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <meta name="description"
-    content="The annual Technical festival of BITS Pilani, Pilani campus featuring participation from all over India." />
-  <meta name="keywords" content="apogee, bits, pilani, tech, festival, fest, 2021" />
-  <meta name="author" content="DVM" />
-  <link rel="stylesheet" href="css/normalize.css" />
-  <link rel="stylesheet" href="css/loader.css" />
-  <link rel="stylesheet" href="css/new_loader.css" />
-  <link rel="stylesheet" href="css/main.css" />
-  <link rel="stylesheet" href="css/background.css" />
-  <link rel="stylesheet" href="css/index.css" />
-  <link rel="stylesheet" href="css/events.css" />
-  <link rel="stylesheet" href="css/contact.css" />
-  <link rel="stylesheet" href="css/aboutUs.css" />
-  <link rel="stylesheet" href="css/videos.css" />
-  <link rel="stylesheet" href="css/speakers.css" />
-  <link rel="stylesheet" href="css/allevents.css" />
-  <link rel="shortcut icon" href="assets/icons/favicon.png" type="image/x-icon" />
-  <link rel="stylesheet" href="css/flickity.css" />
-  <script src="js/flickity.js"></script>
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-153506436-1"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() {
-      dataLayer.push(arguments);
-    }
-    gtag("js", new Date());
-    gtag("config", "UA-153506436-1");
-  </script>
-  <title>APOGEE'21 | The Digitized Renaissance</title>
-</head>
-
-<body>
-  <div id="pagination">
-    <div class="line"></div>
-    <div class="individual opacity1Class" onclick="navigateTo('home')" id="homePagination">
-      <div class="rectangle">
-        <div class="dot"></div>
+  <body>
+    <div id="pagination">
+      <div class="line"></div>
+      <div
+        class="individual opacity1Class"
+        onclick="navigateTo('home')"
+        id="homePagination"
+      >
+        <div class="rectangle">
+          <div class="dot"></div>
+        </div>
+        <div class="name">Home</div>
       </div>
-      <div class="name">Home</div>
-    </div>
-    <div class="individual" onclick="navigateTo('aboutUs')" id="aboutUsPagination">
-      <div class="rectangle">
-        <div class="dot"></div>
+      <div
+        class="individual"
+        onclick="navigateTo('aboutUs')"
+        id="aboutUsPagination"
+      >
+        <div class="rectangle">
+          <div class="dot"></div>
+        </div>
+        <div class="name">About Us</div>
       </div>
-      <div class="name">About Us</div>
-    </div>
-    <div class="individual" onclick="navigateTo('videos')" id="videosPagination">
-      <div class="rectangle">
-        <div class="dot"></div>
+      <div
+        class="individual"
+        onclick="navigateTo('videos')"
+        id="videosPagination"
+      >
+        <div class="rectangle">
+          <div class="dot"></div>
+        </div>
+        <div class="name">Videos</div>
       </div>
-      <div class="name">Videos</div>
-    </div>
-    <div class="individual" onclick="navigateTo('speakers')" id="speakersPagination">
-      <div class="rectangle">
-        <div class="dot"></div>
+      <div
+        class="individual"
+        onclick="navigateTo('speakers')"
+        id="speakersPagination"
+      >
+        <div class="rectangle">
+          <div class="dot"></div>
+        </div>
+        <div class="name">Speakers</div>
       </div>
-      <div class="name">Speakers</div>
-    </div>
-    <div class="individual" onclick="navigateTo('contact')" id="contactPagination">
-      <div class="rectangle">
-        <div class="dot"></div>
+      <div
+        class="individual"
+        onclick="navigateTo('contact')"
+        id="contactPagination"
+      >
+        <div class="rectangle">
+          <div class="dot"></div>
+        </div>
+        <div class="name">Contact Us</div>
       </div>
-      <div class="name">Contact Us</div>
     </div>
 
-  </div>
-
-  <!-- <section class="notif">
+    <!-- <section class="notif">
       <marquee scrollamount='12'>Due to the unfortunate spread of COVID-19 in various parts of the country, APOGEE'20 is postponed until further notice.</marquee>
     </section> -->
 
-
-  <!-- <section class="loader" id="loader">
+    <!-- <section class="loader" id="loader">
      <div class="logo-container"> -->
 
-
-  <!--<div class="logo">
+    <!--<div class="logo">
         <div class="row">
           <div>
             <div></div>
@@ -179,23 +207,21 @@
             <div></div>
           </div>
         </div> -->
-  <!-- </div> -->
-  <!-- <div class="deconstructed">
+    <!-- </div> -->
+    <!-- <div class="deconstructed">
           APOGEE'20
           <div>APOGEE'20</div>
           <div>APOGEE'20</div>
           <div>APOGEE'20</div>
           <div>APOGEE'20</div>
         </div> -->
-  <!-- <div class="typewriter">
+    <!-- <div class="typewriter">
         <div id="parent">
           <div id="child"></div>
           <div id="border"></div>
         </div> -->
 
-
-
-  <!-- <h1>
+    <!-- <h1>
           <div class="first">
             <span class="let1">l</span>  
             <span class="let2">o</span>  
@@ -224,130 +250,556 @@
     </div>
   </section> -->
 
-  <section class="loader" id="loader">
-    <div class="robot_container">
-
-      <div>
-        <img src='assets/loader/With Eyes.svg' class="robot_body">
-
+    <section class="loader" id="loader">
+      <div class="robot_container">
+        <div>
+          <img src="assets/loader/With Eyes.svg" class="robot_body" />
+        </div>
+        <div>
+          <img src="assets/loader/Base.svg" class="robot_base" />
+        </div>
       </div>
-      <div>
-        <img src="assets/loader/Base.svg" class="robot_base">
-      </div>
-    </div>
-    <div class="background-ele4 heading_container">
-      <div class="theme-text loading-text" id="theme-text-landing" data-text="THE DIGITIZED RENAISSANCE"
-        style="color: rgb(42 42 42)">
-        THE DIGITIZED RENAISSANCE
-      </div>
-    </div>
-
-  </section>
-
-  <div class="events-dialogue-container">
-    <div class="events-dialogue-box">
-      <div class="close_button_container">
-        <div style='cursor: pointer;' onclick="close_events()">Close</div>
-      </div>
-      <div class="events-dialogue-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste sapiente molestiae eligendi blanditiis!
-        Cupiditate, voluptas numquam? Eligendi libero ratione iste deserunt quae accusantium quasi repellat.
-        Doloremque
-        esse mollitia eligendi odio?</div>
-    </div>
-  </div>
-  -->
-  <!-- <section class="noise-container">
-      <div class="noise-background"></div>
-    </section> -->
-
-  <!-- <section class="image-glitch-container">
-      <img src="assets/backgrounds/b3462e91132697.5e2993aa6d3fa.png" />
-      <img src="assets/backgrounds/NoPath - Copy (2).png" />
-      <img src="assets/backgrounds/b3462e91132697.5e2993aa6d3fa.png" />
-      <img src="assets/backgrounds/NoPath - Copy (2).png" />
-    </section> -->
-
-  <section class="backgrounds">
-    <div class="landing-background">
-      <img src="assets/backgrounds/Adam.png" class="background-ele" />
-      <div class="background-ele2">
-        <img src="assets/backgrounds/marsbw.jpg" />
-      </div>
-      <div class="background-ele3"></div>
-      <div class="background-ele4">
-        <div class="theme-text" id="theme-text-landing">
+      <div class="background-ele4 heading_container">
+        <div
+          class="theme-text loading-text"
+          id="theme-text-landing"
+          data-text="THE DIGITIZED RENAISSANCE"
+          style="color: rgb(42 42 42)"
+        >
           THE DIGITIZED RENAISSANCE
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <div class="grid-background"></div>
-  <div class="star-container1">
-    <div id="stars"></div>
-    <div id="stars2"></div>
-    <div id="stars3"></div>
-  </div>
-
-  <div class="hamburger-icon">
-    <div></div>
-    <div></div>
-    <div></div>
-  </div>
-
-  <div class="hamburger-menu">
-    <div class="ham-item" onclick="navigateTo('home')">Home</div>
-    <div class="ham-item" onclick="navigateTo('aboutUs')">About Us</div>
-    <div class="ham-item" onclick="navigateTo('events')">Kernel events</div>
-    <div class="ham-item" onclick="window.open('./sponsors.html')">
-      Sponsors
-    </div>
-    <div class="ham-item" onclick="togglePage('main', 'allEvents', true)">
-      All events
-    </div>
-    <!-- <div class="ham-item"onclick="window.open('Internships-Website/home.html', '_blank')">Internships</div> -->
-    <div class="ham-item" onclick="window.open('https://bits-apogee.org/campusambassador2021/', '_blank')">
-      Campus Ambassador
-    </div>
-    <!-- <div class="ham-item"onclick="window.open('https://bits-apogee.org/e-conclave/', '_blank')">Entrepreneurship Conclave</div> -->
-    <div class="ham-item" onclick="window.open('http://bitsmun.co.in/', '_blank')">
-      BITSMUN
-    </div>
-    <div class="ham-item" onclick="navigateTo('contact')">Contact Us</div>
-  </div>
-
-  <div class="wrapper" id="main">
-    <section class="home" id="home">
-      <div class="navbar">
-        <img src="assets/backgrounds/Apogee@2x.png" class="nav-logo" />
-        <div class="nav-link-container">
-          <div class="nav-links">
-            <span><a onclick="navigateTo('home')">Home</a></span>
-          </div>
-          <div class="nav-links">
-            <span><a onclick="navigateTo('aboutUs')">About Us</a></span>
-          </div>
-          <div class="nav-links">
-            <span><a onclick="navigateTo('events')">Kernel Events</a></span>
-          </div>
-          <div class="nav-links">
-            <span><a href="sponsors.html">Sponsors</a></span>
-          </div>
-          <div class="nav-links">
-            <span><a onclick="navigateTo('contact')">Contact Us</a></span>
-          </div>
-          <div class="nav-links register-button">
-            <a href="register.html">REGISTER</a>
-          </div>
-          <div class="hamburger"></div>
+    <div class="events-dialogue-container">
+      <div class="events-dialogue-box">
+        <div class="close_button_container">
+          <div style="cursor: pointer" onclick="close_events()">Close</div>
+        </div>
+        <div class="events-dialogue-text">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste sapiente
+          molestiae eligendi blanditiis! Cupiditate, voluptas numquam? Eligendi
+          libero ratione iste deserunt quae accusantium quasi repellat.
+          Doloremque esse mollitia eligendi odio?
         </div>
       </div>
-      <div class="footer">
-        <div class="countdown"><span id="countdown"></span> TO GO</div>
-        <div class="mousey">
-          <div class="scroller"></div>
+    </div>
+    -->
+    <!-- <section class="noise-container">
+      <div class="noise-background"></div>
+    </section> -->
+
+    <!-- <section class="image-glitch-container">
+      <img src="assets/backgrounds/b3462e91132697.5e2993aa6d3fa.png" />
+      <img src="assets/backgrounds/NoPath - Copy (2).png" />
+      <img src="assets/backgrounds/b3462e91132697.5e2993aa6d3fa.png" />
+      <img src="assets/backgrounds/NoPath - Copy (2).png" />
+    </section> -->
+
+    <section class="backgrounds">
+      <div class="landing-background">
+        <img src="assets/backgrounds/Adam.png" class="background-ele" />
+        <div class="background-ele2">
+          <img src="assets/backgrounds/marsbw.jpg" />
         </div>
-        <div class="social-icons">
+        <div class="background-ele3"></div>
+        <div class="background-ele4">
+          <div class="theme-text" id="theme-text-landing">
+            THE DIGITIZED RENAISSANCE
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="grid-background"></div>
+    <div class="star-container1">
+      <div id="stars"></div>
+      <div id="stars2"></div>
+      <div id="stars3"></div>
+    </div>
+
+    <div class="hamburger-icon">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+
+    <div class="hamburger-menu">
+      <div class="ham-item" onclick="navigateTo('home')">Home</div>
+      <div class="ham-item" onclick="navigateTo('aboutUs')">About Us</div>
+      <div class="ham-item" onclick="navigateTo('events')">Kernel events</div>
+      <div class="ham-item" onclick="window.open('./sponsors.html')">
+        Sponsors
+      </div>
+      <div class="ham-item" onclick="togglePage('main', 'allEvents', true)">
+        All events
+      </div>
+      <!-- <div class="ham-item"onclick="window.open('Internships-Website/home.html', '_blank')">Internships</div> -->
+      <div
+        class="ham-item"
+        onclick="window.open('https://bits-apogee.org/campusambassador2021/', '_blank')"
+      >
+        Campus Ambassador
+      </div>
+      <!-- <div class="ham-item"onclick="window.open('https://bits-apogee.org/e-conclave/', '_blank')">Entrepreneurship Conclave</div> -->
+      <div
+        class="ham-item"
+        onclick="window.open('http://bitsmun.co.in/', '_blank')"
+      >
+        BITSMUN
+      </div>
+      <div class="ham-item" onclick="navigateTo('contact')">Contact Us</div>
+    </div>
+
+    <div class="wrapper" id="main">
+      <section class="home" id="home">
+        <div class="navbar">
+          <img src="assets/backgrounds/Apogee@2x.png" class="nav-logo" />
+          <div class="nav-link-container">
+            <div class="nav-links">
+              <span><a onclick="navigateTo('home')">Home</a></span>
+            </div>
+            <div class="nav-links">
+              <span><a onclick="navigateTo('aboutUs')">About Us</a></span>
+            </div>
+            <div class="nav-links">
+              <span><a onclick="navigateTo('events')">Kernel Events</a></span>
+            </div>
+            <div class="nav-links">
+              <span><a href="sponsors.html">Sponsors</a></span>
+            </div>
+            <div class="nav-links">
+              <span><a onclick="navigateTo('contact')">Contact Us</a></span>
+            </div>
+            <div class="nav-links register-button">
+              <a href="register.html">REGISTER</a>
+            </div>
+            <div class="hamburger"></div>
+          </div>
+        </div>
+        <div class="footer">
+          <div class="countdown"><span id="countdown"></span> TO GO</div>
+          <div class="mousey">
+            <div class="scroller"></div>
+          </div>
+          <div class="social-icons">
+            <a href="https://www.facebook.com/bitsapogee/" target="_blank">
+              <span class="facebook icon"></span>
+            </a>
+            <a href="https://www.instagram.com/bitsapogee/" target="_blank">
+              <span class="instagram icon"></span>
+            </a>
+            <a href="https://twitter.com/bitsapogee/" target="_blank">
+              <span class="twitter icon"></span>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section class="aboutUs" id="aboutUs">
+        <div class="heading">
+          <span>About Us</span>
+        </div>
+        <div class="body">
+          <div class="ele-1"></div>
+          BITS, Pilani, India is back with the 39th edition of APOGEE(A
+          Professions Oriented Gathering over Educational Experiences)- the
+          institute’s annual technical extravaganza, from 20th to 21st March
+          2021, this time as The Digitized Renaissance! A melange of technology,
+          innovation and inspiration across space and time of humankind, this
+          technical conference will, as always, play host to the brightest minds
+          and thinkers in the country and world. From presenting papers and
+          projects at the oldest-of-its-kind events in the country, developing
+          amazing solutions to real-life cases and problems, exhibitions of the
+          best contraptions that man has made, guest lectures that tell stories
+          never heard before, to the college’s own literature festival, APOGEE
+          challenges the intellect of the participants and piques the minds of
+          the audience.
+          <div class="ele-2"></div>
+          <div class="ele-3"></div>
+        </div>
+      </section>
+
+      <section class="videos" id="videos">
+        <div class="heading">
+          <span>Videos</span>
+        </div>
+        <div class="body">
+          <div class="video-section">
+            <span class="video-name">APOGEE 2021 Theme Release</span>
+            <div class="thumbnail">
+              <iframe
+                width="100%"
+                height="100%"
+                src="https://www.youtube.com/embed/z-Pt8nBEa9E"
+                frameborder="0"
+                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+              ></iframe>
+            </div>
+          </div>
+          <div class="video-section">
+            <span class="video-name">APOGEE 2019 Aftermovie</span>
+            <div class="thumbnail">
+              <iframe
+                width="100%"
+                height="100%"
+                src="https://www.youtube.com/embed/fIWJvvcutF0"
+                frameborder="0"
+                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="speakers" id="speakers">
+        <div class="heading">
+          <span>Speakers</span>
+        </div>
+        <div class="speakers-body">
+          <div class="subheading">
+            <span>Think Again Live</span>
+          </div>
+          <div class="carousel"></div>
+          <div class="nav">
+            <!-- <div class="buttons">
+              <div class="l-arrow"></div>
+              <div class="dot"></div>
+              <div class="dot"></div>
+              <div class="r-arrow"></div>
+            </div> -->
+          </div>
+        </div>
+        <div class="speakers-body">
+          <div class="subheading">
+            <span>Upcoming speakers</span>
+          </div>
+          <div class="carousel"></div>
+          <div class="nav">
+            <!-- <div class="buttons">
+              <div class="l-arrow"></div>
+              <div class="dot"></div>
+              <div class="dot"></div>
+              <div class="r-arrow"></div>
+            </div> -->
+          </div>
+        </div>
+      </section>
+
+      <section class="events" id="events">
+        <div class="heading">
+          <span>Events</span>
+        </div>
+        <div class="body">
+          <div class="card">
+            <div class="events-name">Armageddon</div>
+            <div class="events-content">
+              <!-- <img src="assets/kernel-events/armageddon.jpg" alt="IoT" /> -->
+              <div class="glitchy_image_cont" id="cont-1">
+                <div class="glitchy_image"></div>
+                <div class="glitchy_image"></div>
+                <div class="glitchy_image"></div>
+                <div class="glitchy_image"></div>
+                <div class="glitchy_image"></div>
+              </div>
+
+              <span>
+                <div class="events-details">
+                  Counter Strike Global Offensive is a multiplayer first-person
+                  shooter ...
+                </div>
+                <div class="events-details-button-container">
+                  <div
+                    class="events-details-button"
+                    onclick="events_dialog({
+                    name: 'Armageddon',
+                    desc: 'Counter Strike Global Offensive is a multiplayer first-person shooter in which a team of terrorists battle against a team of counter-terrorists, In Competitive mode of the game two teams of 5 are pitted against each other where the terrorists try to plant a bomb at either of the two sites(A or B), While the counter-terrorists try to prevent that. The tournament will be a knockout based tournament , all the matches until the Semi-Finals will be BO1 where the map will be chosen based on a veto process, The Semi-Final and the Final will be BO3.'
+                  })"
+                  >
+                    Details
+                  </div>
+                </div>
+                <!-- <div class="view-detail-button">View Details</div> -->
+              </span>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="events-name">ICL</div>
+            <div class="events-content">
+              <!-- <img src="assets/kernel-events/icl.jpg" alt="IoT" />
+               -->
+              <div class="glitchy_image_cont" id="cont-2">
+                <div class="glitchy_image"></div>
+                <div class="glitchy_image"></div>
+                <div class="glitchy_image"></div>
+                <div class="glitchy_image"></div>
+                <div class="glitchy_image"></div>
+              </div>
+              <span>
+                <div class="events-details">
+                  Talk is Cheap. Show me the code- Linus Torvalds Do you think
+                  you have mastered Competitive coding?
+                </div>
+                <!-- <div class="view-detail-button">View Details</div> -->
+                <div class="events-details-button-container">
+                  <div class="events-details-button" onclick="events_dialog()">
+                    Details
+                  </div>
+                </div>
+              </span>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="events-name">Aerostable Lynyrd Skynyrd</div>
+            <div class="events-content">
+              <!-- <img src="assets/kernel-events/raw.jpg" alt="IoT" /> -->
+              <div class="glitchy_image_cont" id="cont-3">
+                <div class="glitchy_image"></div>
+                <div class="glitchy_image"></div>
+                <div class="glitchy_image"></div>
+                <div class="glitchy_image"></div>
+                <div class="glitchy_image"></div>
+              </div>
+              <span>
+                <div class="events-details">
+                  "The tragic end of Lynyrd Skynyrd, a famous rock band, is well
+                  known. The plane crash of Turkish Airlines Flight 981, Little...
+                </div>
+                <div class="events-details-button-container">
+                  <div
+                    class="events-details-button"
+                    onclick="events_dialog({
+                    name: 'Aerostable Lynyrd Skynyrd',
+                    desc: 'The tragic end of Lynyrd Skynyrd, a famous rock band, is well known. The plane crash of Turkish Airlines Flight 981, Little Baldon Hastings accident, South African Airways Flight 201 and many more have generated concern for better aircraft design.The onus to prevent another such tragedy is upon us: the engineers of tomorrow. The better aircraft design will facilitate several advantages including improved performance parameters such as lift-to-drag ratio (L/D), ratio of empty weight to MTOW, and specific fuel consumption. The participants will be required to submit their CAD file along with an ANSYS Simulation report. Additionally, their model will be judged based on mechanical, ergonomic, aesthetic and environmental factors.'
+                  })"
+                  >
+                    Details
+                  </div>
+                </div>
+                <!-- <div class="view-detail-button">View Details</div> -->
+              </span>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="events-name">AI Robo Soccer</div>
+            <div class="events-content">
+              <!-- <img src="assets/kernel-events/robosoc.jpg" alt="IoT" /> -->
+              <div class="glitchy_image_cont" id="cont-4">
+                <div class="glitchy_image"></div>
+                <div class="glitchy_image"></div>
+                <div class="glitchy_image"></div>
+                <div class="glitchy_image"></div>
+                <div class="glitchy_image"></div>
+              </div>
+              <span>
+                <div class="events-details">
+                  Each team is required to design, construct and operate a
+                  prototype meeting the requirements of the p...
+                </div>
+                <div class="events-details-button-container">
+                  <div class="events-details-button" onclick="events_dialog()">
+                    Details
+                  </div>
+                </div>
+                <!-- <div class="view-detail-button">View Details</div> -->
+              </span>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="events-name">SMS</div>
+            <div class="events-content">
+              <!-- <img src="assets/kernel-events/sms.jpg" alt="IoT" /> -->
+              <div class="glitchy_image_cont" id="cont-5">
+                <div class="glitchy_image"></div>
+                <div class="glitchy_image"></div>
+                <div class="glitchy_image"></div>
+                <div class="glitchy_image"></div>
+                <div class="glitchy_image"></div>
+              </div>
+              <span>
+                <div class="events-details">
+                  Stock Market Simulation is the flagship event of Economics and
+                  Finance Association in joint-collabor...
+                </div>
+                <div class="events-details-button-container">
+                  <div class="events-details-button" onclick="events_dialog()">
+                    Details
+                  </div>
+                </div>
+                <!-- <div class="view-detail-button">View Details</div> -->
+              </span>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="events-name">Mechanix</div>
+            <div class="events-content">
+              <!-- <img src="assets/kernel-events/ml.png" alt="IoT" /> -->
+              <div class="glitchy_image_cont" id="cont-6">
+                <div class="glitchy_image"></div>
+                <div class="glitchy_image"></div>
+                <div class="glitchy_image"></div>
+                <div class="glitchy_image"></div>
+                <div class="glitchy_image"></div>
+              </div>
+              <span>
+                <div class="events-details">
+                  Have you ever dreamt of exploring the world of Artificial
+                  Intelligence by solving a real-life proble...
+                </div>
+                <div class="events-details-button-container">
+                  <div class="events-details-button" onclick="events_dialog()">
+                    Details
+                  </div>
+                </div>
+                <!-- <div class="view-detail-button">View Details</div> -->
+              </span>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="events-name">Hackatronix</div>
+            <div class="events-content">
+              <!-- <img src="assets/kernel-events/junky.jpg" alt="IoT" /> -->
+              <div class="glitchy_image_cont" id="cont-7">
+                <div class="glitchy_image"></div>
+                <div class="glitchy_image"></div>
+                <div class="glitchy_image"></div>
+                <div class="glitchy_image"></div>
+                <div class="glitchy_image"></div>
+              </div>
+              <span>
+                <div class="events-details">
+                  Do you have the imagination and will power to transform
+                  useless things into some great mechanisms? T...
+                </div>
+                <div class="events-details-button-container">
+                  <div class="events-details-button" onclick="events_dialog()">
+                    Details
+                  </div>
+                </div>
+                <!-- <div class="view-detail-button">View Details</div> -->
+              </span>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="events-name">Gambling Mathematics</div>
+            <div class="events-content">
+              <!-- <img src="assets/kernel-events/reveng.jpg" alt="IoT" /> -->
+              <div class="glitchy_image_cont" id="cont-8">
+                <div class="glitchy_image"></div>
+                <div class="glitchy_image"></div>
+                <div class="glitchy_image"></div>
+                <div class="glitchy_image"></div>
+                <div class="glitchy_image"></div>
+              </div>
+              <span>
+                <div class="events-details">
+                  In this event, we provide used motorcycle or scooter engines
+                  to the teams, they have to disassemble ...
+                </div>
+                <div class="events-details-button-container">
+                  <div class="events-details-button" onclick="events_dialog()">
+                    Details
+                  </div>
+                </div>
+                <!-- <div class="view-detail-button">View Details</div> -->
+              </span>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="events-name">Analog Design Challenge</div>
+            <div class="events-content">
+              <!-- <img src="assets/kernel-events/aic.png" alt="IoT" /> -->
+              <div class="glitchy_image_cont" id="cont-9">
+                <div class="glitchy_image"></div>
+                <div class="glitchy_image"></div>
+                <div class="glitchy_image"></div>
+                <div class="glitchy_image"></div>
+                <div class="glitchy_image"></div>
+              </div>
+              <span>
+                <div class="events-details">
+                  The event aims to connect industry to college students. The
+                  students get a chance to apply theoretic...
+                </div>
+                <div class="events-details-button-container">
+                  <div class="events-details-button" onclick="events_dialog()">
+                    Details
+                  </div>
+                </div>
+                <!-- <div class="view-detail-button">View Details</div> -->
+              </span>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="events-name">Q.E.D</div>
+            <div class="events-content">
+              <!-- <img src="assets/kernel-events/qed.jpg" alt="IoT" /> -->
+              <div class="glitchy_image_cont" id="cont-10">
+                <div class="glitchy_image"></div>
+                <div class="glitchy_image"></div>
+                <div class="glitchy_image"></div>
+                <div class="glitchy_image"></div>
+                <div class="glitchy_image"></div>
+              </div>
+              <span>
+                <div class="events-details">Parliamentary Debate</div>
+                <div class="events-details-button-container">
+                  <div class="events-details-button" onclick="events_dialog()">
+                    Details
+                  </div>
+                </div>
+                <!-- <div class="view-detail-button">View Details</div> -->
+              </span>
+            </div>
+          </div>
+          <div class="card">
+            <div class="events-name">OHT</div>
+            <div class="events-content">
+              <!-- <img src="assets/kernel-events/qed.jpg" alt="IoT" /> -->
+              <div class="glitchy_image_cont" id="cont-10">
+                <div class="glitchy_image"></div>
+                <div class="glitchy_image"></div>
+                <div class="glitchy_image"></div>
+                <div class="glitchy_image"></div>
+                <div class="glitchy_image"></div>
+              </div>
+              <span>
+                <div class="events-details">Parliamentary Debate</div>
+                <div class="events-details-button-container">
+                  <div class="events-details-button" onclick="events_dialog()">
+                    Details
+                  </div>
+                </div>
+                <!-- <div class="view-detail-button">View Details</div> -->
+              </span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="contact" id="contact">
+        <div class="heading">
+          <span>Contact Us</span>
+        </div>
+        <div class="contact-body">
+          <!-- Contacts generated in scripts/ui.js -->
+        </div>
+      </section>
+
+      <footer>
+        <span>
+          <span id="follow-us-sapn">Follow us on</span>
           <a href="https://www.facebook.com/bitsapogee/" target="_blank">
             <span class="facebook icon"></span>
           </a>
@@ -357,369 +809,15 @@
           <a href="https://twitter.com/bitsapogee/" target="_blank">
             <span class="twitter icon"></span>
           </a>
-        </div>
-      </div>
-    </section>
+        </span>
+        <span>APOGEE, BITS Pilani</span>
+      </footer>
+    </div>
 
-    <section class="aboutUs" id="aboutUs">
-      <div class="heading">
-        <span>About Us</span>
-      </div>
-      <div class="body">
-        <div class="ele-1"></div>
-        BITS, Pilani, India is back with the 39th edition of APOGEE(A
-        Professions Oriented Gathering over Educational Experiences)- the
-        institute’s annual technical extravaganza, from 20th to 21st March
-        2021, this time as The Digitized Renaissance! A melange of technology,
-        innovation and inspiration across space and time of humankind, this
-        technical conference will, as always, play host to the brightest minds
-        and thinkers in the country and world. From presenting papers and
-        projects at the oldest-of-its-kind events in the country, developing
-        amazing solutions to real-life cases and problems, exhibitions of the
-        best contraptions that man has made, guest lectures that tell stories
-        never heard before, to the college’s own literature festival, APOGEE
-        challenges the intellect of the participants and piques the minds of
-        the audience.
-        <div class="ele-2"></div>
-        <div class="ele-3"></div>
-      </div>
-    </section>
-
-    <section class="videos" id="videos">
-      <div class="heading">
-        <span>Videos</span>
-      </div>
-      <div class="body">
-        <div class="video-section">
-          <span class="video-name">APOGEE 2021 Theme Release</span>
-          <div class="thumbnail">
-            <iframe width="100%" height="100%" src="https://www.youtube.com/embed/z-Pt8nBEa9E" frameborder="0"
-              allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-          </div>
-        </div>
-        <div class="video-section">
-          <span class="video-name">APOGEE 2019 Aftermovie</span>
-          <div class="thumbnail">
-            <iframe width="100%" height="100%" src="https://www.youtube.com/embed/fIWJvvcutF0" frameborder="0"
-              allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="speakers" id="speakers">
-      <div class="heading">
-        <span>Speakers</span>
-      </div>
-      <div class="speakers-body">
-        <div class="subheading">
-          <span>Think Again Live</span>
-        </div>
-        <div class="carousel"></div>
-        <div class="nav">
-          <!-- <div class="buttons">
-              <div class="l-arrow"></div>
-              <div class="dot"></div>
-              <div class="dot"></div>
-              <div class="r-arrow"></div>
-            </div> -->
-        </div>
-      </div>
-      <div class="speakers-body">
-        <div class="subheading">
-          <span>Upcoming speakers</span>
-        </div>
-        <div class="carousel"></div>
-        <div class="nav">
-          <!-- <div class="buttons">
-              <div class="l-arrow"></div>
-              <div class="dot"></div>
-              <div class="dot"></div>
-              <div class="r-arrow"></div>
-            </div> -->
-        </div>
-      </div>
-    </section>
-
-    <section class="events" id="events">
-
-
-      <div class="heading">
-        <span>Events</span>
-      </div>
-      <div class="body">
-        <div class="card">
-          <div class="events-name">Armageddon</div>
-          <div class="events-content">
-            <!-- <img src="assets/kernel-events/armageddon.jpg" alt="IoT" /> -->
-            <div class="glitchy_image_cont" id="cont-1">
-              <div class="glitchy_image"></div>
-              <div class="glitchy_image"></div>
-              <div class="glitchy_image"></div>
-              <div class="glitchy_image"></div>
-              <div class="glitchy_image"></div>
-            </div>
-
-            <span>
-              <div class="events-details">
-                Gaming extravaganza . Featured games - CSGO, COD 4,Fifa 18/19,
-                Blur
-              </div>
-              <div class="events-details-button-container">
-                <div class="events-details-button" onclick="events_dialog()">Details</div>
-              </div>
-              <!-- <div class="view-detail-button">View Details</div> -->
-            </span>
-          </div>
-        </div>
-
-        <div class="card">
-          <div class="events-name">ICL</div>
-          <div class="events-content">
-            <!-- <img src="assets/kernel-events/icl.jpg" alt="IoT" />
-               -->
-            <div class="glitchy_image_cont" id="cont-2">
-              <div class="glitchy_image"></div>
-              <div class="glitchy_image"></div>
-              <div class="glitchy_image"></div>
-              <div class="glitchy_image"></div>
-              <div class="glitchy_image"></div>
-            </div>
-            <span>
-              <div class="events-details">
-                Talk is Cheap. Show me the code- Linus Torvalds Do you think
-                you have mastered Competitive coding?
-              </div>
-              <!-- <div class="view-detail-button">View Details</div> -->
-              <div class="events-details-button-container">
-                <div class="events-details-button" onclick="events_dialog()">Details</div>
-              </div>
-            </span>
-          </div>
-        </div>
-
-        <div class="card">
-          <div class="events-name">RAW</div>
-          <div class="events-content">
-            <!-- <img src="assets/kernel-events/raw.jpg" alt="IoT" /> -->
-            <div class="glitchy_image_cont" id="cont-3">
-              <div class="glitchy_image"></div>
-              <div class="glitchy_image"></div>
-              <div class="glitchy_image"></div>
-              <div class="glitchy_image"></div>
-              <div class="glitchy_image"></div>
-            </div>
-            <span>
-              <div class="events-details">
-                In this event participants have to design a remote controlled
-                robot to combat with others.
-              </div>
-              <div class="events-details-button-container">
-                <div class="events-details-button" onclick="events_dialog()">Details</div>
-              </div>
-              <!-- <div class="view-detail-button">View Details</div> -->
-            </span>
-
-          </div>
-        </div>
-
-        <div class="card">
-          <div class="events-name">Robo Soccer</div>
-          <div class="events-content">
-            <!-- <img src="assets/kernel-events/robosoc.jpg" alt="IoT" /> -->
-            <div class="glitchy_image_cont" id="cont-4">
-              <div class="glitchy_image"></div>
-              <div class="glitchy_image"></div>
-              <div class="glitchy_image"></div>
-              <div class="glitchy_image"></div>
-              <div class="glitchy_image"></div>
-            </div>
-            <span>
-              <div class="events-details">
-                Each team is required to design, construct and operate a
-                prototype meeting the requirements of the p...
-              </div>
-              <div class="events-details-button-container">
-                <div class="events-details-button" onclick="events_dialog()">Details</div>
-              </div>
-              <!-- <div class="view-detail-button">View Details</div> -->
-            </span>
-          </div>
-        </div>
-
-        <div class="card">
-          <div class="events-name">SMS</div>
-          <div class="events-content">
-            <!-- <img src="assets/kernel-events/sms.jpg" alt="IoT" /> -->
-            <div class="glitchy_image_cont" id="cont-5">
-              <div class="glitchy_image"></div>
-              <div class="glitchy_image"></div>
-              <div class="glitchy_image"></div>
-              <div class="glitchy_image"></div>
-              <div class="glitchy_image"></div>
-            </div>
-            <span>
-              <div class="events-details">
-                Stock Market Simulation is the flagship event of Economics and
-                Finance Association in joint-collabor...
-              </div>
-              <div class="events-details-button-container">
-                <div class="events-details-button" onclick="events_dialog()">Details</div>
-              </div>
-              <!-- <div class="view-detail-button">View Details</div> -->
-            </span>
-          </div>
-        </div>
-
-        <div class="card">
-          <div class="events-name">Machine Learning Hackathon</div>
-          <div class="events-content">
-            <!-- <img src="assets/kernel-events/ml.png" alt="IoT" /> -->
-            <div class="glitchy_image_cont" id="cont-6">
-              <div class="glitchy_image"></div>
-              <div class="glitchy_image"></div>
-              <div class="glitchy_image"></div>
-              <div class="glitchy_image"></div>
-              <div class="glitchy_image"></div>
-            </div>
-            <span>
-              <div class="events-details">
-                Have you ever dreamt of exploring the world of Artificial
-                Intelligence by solving a real-life proble...
-              </div>
-              <div class="events-details-button-container">
-                <div class="events-details-button" onclick="events_dialog()">Details</div>
-              </div>
-              <!-- <div class="view-detail-button">View Details</div> -->
-            </span>
-          </div>
-        </div>
-
-        <div class="card">
-          <div class="events-name">Junkyard Wars</div>
-          <div class="events-content">
-            <!-- <img src="assets/kernel-events/junky.jpg" alt="IoT" /> -->
-            <div class="glitchy_image_cont" id="cont-7">
-              <div class="glitchy_image"></div>
-              <div class="glitchy_image"></div>
-              <div class="glitchy_image"></div>
-              <div class="glitchy_image"></div>
-              <div class="glitchy_image"></div>
-            </div>
-            <span>
-              <div class="events-details">
-                Do you have the imagination and will power to transform
-                useless things into some great mechanisms? T...
-              </div>
-              <div class="events-details-button-container">
-                <div class="events-details-button" onclick="events_dialog()">Details</div>
-              </div>
-              <!-- <div class="view-detail-button">View Details</div> -->
-            </span>
-          </div>
-        </div>
-
-        <div class="card">
-          <div class="events-name">Reverse Engineering</div>
-          <div class="events-content">
-            <!-- <img src="assets/kernel-events/reveng.jpg" alt="IoT" /> -->
-            <div class="glitchy_image_cont" id="cont-8">
-              <div class="glitchy_image"></div>
-              <div class="glitchy_image"></div>
-              <div class="glitchy_image"></div>
-              <div class="glitchy_image"></div>
-              <div class="glitchy_image"></div>
-            </div>
-            <span>
-              <div class="events-details">
-                In this event, we provide used motorcycle or scooter engines
-                to the teams, they have to disassemble ...
-              </div>
-              <div class="events-details-button-container">
-                <div class="events-details-button" onclick="events_dialog()">Details</div>
-              </div>
-              <!-- <div class="view-detail-button">View Details</div> -->
-            </span>
-          </div>
-        </div>
-
-        <div class="card">
-          <div class="events-name">Apogee Innovation Challenge</div>
-          <div class="events-content">
-            <!-- <img src="assets/kernel-events/aic.png" alt="IoT" /> -->
-            <div class="glitchy_image_cont" id="cont-9">
-              <div class="glitchy_image"></div>
-              <div class="glitchy_image"></div>
-              <div class="glitchy_image"></div>
-              <div class="glitchy_image"></div>
-              <div class="glitchy_image"></div>
-            </div>
-            <span>
-              <div class="events-details">
-                The event aims to connect industry to college students. The
-                students get a chance to apply theoretic...
-              </div>
-              <div class="events-details-button-container">
-                <div class="events-details-button" onclick="events_dialog()">Details</div>
-              </div>
-              <!-- <div class="view-detail-button">View Details</div> -->
-            </span>
-          </div>
-        </div>
-
-        <div class="card">
-          <div class="events-name">Q.E.D</div>
-          <div class="events-content">
-            <!-- <img src="assets/kernel-events/qed.jpg" alt="IoT" /> -->
-            <div class="glitchy_image_cont" id="cont-10">
-              <div class="glitchy_image"></div>
-              <div class="glitchy_image"></div>
-              <div class="glitchy_image"></div>
-              <div class="glitchy_image"></div>
-              <div class="glitchy_image"></div>
-            </div>
-            <span>
-              <div class="events-details">Parliamentary Debate</div>
-              <div class="events-details-button-container">
-                <div class="events-details-button" onclick="events_dialog()">Details</div>
-              </div>
-              <!-- <div class="view-detail-button">View Details</div> -->
-            </span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="contact" id="contact">
-      <div class="heading">
-        <span>Contact Us</span>
-      </div>
-      <div class="contact-body">
-        <!-- Contacts generated in scripts/ui.js -->
-      </div>
-    </section>
-
-    <footer>
-      <span>
-        <span id="follow-us-sapn">Follow us on</span>
-        <a href="https://www.facebook.com/bitsapogee/" target="_blank">
-          <span class="facebook icon"></span>
-        </a>
-        <a href="https://www.instagram.com/bitsapogee/" target="_blank">
-          <span class="instagram icon"></span>
-        </a>
-        <a href="https://twitter.com/bitsapogee/" target="_blank">
-          <span class="twitter icon"></span>
-        </a>
-      </span>
-      <span>APOGEE, BITS Pilani</span>
-    </footer>
-  </div>
-
-  <section class="allEvents" id="allEvents">
-    <div class="header">
-      <span class="heading">Events</span>
-      <!-- <div class="filter">
+    <section class="allEvents" id="allEvents">
+      <div class="header">
+        <span class="heading">Events</span>
+        <!-- <div class="filter">
           <span>Filter by:</span>
           <select id="yos">
             <option>1</option>
@@ -728,9 +826,9 @@
             <option>4</option>
           </select>
         </div> -->
-    </div>
-    <div class="body" id="allEventsBody">
-      <!-- <div class="card">
+      </div>
+      <div class="body" id="allEventsBody">
+        <!-- <div class="card">
           <div class="events-name">Armageddon</div>
           <div class="events-content">
             <img src="assets/kernel-events/armageddon.jpg" alt="IoT" />
@@ -743,16 +841,15 @@
             </span>
           </div>
         </div> -->
-    </div>
-  </section>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/lettering.js/0.6.1/jquery.lettering.min.js"></script>
-  <script src="scripts/ui.js"></script>
-  <script src="js/index.js"></script>
-  <script src="js/speakers.js"></script>
-  <script src="js/scramble_text.js"></script>
-  <script src="js/allevents.js"></script>
-  <script src="js/events.js"></script>
-</body>
-
+      </div>
+    </section>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lettering.js/0.6.1/jquery.lettering.min.js"></script>
+    <script src="scripts/ui.js"></script>
+    <script src="js/index.js"></script>
+    <script src="js/speakers.js"></script>
+    <script src="js/scramble_text.js"></script>
+    <script src="js/allevents.js"></script>
+    <script src="js/events.js"></script>
+  </body>
 </html>
