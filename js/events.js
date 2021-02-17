@@ -5,6 +5,8 @@ function events_dialog(input) {
   document.getElementsByClassName(
     "events-dialogue-container"
   )[0].style.display = "flex";
+  document.getElementsByClassName("events-dialogue-text")[0].innerHTML =
+    input.desc;
   //   setTimeout(() => {
   //     document.getElementsByClassName("events-dialogue-text")[0].style.transform =
   //       "translateY(0vh)";
@@ -35,5 +37,3 @@ function close_events() {
 // function enableScroll() {
 //   window.onscroll = function () {};
 // }
-
-
