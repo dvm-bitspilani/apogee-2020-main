@@ -15,7 +15,10 @@
   display: none;
   justify-content: center;
   align-items: center;
-  position: absolute;
+  position: fixed;
+  z-index: 1000;
+  background-color: rgba(0, 0, 0, 0.85);
+  transition: 0.5s ease;
 }
 
 .events-dialogue-text {
@@ -39,6 +42,8 @@
   width: 40vw;
   font-family: "Space Mono", serif;
   z-index: 100;
+  transform: translateY(-100vh);
+  transition: transform 1s ease-in-out;
 }
 
 .events .heading {
@@ -336,6 +341,19 @@
   .events .body {
     width: 100%;
     padding: 40px 5%;
+  }
+  .events-dialogue-box {
+    width: 85vw;
+    padding: 20px 20px;
+    font-size: 0.8rem;
+  }
+  .close_button_container {
+    width: auto;
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 2vh;
+    margin-top: 0;
+    font-size: 1rem;
   }
   .events .body .card {
     width: 95%;

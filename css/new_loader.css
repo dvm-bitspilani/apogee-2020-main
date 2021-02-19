@@ -222,13 +222,13 @@
         transition: opacity 0.2s ease-in-out;
     }
     .robot_container {
-        left: 37.5vw;
+        left: 32.5vw;
     }
     .robot_body {
-        width: 25vw;
+        width: 35vw;
     }
     .robot_base {
-        width: 12.5vw;
+        width: 17.5vw;
     }
     /* .loading-text {
         display: block !important;
