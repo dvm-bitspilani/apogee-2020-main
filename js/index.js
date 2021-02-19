@@ -141,7 +141,13 @@ const setActivePage = (idAsString) => {
       ele.classList.remove("opacity1Class");
     }
   });
-  // console.log(activePage);
+  console.log(document.getElementById("allEvents").style.display);
+  if (document.getElementById("allEvents").style.display == "" || document.getElementById("allEvents").style.display == "none"){
+    setPaginationDisplay(null);
+  }
+  else{
+    setPaginationDisplay("none");
+  }
 };
 
 window.addEventListener(
@@ -259,14 +265,13 @@ const setPaginationDisplay = (value) => {
 };
 
 const navigateTo = (id) => {
-  console.log(document.getElementById("allEvents").style.display);
+  // console.log(document.getElementById("allEvents").style.display);
   if (
     document.getElementById("allEvents").style.display &&
     document.getElementById("allEvents").style.display !== "none"
   ) {
-    console.log("hey");
+    // console.log("hey");
     togglePage("allEvents", "main", true);
-    setPaginationDisplay("flex");
     setTimeout(
       () =>
         document
