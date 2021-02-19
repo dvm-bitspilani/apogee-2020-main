@@ -13,29 +13,36 @@
 }
 
 .robot_container {
-    height: 100vh;
-    width: 100vw;
+    /* height: 100vh;
+    width: 100vw; */
+    position: absolute;
+    width: max-content;
+    top: 30vh;
+    left: 46vw;
     display: flex;
     align-items: center;
     flex-direction: column;
     justify-content: flex-start;
+    transition: top 2.5s ease-in-out;
 }
 
 .robot_body {
-    margin-top: 30vh;
     width: 8vw;
     animation-name: hover_robot;
     animation-duration: 4s;
     animation-iteration-count: infinite;
     animation-timing-function: ease-in-out;
-    transition: margin-top 1s ease-in-out;
 }
 
 .robot_base {
     width: 4vw;
+    /* position: absolute;
+    left: 47vw;
+    right: 0;
+    top: 42vh; */
 }
 
-.loading-text:before {
+/* .loading-text:before {
     content: attr(data-text);
     position: absolute;
     overflow: hidden;
@@ -43,7 +50,7 @@
     white-space: nowrap;
     color: #DEDAD8;
     animation: loading 3s infinite;
-}
+} */
 
 @keyframes loading {
     0% {
@@ -66,20 +73,87 @@
     }
 }
 
+.loading-text, .theme-text {
+    display: flex;
+    justify-content: center;
+}
+
+.loading-text-words {
+    margin: 0 13.25px;
+    width: min-content;
+}
+
+.loading-text span:nth-child(1) {
+    filter: blur(0px);
+    animation: blur-text 1.5s 0s infinite linear alternate;
+}
+
+.loading-text span:nth-child(2) {
+    filter: blur(0px);
+    animation: blur-text 1.5s 0.2s infinite linear alternate;
+}
+
+.loading-text span:nth-child(3) {
+    filter: blur(0px);
+    animation: blur-text 1.5s 0.4s infinite linear alternate;
+}
+
+.loading-text span:nth-child(4) {
+    filter: blur(0px);
+    animation: blur-text 1.5s 0.6s infinite linear alternate;
+}
+
+.loading-text span:nth-child(5) {
+    filter: blur(0px);
+    animation: blur-text 1.5s 0.8s infinite linear alternate;
+}
+
+.loading-text span:nth-child(6) {
+    filter: blur(0px);
+    animation: blur-text 1.5s 1s infinite linear alternate;
+}
+
+.loading-text span:nth-child(7) {
+    filter: blur(0px);
+    animation: blur-text 1.5s 1.2s infinite linear alternate;
+}
+
+@keyframes blur-text {
+    0% {
+        filter: blur(0px);
+    }
+    100% {
+        filter: blur(4px);
+    }
+}
+
 @media(max-width:600px) {
     #loader {
         transition: opacity 0.2s ease-in-out;
     }
+    .robot_container {
+        left: 37.5vw;
+    }
     .robot_body {
-        width: 20vw;
+        width: 25vw;
     }
     .robot_base {
-        width: 10vw;
+        width: 12.5vw;
     }
-    .loading-text {
+    /* .loading-text {
         display: block !important;
         font-size: 1.8em !important;
         letter-spacing: 0.1em !important;
+    } */
+    .loading-text-words {
+        margin: 0 0.05em;
+        width: min-content;
+        display: block !important;
+    }
+    .loading-text {
+        display: flex !important;
+        justify-content: center;
+        font-size: 1.8em !important;
     }
     @keyframes hover {
         0% {

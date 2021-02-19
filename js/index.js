@@ -100,7 +100,7 @@ let fx;
 
 let counter = 0;
 const next = () => {
-  fx.setText(phrases[counter]).then(() => {});
+  fx.setText(phrases[counter]).then(() => { });
   counter = (counter + 1) % phrases.length;
 };
 
@@ -125,9 +125,9 @@ const isInViewport = function (elem) {
     bounding.top >= 0 &&
     bounding.left >= 0 &&
     bounding.bottom <=
-      (window.innerHeight || document.documentElement.clientHeight) &&
+    (window.innerHeight || document.documentElement.clientHeight) &&
     bounding.right <=
-      (window.innerWidth || document.documentElement.clientWidth)
+    (window.innerWidth || document.documentElement.clientWidth)
   );
 };
 
@@ -464,12 +464,12 @@ document.getElementsByClassName("wrapper")[0].style.display = "none";
 window.onload = () => {
   console.log("hey1");
   setTimeout(() => {
-    document.getElementsByClassName("robot_body")[0].style.marginTop =
+    document.getElementsByClassName("robot_container")[0].style.top =
       "-1000vh";
 
     document.getElementsByClassName("robot_base")[0].style.opacity = "0";
-    document.getElementsByClassName("robot_body")[0].style.position =
-      "absolute";
+    // document.getElementsByClassName("robot_body")[0].style.position =
+    //   "absolute";
     setTimeout(() => {
       document.getElementsByClassName("wrapper")[0].style.display = "";
       document.getElementById("loader").style.opacity = "0";
