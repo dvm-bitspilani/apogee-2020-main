@@ -100,7 +100,7 @@ let fx;
 
 let counter = 0;
 const next = () => {
-  fx.setText(phrases[counter]).then(() => { });
+  fx.setText(phrases[counter]).then(() => {});
   counter = (counter + 1) % phrases.length;
 };
 
@@ -125,9 +125,9 @@ const isInViewport = function (elem) {
     bounding.top >= 0 &&
     bounding.left >= 0 &&
     bounding.bottom <=
-    (window.innerHeight || document.documentElement.clientHeight) &&
+      (window.innerHeight || document.documentElement.clientHeight) &&
     bounding.right <=
-    (window.innerWidth || document.documentElement.clientWidth)
+      (window.innerWidth || document.documentElement.clientWidth)
   );
 };
 
@@ -141,7 +141,13 @@ const setActivePage = (idAsString) => {
       ele.classList.remove("opacity1Class");
     }
   });
-  // console.log(activePage);
+  console.log(document.getElementById("allEvents").style.display);
+  if (document.getElementById("allEvents").style.display == "" || document.getElementById("allEvents").style.display == "none"){
+    setPaginationDisplay(null);
+  }
+  else{
+    setPaginationDisplay("none");
+  }
 };
 
 window.addEventListener(
@@ -259,14 +265,13 @@ const setPaginationDisplay = (value) => {
 };
 
 const navigateTo = (id) => {
-  console.log(document.getElementById("allEvents").style.display);
+  // console.log(document.getElementById("allEvents").style.display);
   if (
     document.getElementById("allEvents").style.display &&
     document.getElementById("allEvents").style.display !== "none"
   ) {
-    console.log("hey");
+    // console.log("hey");
     togglePage("allEvents", "main", true);
-    setPaginationDisplay("flex");
     setTimeout(
       () =>
         document
@@ -449,6 +454,27 @@ $words.each(function () {
 
 const EVENTS_URL = "https://www.bits-apogee.org/registrations/events_details/";
 
+const ALL_EVENTS_NAMES = [];
+
+const getDetailsForEvents = (namesArr) => {
+  const body = {
+    name: namesArr,
+  };
+  fetch(EVENTS_URL, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(body),
+  })
+    .then((res) => {
+      return res.json();
+    })
+    .then((response) => {
+      console.log(response);
+    });
+};
+
 const getAllEvents = async () => {
   fetch(EVENTS_URL)
     .then((res) => {
@@ -456,7 +482,13 @@ const getAllEvents = async () => {
     })
     .then((response) => {
       console.log("------------------");
-      console.log(response);
+      ALL_EVENTS = response[0].events;
+      ALL_EVENTS.map((ev) => {
+        ALL_EVENTS_NAMES.push(ev.name);
+        mapEvents(ev.name, ev.about, ev.id);
+      });
+      console.log(ALL_EVENTS_NAMES);
+     
     }, console.error);
 };
 
@@ -464,8 +496,7 @@ document.getElementsByClassName("wrapper")[0].style.display = "none";
 window.onload = () => {
   console.log("hey1");
   setTimeout(() => {
-    document.getElementsByClassName("robot_container")[0].style.top =
-      "-1000vh";
+    document.getElementsByClassName("robot_container")[0].style.top = "-1000vh";
 
     document.getElementsByClassName("robot_base")[0].style.opacity = "0";
     // document.getElementsByClassName("robot_body")[0].style.position =
@@ -481,27 +512,27 @@ window.onload = () => {
     setTime();
   }, 5400);
   console.log("hey3");
-  fetch("https://bits-apogee.org/registrations/events/Registration")
-    .then((data) => {
-      console.log("hey4");
-      return data.json();
-    })
-    .then((response) => {
-      console.log("hey5");
-      console.log(response);
-      ALL_EVENTS = [...response.events];
-      ALL_EVENTS.map((event) => {
-        mapEvents(
-          event.name,
-          (event.about.substring(
-            event.about.indexOf("DESCRIPTION") + 11,
-            150
-          ) || event.about) + "...",
-          event.id
-        );
-      });
-    }, console.error);
   getAllEvents();
+  // fetch("https://bits-apogee.org/registrations/events/Registration")
+  //   .then((data) => {
+  //     console.log("hey4");
+  //     return data.json();
+  //   })
+  //   .then((response) => {
+  //     console.log("hey5");
+  //     console.log(response);
+  //     ALL_EVENTS = [...response.events];
+  //     ALL_EVENTS.map((event) => {
+  //       mapEvents(
+  //         event.name,
+  //         (event.about.substring(
+  //           event.about.indexOf("DESCRIPTION") + 11,
+  //           150
+  //         ) || event.about) + "...",
+  //         event.id
+  //       );
+  //     });
+  //   }, console.error);
 };
 
 // const sections = [...document.getElementsByTagName("section")];
