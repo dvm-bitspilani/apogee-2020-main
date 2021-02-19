@@ -449,6 +449,27 @@ $words.each(function () {
 
 const EVENTS_URL = "https://www.bits-apogee.org/registrations/events_details/";
 
+const ALL_EVENTS_NAMES = [];
+
+const getDetailsForEvents = (namesArr) => {
+  const body = {
+    name: namesArr
+  }
+  fetch(EVENTS_URL, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify(body)
+  })
+    .then((res) => {
+      return res.json();
+    })
+    .then((response) => {
+      console.log(response);
+    });
+};
+
 const getAllEvents = async () => {
   fetch(EVENTS_URL)
     .then((res) => {
@@ -456,7 +477,11 @@ const getAllEvents = async () => {
     })
     .then((response) => {
       console.log("------------------");
-      console.log(response);
+      ALL_EVENTS = response[0].events;
+      ALL_EVENTS.map((ev) => {
+        ALL_EVENTS_NAMES.push(ev.name);
+      });
+      console.log(ALL_EVENTS_NAMES);
     }, console.error);
 };
 
@@ -481,27 +506,27 @@ window.onload = () => {
     setTime();
   }, 5400);
   console.log("hey3");
-  fetch("https://bits-apogee.org/registrations/events/Registration")
-    .then((data) => {
-      console.log("hey4");
-      return data.json();
-    })
-    .then((response) => {
-      console.log("hey5");
-      console.log(response);
-      ALL_EVENTS = [...response.events];
-      ALL_EVENTS.map((event) => {
-        mapEvents(
-          event.name,
-          (event.about.substring(
-            event.about.indexOf("DESCRIPTION") + 11,
-            150
-          ) || event.about) + "...",
-          event.id
-        );
-      });
-    }, console.error);
   getAllEvents();
+  // fetch("https://bits-apogee.org/registrations/events/Registration")
+  //   .then((data) => {
+  //     console.log("hey4");
+  //     return data.json();
+  //   })
+  //   .then((response) => {
+  //     console.log("hey5");
+  //     console.log(response);
+  //     ALL_EVENTS = [...response.events];
+  //     ALL_EVENTS.map((event) => {
+  //       mapEvents(
+  //         event.name,
+  //         (event.about.substring(
+  //           event.about.indexOf("DESCRIPTION") + 11,
+  //           150
+  //         ) || event.about) + "...",
+  //         event.id
+  //       );
+  //     });
+  //   }, console.error);
 };
 
 // const sections = [...document.getElementsByTagName("section")];
