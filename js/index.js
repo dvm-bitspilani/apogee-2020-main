@@ -100,7 +100,7 @@ let fx;
 
 let counter = 0;
 const next = () => {
-  fx.setText(phrases[counter]).then(() => { });
+  fx.setText(phrases[counter]).then(() => {});
   counter = (counter + 1) % phrases.length;
 };
 
@@ -125,9 +125,9 @@ const isInViewport = function (elem) {
     bounding.top >= 0 &&
     bounding.left >= 0 &&
     bounding.bottom <=
-    (window.innerHeight || document.documentElement.clientHeight) &&
+      (window.innerHeight || document.documentElement.clientHeight) &&
     bounding.right <=
-    (window.innerWidth || document.documentElement.clientWidth)
+      (window.innerWidth || document.documentElement.clientWidth)
   );
 };
 
@@ -453,14 +453,14 @@ const ALL_EVENTS_NAMES = [];
 
 const getDetailsForEvents = (namesArr) => {
   const body = {
-    name: namesArr
-  }
+    name: namesArr,
+  };
   fetch(EVENTS_URL, {
     method: "POST",
     headers: {
-      "Content-Type": "application/json"
+      "Content-Type": "application/json",
     },
-    body: JSON.stringify(body)
+    body: JSON.stringify(body),
   })
     .then((res) => {
       return res.json();
@@ -480,8 +480,10 @@ const getAllEvents = async () => {
       ALL_EVENTS = response[0].events;
       ALL_EVENTS.map((ev) => {
         ALL_EVENTS_NAMES.push(ev.name);
+        mapEvents(ev.name, ev.about, ev.id);
       });
       console.log(ALL_EVENTS_NAMES);
+     
     }, console.error);
 };
 
@@ -489,8 +491,7 @@ document.getElementsByClassName("wrapper")[0].style.display = "none";
 window.onload = () => {
   console.log("hey1");
   setTimeout(() => {
-    document.getElementsByClassName("robot_container")[0].style.top =
-      "-1000vh";
+    document.getElementsByClassName("robot_container")[0].style.top = "-1000vh";
 
     document.getElementsByClassName("robot_base")[0].style.opacity = "0";
     // document.getElementsByClassName("robot_body")[0].style.position =

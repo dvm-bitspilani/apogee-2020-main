@@ -142,11 +142,27 @@ const mapEvents = (name, detail, id) => {
   const eventContentSpan = document.createElement("span");
   const eventDetail = document.createElement("div");
   eventDetail.className = "allEvents-details";
-  eventDetail.innerHTML = detail;
+  //if(name==="Armageddon") detail = "<p>Counter Strike Global Offensive is a multiplayer first-person shooter in which a team of terrorists battle against a team of counter-terrorists, In Competitive mode of the game two teams of 5 are pitted against each other where the terrorists try to plant a bomb at either of the two sites(A or B), While the counter-terrorists try to prevent that. The tournament will be a knockout based tournament , all the matches until the Semi-Finals will be BO1 where the map will be chosen based on a veto process, The Semi-Final and the Final will be BO3.</p>"
+  const concatenatedDetail =
+    detail.length <= 157 ? detail : detail.substring(0, 150) + "...</p>";
+  eventDetail.innerHTML = concatenatedDetail;
   eventContentSpan.appendChild(eventDetail);
   const viewDetailButton = document.createElement("div");
   viewDetailButton.className = "view-detail-button";
   viewDetailButton.innerHTML = "View Details";
+  // viewDetailButton.setAttribute(
+  //   "onclick",
+  //   `events_dialog({
+  //     name: ${name},
+  //     desc: ${detail.substring(3, detail.length - 4)}
+  //   })`
+  // );
+  viewDetailButton.onclick = function () {
+    events_dialog({
+      name: name,
+      desc: detail.substring(3, detail.length - 4),
+    });
+  };
   eventContentSpan.appendChild(viewDetailButton);
   eventContent.appendChild(eventContentSpan);
   card.appendChild(eventContent);

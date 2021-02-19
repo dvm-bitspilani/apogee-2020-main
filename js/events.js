@@ -1,4 +1,5 @@
 function events_dialog(input) {
+  console.log(input.desc.length)
   console.log(document.getElementsByClassName("events-dialogue-container"));
   document.getElementsByClassName("events-dialogue-container")[0].style.top =
     window.pageYOffset + "px";
