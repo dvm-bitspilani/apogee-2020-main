@@ -105,17 +105,107 @@
 
 .loading-text span:nth-child(5) {
     filter: blur(0px);
-    animation: blur-text 1.5s 0.8s infinite linear alternate;
+    animation: blur-text 1.5s 0.6s infinite linear alternate;
 }
 
 .loading-text span:nth-child(6) {
     filter: blur(0px);
-    animation: blur-text 1.5s 1s infinite linear alternate;
+    animation: blur-text 1.5s 0.8s infinite linear alternate;
 }
 
 .loading-text span:nth-child(7) {
     filter: blur(0px);
+    animation: blur-text 1.5s 1s infinite linear alternate;
+}
+
+.loading-text span:nth-child(8) {
+    filter: blur(0px);
     animation: blur-text 1.5s 1.2s infinite linear alternate;
+}
+
+.loading-text span:nth-child(9) {
+    filter: blur(0px);
+    animation: blur-text 1.5s 1.4s infinite linear alternate;
+}
+
+.loading-text span:nth-child(10) {
+    filter: blur(0px);
+    animation: blur-text 1.5s 1.6s infinite linear alternate;
+}
+
+.loading-text span:nth-child(11) {
+    filter: blur(0px);
+    animation: blur-text 1.5s 1.8s infinite linear alternate;
+}
+
+.loading-text span:nth-child(12) {
+    filter: blur(0px);
+    animation: blur-text 1.5s 2s infinite linear alternate;
+}
+
+.loading-text span:nth-child(13) {
+    filter: blur(0px);
+    animation: blur-text 1.5s 2.2s infinite linear alternate;
+}
+
+.loading-text span:nth-child(14) {
+    filter: blur(0px);
+    animation: blur-text 1.5s 1.2s infinite linear alternate;
+}
+
+.loading-text span:nth-child(15) {
+    filter: blur(0px);
+    animation: blur-text 1.5s 2.4s infinite linear alternate;
+}
+
+.loading-text span:nth-child(16) {
+    filter: blur(0px);
+    animation: blur-text 1.5s 2.6s infinite linear alternate;
+}
+
+.loading-text span:nth-child(17) {
+    filter: blur(0px);
+    animation: blur-text 1.5s 2.8s infinite linear alternate;
+}
+
+.loading-text span:nth-child(18) {
+    filter: blur(0px);
+    animation: blur-text 1.5s 3s infinite linear alternate;
+}
+
+.loading-text span:nth-child(19) {
+    filter: blur(0px);
+    animation: blur-text 1.5s 3.2s infinite linear alternate;
+}
+
+.loading-text span:nth-child(20) {
+    filter: blur(0px);
+    animation: blur-text 1.5s 3.4s infinite linear alternate;
+}
+
+.loading-text span:nth-child(21) {
+    filter: blur(0px);
+    animation: blur-text 1.5s 3.6s infinite linear alternate;
+}
+
+.loading-text span:nth-child(22) {
+    filter: blur(0px);
+    animation: blur-text 1.5s 3.8s infinite linear alternate;
+}
+
+.loading-text span:nth-child(23) {
+    filter: blur(0px);
+    animation: blur-text 1.5s 4s infinite linear alternate;
+}
+
+.loading-text span:nth-child(24) {
+    filter: blur(0px);
+    animation: blur-text 1.5s 4.2s infinite linear alternate;
+}
+
+.loading-text span:nth-child(25) {
+    filter: blur(0px);
+    animation: blur-text 1.5s 4.4s infinite linear alternate;
 }
 
 @keyframes blur-text {
