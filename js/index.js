@@ -254,6 +254,10 @@ window.addEventListener(
   false
 );
 
+const setPaginationDisplay = (value) => {
+  document.getElementById("pagination").style.display = value;
+};
+
 const navigateTo = (id) => {
   console.log(document.getElementById("allEvents").style.display);
   if (
@@ -262,6 +266,7 @@ const navigateTo = (id) => {
   ) {
     console.log("hey");
     togglePage("allEvents", "main", true);
+    setPaginationDisplay("flex");
     setTimeout(
       () =>
         document
