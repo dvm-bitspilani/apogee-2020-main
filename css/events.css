@@ -61,6 +61,7 @@
 .events .body {
   width: 100%;
   padding-top: 128px;
+  /* padding: 1280px 0 0 0; */
   box-sizing: border-box;
   display: flex;
   flex-wrap: wrap;
@@ -359,7 +360,7 @@
     width: 95%;
     font-size: 0.75rem;
     letter-spacing: 0.15rem;
-    margin: 20px 0;
+    margin: 40px 0;
   }
   .events .body .card .events-name {
     margin-bottom: 4px;
