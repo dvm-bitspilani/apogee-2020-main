@@ -180,16 +180,18 @@ window.addEventListener(
         isVideoAnimated = true;
         next();
       }
-    } else if (isInViewport(speakers)) {
-      setActivePage("speakers");
-      if (!isSpeakersAnimated) {
-        phrases = ["Speakers"];
-        el = speakers;
-        fx = new TextScramble(el);
-        isSpeakersAnimated = true;
-        next();
-      }
-    } else if (isInViewport(home)) {
+    } 
+    // else if (isInViewport(speakers)) {
+    //   setActivePage("speakers");
+    //   if (!isSpeakersAnimated) {
+    //     phrases = ["Speakers"];
+    //     el = speakers;
+    //     fx = new TextScramble(el);
+    //     isSpeakersAnimated = true;
+    //     next();
+    //   }
+    // } 
+    else if (isInViewport(home)) {
       setActivePage("home");
     } else if (isInViewport(events)) {
       setActivePage("events");
@@ -235,16 +237,17 @@ window.addEventListener(
         isVideoAnimated = true;
         next();
       }
-    } else if (isInViewport(speakers)) {
-      setActivePage("speakers");
-      if (!isSpeakersAnimated) {
-        phrases = ["Speakers"];
-        el = speakers;
-        fx = new TextScramble(el);
-        isSpeakersAnimated = true;
-        next();
-      }
-    } else if (isInViewport(home)) {
+     } //else if (isInViewport(speakers)) {
+    //   setActivePage("speakers");
+    //   if (!isSpeakersAnimated) {
+    //     phrases = ["Speakers"];
+    //     el = speakers;
+    //     fx = new TextScramble(el);
+    //     isSpeakersAnimated = true;
+    //     next();
+    //   }
+    //} 
+    else if (isInViewport(home)) {
       setActivePage("home");
     } else if (isInViewport(events)) {
       setActivePage("events");

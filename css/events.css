@@ -97,11 +97,11 @@
   height: 100%;
 }
 
-/* .events .body .card .events-content img {
+.events .body .card .events-content img {
   width: 40%;
   margin-left: 10%;
   margin-right: 4.5%;
-} */
+}
 
 .glitchy_image_cont {
   --gap-horizontal: 3px;
@@ -366,6 +366,7 @@
     margin-bottom: 4px;
   }
   .events .body .card .events-content span .events-details {
+    width: 100%;
     font-size: 0.6rem;
   }
   .events .body .card .events-content span .events-details .events-date {
@@ -373,6 +374,10 @@
   }
   .events .body .card .events-content span .view-detail-button {
     font-size: 0.6rem;
+  }
+  .events .body .card .events-content img {
+    width: 50%;
+    margin-left: -5%;
   }
 }
 

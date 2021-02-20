@@ -4,6 +4,7 @@
   padding-right: 0%;
   box-sizing: border-box;
   position: relative;
+  display: none;
 }
 
 .speakers .heading {
