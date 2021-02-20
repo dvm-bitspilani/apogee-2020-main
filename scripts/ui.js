@@ -89,7 +89,7 @@ const contactData = {
     name: "Vaibhav Bansal",
     post: "Publicity and Online Partnerships",
     phone: "+91-8805711081",
-    email: "adp@bits-apogee.org",
+    email: "collaborations@bits-apogee.org",
     image: "assets/contact/Vaibhav.jpg",
   },
   recnacc: {
