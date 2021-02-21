@@ -261,6 +261,8 @@ html, body {
     15%, 80% {
         background: #377CFD;
         box-shadow: 0 0 15px 0px #377CFD;
+        background: #377CFD;
+        box-shadow: 0 0 15px 0px #377CFD;
     }
 }
 
@@ -439,7 +441,7 @@ html, body {
         width: 130px;
     }
     65%, 80% {
-        width: 300px;
+        width: 245px;
     }
 }
 
@@ -451,7 +453,7 @@ html, body {
         width: 95px;
     }
     65%, 80% {
-        width: 208.5px;
+        width: 160.5px;
     }
 }
 
@@ -462,7 +464,7 @@ html, body {
         content: "APOGEE'21";
     }
     60%, 80% {
-        content: "21st - 26th March";
+        content: "20th - 21st March";
     }
 }
 
