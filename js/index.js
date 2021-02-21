@@ -180,7 +180,7 @@ window.addEventListener(
         isVideoAnimated = true;
         next();
       }
-    } 
+    }
     // else if (isInViewport(speakers)) {
     //   setActivePage("speakers");
     //   if (!isSpeakersAnimated) {
@@ -190,7 +190,7 @@ window.addEventListener(
     //     isSpeakersAnimated = true;
     //     next();
     //   }
-    // } 
+    // }
     else if (isInViewport(home)) {
       setActivePage("home");
     } else if (isInViewport(events)) {
@@ -246,7 +246,7 @@ window.addEventListener(
     //     isSpeakersAnimated = true;
     //     next();
     //   }
-    //} 
+    //}
     else if (isInViewport(home)) {
       setActivePage("home");
     } else if (isInViewport(events)) {
@@ -491,11 +491,11 @@ const getAllEvents = async () => {
         mapEvents(ev.name, ev.about, ev.id);
       });
       console.log(ALL_EVENTS_NAMES);
-     
+
     }, console.error);
 };
 
-document.getElementsByClassName("wrapper")[0].style.display = "none";
+// document.getElementsByClassName("wrapper")[0].style.display = "none";
 window.onload = () => {
   console.log("hey1");
   setTimeout(() => {
