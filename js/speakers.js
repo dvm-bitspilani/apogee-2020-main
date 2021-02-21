@@ -29,7 +29,7 @@ for (var x = 0; x < 2; x++) {
   function createCard() {
     var screenSize = window.innerWidth;
     var carousel = document.querySelectorAll(".carousel")[x];
-    console.log(carousel);
+    //console.log(carousel);
     for (let i = 0; i < speakersName.length; i++) {
       carousel.innerHTML +=
         `<div class="card">
@@ -44,7 +44,7 @@ for (var x = 0; x < 2; x++) {
       var img = document.querySelectorAll(
         ".speakers .speakers-body .carousel .card .image"
       );
-      console.log(img);
+      //console.log(img);
       // console.log(img );
       img[x * speakersName.length + i].style.backgroundImage =
         `url(` + speakerImgUrl[i] + `)`;

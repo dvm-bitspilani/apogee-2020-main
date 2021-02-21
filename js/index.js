@@ -141,7 +141,7 @@ const setActivePage = (idAsString) => {
       ele.classList.remove("opacity1Class");
     }
   });
-  console.log(document.getElementById("allEvents").style.display);
+  // console.log(document.getElementById("allEvents").style.display);
   if (document.getElementById("allEvents").style.display == "" || document.getElementById("allEvents").style.display == "none") {
     setPaginationDisplay(null);
   }
@@ -490,14 +490,14 @@ const getAllEvents = async () => {
         ALL_EVENTS_NAMES.push(ev.name);
         mapEvents(ev.name, ev.about, ev.id);
       });
-      console.log(ALL_EVENTS_NAMES);
+      //console.log(ALL_EVENTS_NAMES);
 
     }, console.error);
 };
 document.getElementsByTagName("BODY")[0].style.overflowY='hidden'
 // document.getElementsByClassName("wrapper")[0].style.display = "none";
 window.onload = () => {
-  console.log("hey1");
+  //console.log("hey1");
   setTimeout(() => {
     document.getElementsByClassName("logo-container")[0].style.display = 'none'
     document.getElementsByTagName("BODY")[0].style.overflowY = ''
@@ -518,10 +518,10 @@ window.onload = () => {
     //     document.getElementById("loader").style.display = "none";
     //   }, 1000);  
     // }, 1000);
-    console.log("hey2");
+    //console.log("hey2");
     setTime();
   }, 5400);
-  console.log("hey3");
+  //console.log("hey3");
   getAllEvents();
   // fetch("https://bits-apogee.org/registrations/events/Registration")
   //   .then((data) => {

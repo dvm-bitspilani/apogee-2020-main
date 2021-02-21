@@ -34,6 +34,10 @@
   margin-top: -25px;
 }
 
+.close_svg {
+  height: 2vh;
+}
+
 .events-dialogue-box {
   display: flex;
   flex-direction: column;
