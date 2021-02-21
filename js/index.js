@@ -494,13 +494,14 @@ const getAllEvents = async () => {
 
     }, console.error);
 };
-
+document.getElementsByTagName("BODY")[0].style.overflowY='hidden'
 // document.getElementsByClassName("wrapper")[0].style.display = "none";
 window.onload = () => {
   console.log("hey1");
   setTimeout(() => {
     document.getElementsByClassName("logo-container")[0].style.display = 'none'
-    document.getElementsByClassName("wrapper")[0].style.display = "block";
+    document.getElementsByTagName("BODY")[0].style.overflowY = ''
+    document.getElementsByClassName("wrapper")[0].style.overflowY = 'auto'
     document.getElementById("loader").style.opacity = "0";
     setTimeout(() => {
       document.getElementById('loader').style.display = 'none'
