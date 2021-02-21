@@ -100,7 +100,7 @@ let fx;
 
 let counter = 0;
 const next = () => {
-  fx.setText(phrases[counter]).then(() => {});
+  fx.setText(phrases[counter]).then(() => { });
   counter = (counter + 1) % phrases.length;
 };
 
@@ -125,9 +125,9 @@ const isInViewport = function (elem) {
     bounding.top >= 0 &&
     bounding.left >= 0 &&
     bounding.bottom <=
-      (window.innerHeight || document.documentElement.clientHeight) &&
+    (window.innerHeight || document.documentElement.clientHeight) &&
     bounding.right <=
-      (window.innerWidth || document.documentElement.clientWidth)
+    (window.innerWidth || document.documentElement.clientWidth)
   );
 };
 
@@ -142,10 +142,10 @@ const setActivePage = (idAsString) => {
     }
   });
   console.log(document.getElementById("allEvents").style.display);
-  if (document.getElementById("allEvents").style.display == "" || document.getElementById("allEvents").style.display == "none"){
+  if (document.getElementById("allEvents").style.display == "" || document.getElementById("allEvents").style.display == "none") {
     setPaginationDisplay(null);
   }
-  else{
+  else {
     setPaginationDisplay("none");
   }
 };
@@ -237,7 +237,7 @@ window.addEventListener(
         isVideoAnimated = true;
         next();
       }
-     } //else if (isInViewport(speakers)) {
+    } //else if (isInViewport(speakers)) {
     //   setActivePage("speakers");
     //   if (!isSpeakersAnimated) {
     //     phrases = ["Speakers"];
@@ -499,18 +499,24 @@ const getAllEvents = async () => {
 window.onload = () => {
   console.log("hey1");
   setTimeout(() => {
-    document.getElementsByClassName("robot_container")[0].style.top = "-1000vh";
-
-    document.getElementsByClassName("robot_base")[0].style.opacity = "0";
-    // document.getElementsByClassName("robot_body")[0].style.position =
-    //   "absolute";
+    document.getElementsByClassName("logo-container")[0].style.display = 'none'
+    document.getElementsByClassName("wrapper")[0].style.display = "block";
+    document.getElementById("loader").style.opacity = "0";
     setTimeout(() => {
-      document.getElementsByClassName("wrapper")[0].style.display = "";
-      document.getElementById("loader").style.opacity = "0";
-      setTimeout(() => {
-        document.getElementById("loader").style.display = "none";
-      }, 1000);
-    }, 1000);
+      document.getElementById('loader').style.display = 'none'
+    }, 1500)
+    // document.getElementsByClassName("robot_container")[0].style.top = "-1000vh";
+
+    // document.getElementsByClassName("robot_base")[0].style.opacity = "0";
+    // // document.getElementsByClassName("robot_body")[0].style.position =
+    // //   "absolute";
+    // setTimeout(() => {
+    //   document.getElementsByClassName("wrapper")[0].style.display = "";
+    //   document.getElementById("loader").style.opacity = "0";
+    //   setTimeout(() => {
+    //     document.getElementById("loader").style.display = "none";
+    //   }, 1000);  
+    // }, 1000);
     console.log("hey2");
     setTime();
   }, 5400);
