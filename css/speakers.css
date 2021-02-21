@@ -72,7 +72,9 @@
 
 .speakers .speakers-body .carousel .name {
   font-size: 1.1vw;
-  margin-left: -11vw;
+  text-align: left;
+  /* margin-left: -10.5vw; */
+  display: contents;
 }
 
 .speakers .speakers-body .carousel .speakers-name {
@@ -208,7 +210,7 @@
   .speakers .speakers-body .carousel .card {
     height: 100vh;
     margin: 0px 0%;
-    width: 57vw;
+    width: 55vw;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -222,6 +224,8 @@
     width: 50vw;
     transform: translateX(0px);
     margin-bottom: 3vh;
+    background-position: center;
+    background-size: cover;
   }
   .speakers .speakers-body .carousel .description {
     font-size: 1.75vh;
