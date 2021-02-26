@@ -149,83 +149,6 @@
     cursor: pointer;
 }
 
-@media (max-width: 600px) {
-    .spons-wrapper {
-        height: 100vh;
-        width: 100vw;
-        padding-bottom: 0vh;
-    }
-    .spons-heading {
-        margin-top: 5vh;
-    }
-    .spons-wrapper span {
-        font-size: 2.5rem;
-        text-align: center;
-    }
-    .spons-container {
-        width: 100%;
-        height: 80%;
-        overflow-y: scroll;
-        margin-top: 3vh;
-    }
-    .sponsor {
-        width: 100%;
-        margin-bottom: 3vw;
-    }
-    .sponsor-heading {
-        height: 3vh;
-        font-size: 1.5vh;
-        margin-bottom: 1vh;
-        width: fit-content;
-    }
-    .sponsor-card-container {
-        display: flex;
-        justify-content: center;
-        align-content: center;
-        flex-wrap: wrap;
-        flex-direction: row;
-    }
-    .sponsor-card-container .spons-details {
-        width: fit-content;
-        font-size: 4.75vw;
-        font-family: "Ikaros-Sans";
-        text-align: center;
-        height: fit-content;
-        margin-bottom: 3vh;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-    }
-    .sponsor-card-container .spons-details .name {
-        /* width: 100%; */
-        font-size: 2.05vh;
-        font-family: "Ikaros-Sans";
-        text-align: center;
-        /* padding-top: 1.5vh; */
-        width: max-content;
-    }
-    .sponsor-card-container img {
-        width: 39vw;
-    }
-    .spons-tab-container {
-        padding: 8px;
-    }
-    .spons-tab span, .past-spons-tab span {
-        font-size: 0.95rem;
-        white-space: nowrap;
-        letter-spacing: 1px;
-        padding-bottom: 0.5px;
-    }
-    .back {
-        top: 4.45vh;
-        left: 5vw;
-        height: 4rem;
-    }
-    .back img {
-        width: 4vh;
-    }
-}
-
 .dev-container {
     display: flex;
     flex-wrap: wrap;
@@ -314,4 +237,100 @@
 @font-face {
     font-family: 'Poppins';
     src: url('../assets/fonts/Poppins-Medium.ttf');
+}
+
+@media (max-width: 600px) {
+    .spons-wrapper {
+        height: 100vh;
+        width: 100vw;
+        padding-bottom: 0vh;
+    }
+    .spons-heading {
+        margin-top: 5vh;
+    }
+    .spons-wrapper span {
+        font-size: 2.5rem;
+        text-align: center;
+    }
+    .spons-container {
+        width: 100%;
+        height: 80%;
+        overflow-y: scroll;
+        margin-top: 3vh;
+    }
+    .sponsor {
+        width: 100%;
+        margin-bottom: 3vw;
+    }
+    .sponsor-heading {
+        height: 3vh;
+        font-size: 1.5vh;
+        margin-bottom: 1vh;
+        width: fit-content;
+    }
+    .sponsor-card-container {
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        flex-wrap: wrap;
+        flex-direction: row;
+    }
+    .sponsor-card-container .spons-details {
+        width: fit-content;
+        font-size: 4.75vw;
+        font-family: "Ikaros-Sans";
+        text-align: center;
+        height: fit-content;
+        margin-bottom: 3vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .sponsor-card-container .spons-details .name {
+        /* width: 100%; */
+        font-size: 2.05vh;
+        font-family: "Ikaros-Sans";
+        text-align: center;
+        /* padding-top: 1.5vh; */
+        width: max-content;
+    }
+    .sponsor-card-container img {
+        width: 39vw;
+    }
+    .spons-tab-container {
+        padding: 8px;
+    }
+    .spons-tab span, .past-spons-tab span {
+        font-size: 0.95rem;
+        white-space: nowrap;
+        letter-spacing: 1px;
+        padding-bottom: 0.5px;
+    }
+    .back {
+        top: 4.45vh;
+        left: 5vw;
+        height: 4rem;
+    }
+    .back img {
+        width: 4vh;
+    }
+    .dev-container {
+        padding: 2% 2%;
+    }
+    .dev-card {
+        width: 25%;
+    }
+    .dev-image {
+        height: 13vh;
+    }
+    .dev-name {
+        font-size: 0.8em;
+    }
+    .dev-category {
+        font-size: 0.65em;
+    }
+    .dev-info img {
+        height: 3vh;
+        padding: 0 5px;
+    }
 }
