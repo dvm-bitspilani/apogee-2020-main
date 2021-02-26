@@ -207,7 +207,7 @@
     -webkit-user-drag: none;
     user-select: none;
     height: 100%;
-    border-radius: 50%;
+    border-radius: 25px;
 }
 
 .dev-category {
@@ -322,6 +322,9 @@
     }
     .dev-image {
         height: 22vw;
+    }
+    .dev-image img {
+        border-radius: 15px;
     }
     .dev-name {
         font-size: 0.8em;
