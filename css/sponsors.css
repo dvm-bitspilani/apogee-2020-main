@@ -176,9 +176,8 @@
     }
     .sponsor-heading {
         height: 3vh;
-        font-size: 1.5vh;
-        margin-bottom: 1vh;
-        width: fit-content;
+        font-size: 1.5rem;
+        margin-bottom: 3%;
     }
     .sponsor-card-container {
         display: flex;
@@ -188,7 +187,7 @@
         flex-direction: column;
     }
     .sponsor-card-container .spons-details {
-        width: fit-content;
+        width: 100%;
         font-size: 4.75vw;
         font-family: "Ikaros-Sans";
         text-align: center;
@@ -199,12 +198,12 @@
         justify-content: center;
     }
     .sponsor-card-container .spons-details .name {
-      /* width: 100%; */
-      font-size: 2.05vh;
-      font-family: "Ikaros-Sans";
-      text-align: center;
-      /* padding-top: 1.5vh; */
-      width: max-content;
+        width: 100%;
+    font-family: "Teko Medium";
+    font-size: 2em;
+    color: white;
+    opacity: 1;
+    margin: 0;
     }
     .sponsor-card-container img {
         width: 39vw;
