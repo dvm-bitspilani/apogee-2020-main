@@ -48,13 +48,13 @@
 
 .sponsor-heading {
     width: 100%;
-    font-size: 1.5em;
+    font-size: 2em;
     height: 2vw;
     font-family: "Space Mono";
     text-align: center;
     font-style: italic;
     color: white;
-     /* margin-top: 1.2vw; */
+    margin-top: 2.5vw;
 }
 
 .sponsor-card-container {
@@ -63,7 +63,6 @@
     justify-content: center;
     align-content: center;
     flex-wrap: wrap;
-    margin-top: 4vw;
 }
 
 .sponsor-card-container .spons-details {
@@ -80,6 +79,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-bottom: 5%;
 }
 
 
