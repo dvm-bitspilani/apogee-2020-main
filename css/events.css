@@ -18,7 +18,7 @@
   position: fixed;
   z-index: 1000;
   background-color: rgba(0, 0, 0, 0.85);
-  transition: 0.5s ease;
+  transition: opacity 0.5s ease-in-out;
 }
 
 .events-dialogue-text {
@@ -34,6 +34,10 @@
   margin-top: -25px;
 }
 
+.close_svg {
+  height: 2vh;
+}
+
 .events-dialogue-box {
   display: flex;
   flex-direction: column;
@@ -43,7 +47,7 @@
   font-family: "Space Mono", serif;
   z-index: 100;
   transform: translateY(-100vh);
-  transition: transform 1s ease-in-out;
+  transition: transform 0.5s ease-out;
 }
 
 .events .heading {
@@ -61,6 +65,7 @@
 .events .body {
   width: 100%;
   padding-top: 128px;
+  /* padding: 1280px 0 0 0; */
   box-sizing: border-box;
   display: flex;
   flex-wrap: wrap;
@@ -94,13 +99,19 @@
   line-height: 1.3;
   letter-spacing: 0.1rem;
   height: 100%;
+  align-items: center;
+  overflow: hidden;
+  justify-content: space-between;
 }
 
-/* .events .body .card .events-content img {
-  width: 40%;
+.events .body .card .events-content img {
+  width: 37%;
+  /* display: flex; */
   margin-left: 10%;
-  margin-right: 4.5%;
-} */
+  margin-right: auto;
+  height: 73%;
+  box-sizing: border-box;
+}
 
 .glitchy_image_cont {
   --gap-horizontal: 3px;
@@ -249,9 +260,11 @@
   justify-content: space-between;
   height: 100%;
   margin-left: 5vw;
+  /* padding-top: 10%; */
 }
 
 .events .body .card .events-content span .events-details {
+  width: 100%;
   height: 80%;
   display: flex;
   flex-direction: column;
@@ -359,19 +372,26 @@
     width: 95%;
     font-size: 0.75rem;
     letter-spacing: 0.15rem;
-    margin: 20px 0;
+    margin: 40px 0;
   }
   .events .body .card .events-name {
     margin-bottom: 4px;
   }
   .events .body .card .events-content span .events-details {
+    width: 100%;
     font-size: 0.6rem;
+    box-sizing: border-box;
   }
   .events .body .card .events-content span .events-details .events-date {
     margin-bottom: 8px;
   }
   .events .body .card .events-content span .view-detail-button {
     font-size: 0.6rem;
+  }
+  .events .body .card .events-content img {
+    width: 50%;
+    height: 80%;
+    margin-left: -0.5%;
   }
 }
 

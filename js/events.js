@@ -1,14 +1,17 @@
 function events_dialog(input) {
-  console.log(input.desc.length)
-  console.log(document.getElementsByClassName("events-dialogue-container"));
+  //console.log(input.desc.length)
+  //console.log(document.getElementsByClassName("events-dialogue-container"));
   // document.getElementsByClassName("events-dialogue-container")[0].style.top =
   //   window.pageYOffset + "px";
   document.getElementsByClassName("events-dialogue-container")[0].style.display = "flex";
-
   setTimeout(() => {
     document.getElementsByClassName("events-dialogue-container")[0].style.opacity = "1";
+  }, 100)
+
+  setTimeout(() => {
+
     document.getElementsByClassName("events-dialogue-box")[0].style.transform = 'translateY(0vh)'
-  }, 200)
+  }, 500)
   document.getElementsByClassName("events-dialogue-text")[0].innerHTML =
     input.desc;
   //   setTimeout(() => {

@@ -100,7 +100,7 @@ let fx;
 
 let counter = 0;
 const next = () => {
-  fx.setText(phrases[counter]).then(() => {});
+  fx.setText(phrases[counter]).then(() => { });
   counter = (counter + 1) % phrases.length;
 };
 
@@ -109,6 +109,7 @@ const events = document.querySelector("#events > .heading > span");
 const contact = document.querySelector("#contact > .heading > span");
 const videos = document.querySelector("#videos > .heading > span");
 const speakers = document.querySelector("#speakers > .heading > span");
+const workshops = document.querySelector("#workshops > .heading > span");
 const home = document.querySelector("#home .register-button");
 
 let isAboutUsAnimated = false;
@@ -116,6 +117,7 @@ let isEventsAnimated = false;
 let isContactAnimated = false;
 let isVideoAnimated = false;
 let isSpeakersAnimated = false;
+let isWorkshopsAnimated = false;
 
 let activePage = "home";
 
@@ -125,13 +127,14 @@ const isInViewport = function (elem) {
     bounding.top >= 0 &&
     bounding.left >= 0 &&
     bounding.bottom <=
-      (window.innerHeight || document.documentElement.clientHeight) &&
+    (window.innerHeight || document.documentElement.clientHeight) &&
     bounding.right <=
-      (window.innerWidth || document.documentElement.clientWidth)
+    (window.innerWidth || document.documentElement.clientWidth)
   );
 };
 
 const setActivePage = (idAsString) => {
+  console.log(activePage);
   activePage = idAsString;
   str = activePage + "Pagination";
   document.querySelectorAll(".individual").forEach((ele) => {
@@ -141,11 +144,11 @@ const setActivePage = (idAsString) => {
       ele.classList.remove("opacity1Class");
     }
   });
-  console.log(document.getElementById("allEvents").style.display);
-  if (document.getElementById("allEvents").style.display == "" || document.getElementById("allEvents").style.display == "none"){
+  // console.log(document.getElementById("allEvents").style.display);
+  if (document.getElementById("allEvents").style.display == "" || document.getElementById("allEvents").style.display == "none") {
     setPaginationDisplay(null);
   }
-  else{
+  else {
     setPaginationDisplay("none");
   }
 };
@@ -162,7 +165,8 @@ window.addEventListener(
         isAboutUsAnimated = true;
         next();
       }
-    } else if (isInViewport(contact)) {
+    } 
+    else if (isInViewport(contact)) {
       setActivePage("contact");
       if (!isContactAnimated) {
         phrases = ["Contact Us"];
@@ -171,7 +175,8 @@ window.addEventListener(
         isContactAnimated = true;
         next();
       }
-    } else if (isInViewport(videos)) {
+    } 
+    else if (isInViewport(videos)) {
       setActivePage("videos");
       if (!isVideoAnimated) {
         phrases = ["Videos"];
@@ -180,7 +185,8 @@ window.addEventListener(
         isVideoAnimated = true;
         next();
       }
-    } else if (isInViewport(speakers)) {
+    }
+    else if (isInViewport(speakers)) {
       setActivePage("speakers");
       if (!isSpeakersAnimated) {
         phrases = ["Speakers"];
@@ -189,9 +195,31 @@ window.addEventListener(
         isSpeakersAnimated = true;
         next();
       }
-    } else if (isInViewport(home)) {
+    }
+    else if (isInViewport(workshops)) {
+      setActivePage("speakers");
+      if (!isWorkshopsAnimated) {
+        phrases = ["Workshops"];
+        el = workshops;
+        fx = new TextScramble(el);
+        isWorkshopsAnimated = true;
+        next();
+      }
+    }
+    else if (isInViewport(events)) {
+      setActivePage("events");
+      if (!isEventsAnimated) {
+        phrases = ["Events"];
+        el = events;
+        fx = new TextScramble(el);
+        isEventsAnimated = true;
+        next();
+      }
+    }
+    else if (isInViewport(home)) {
       setActivePage("home");
-    } else if (isInViewport(events)) {
+    } 
+    else if (isInViewport(events)) {
       setActivePage("events");
       if (!isEventsAnimated) {
         phrases = ["Events"];
@@ -217,7 +245,8 @@ window.addEventListener(
         isAboutUsAnimated = true;
         next();
       }
-    } else if (isInViewport(contact)) {
+    }
+    else if (isInViewport(contact)) {
       setActivePage("contact");
       if (!isContactAnimated) {
         phrases = ["Contact Us"];
@@ -226,7 +255,8 @@ window.addEventListener(
         isContactAnimated = true;
         next();
       }
-    } else if (isInViewport(videos)) {
+    }
+    else if (isInViewport(videos)) {
       setActivePage("videos");
       if (!isVideoAnimated) {
         phrases = ["Videos"];
@@ -235,7 +265,8 @@ window.addEventListener(
         isVideoAnimated = true;
         next();
       }
-    } else if (isInViewport(speakers)) {
+    }
+    else if (isInViewport(speakers)) {
       setActivePage("speakers");
       if (!isSpeakersAnimated) {
         phrases = ["Speakers"];
@@ -244,9 +275,21 @@ window.addEventListener(
         isSpeakersAnimated = true;
         next();
       }
-    } else if (isInViewport(home)) {
+    }
+    else if (isInViewport(workshops)) {
+      setActivePage("workshops");
+      if (!isWorkshopsAnimated) {
+        phrases = ["Workshops"];
+        el = workshops;
+        fx = new TextScramble(el);
+        isWorkshopsAnimated = true;
+        next();
+      }
+    }
+    else if (isInViewport(home)) {
       setActivePage("home");
-    } else if (isInViewport(events)) {
+    }
+    else if (isInViewport(events)) {
       setActivePage("events");
       if (!isEventsAnimated) {
         phrases = ["Events"];
@@ -297,7 +340,8 @@ const navigateTo = (id) => {
       isAboutUsAnimated = true;
       next();
     }
-  } else if (id == "contact") {
+  }
+  else if (id == "contact") {
     setActivePage("contact");
     if (!isContactAnimated) {
       phrases = ["Contact Us"];
@@ -306,7 +350,8 @@ const navigateTo = (id) => {
       isContactAnimated = true;
       next();
     }
-  } else if (id == "videos") {
+  }
+  else if (id == "videos") {
     setActivePage("videos");
     if (!isVideoAnimated) {
       phrases = ["Videos"];
@@ -315,7 +360,8 @@ const navigateTo = (id) => {
       isVideoAnimated = true;
       next();
     }
-  } else if (id == "speakers") {
+  }
+  else if (id == "speakers") {
     setActivePage("speakers");
     if (!isSpeakersAnimated) {
       phrases = ["Speakers"];
@@ -324,9 +370,21 @@ const navigateTo = (id) => {
       isSpeakersAnimated = true;
       next();
     }
-  } else if (id == "home") {
+  }
+  else if (id == "workshops") {
+    setActivePage("workshops");
+    if (!isWorkshopsAnimated) {
+      phrases = ["Workshops"];
+      el = workshops;
+      fx = new TextScramble(el);
+      isWorkshopsAnimated = true;
+      next();
+    }
+  }
+  else if (id == "home") {
     setActivePage("home");
-  } else if ((id = "events")) {
+  }
+  else if ((id = "events")) {
     setActivePage("events");
     if (!isEventsAnimated) {
       phrases = ["Events"];
@@ -487,31 +545,38 @@ const getAllEvents = async () => {
         ALL_EVENTS_NAMES.push(ev.name);
         mapEvents(ev.name, ev.about, ev.id);
       });
-      console.log(ALL_EVENTS_NAMES);
-     
+      //console.log(ALL_EVENTS_NAMES);
+
     }, console.error);
 };
-
-document.getElementsByClassName("wrapper")[0].style.display = "none";
+document.getElementsByTagName("BODY")[0].style.overflowY = 'hidden'
+// document.getElementsByClassName("wrapper")[0].style.display = "none";
 window.onload = () => {
-  console.log("hey1");
+  //console.log("hey1");
   setTimeout(() => {
-    document.getElementsByClassName("robot_container")[0].style.top = "-1000vh";
-
-    document.getElementsByClassName("robot_base")[0].style.opacity = "0";
-    // document.getElementsByClassName("robot_body")[0].style.position =
-    //   "absolute";
+    document.getElementsByClassName("logo-container")[0].style.display = 'none'
+    document.getElementsByTagName("BODY")[0].style.overflowY = ''
+    document.getElementsByClassName("wrapper")[0].style.overflowY = 'auto'
+    document.getElementById("loader").style.opacity = "0";
     setTimeout(() => {
-      document.getElementsByClassName("wrapper")[0].style.display = "";
-      document.getElementById("loader").style.opacity = "0";
-      setTimeout(() => {
-        document.getElementById("loader").style.display = "none";
-      }, 1000);
-    }, 1000);
-    console.log("hey2");
+      document.getElementById('loader').style.display = 'none'
+    }, 1500)
+    // document.getElementsByClassName("robot_container")[0].style.top = "-1000vh";
+
+    // document.getElementsByClassName("robot_base")[0].style.opacity = "0";
+    // // document.getElementsByClassName("robot_body")[0].style.position =
+    // //   "absolute";
+    // setTimeout(() => {
+    //   document.getElementsByClassName("wrapper")[0].style.display = "";
+    //   document.getElementById("loader").style.opacity = "0";
+    //   setTimeout(() => {
+    //     document.getElementById("loader").style.display = "none";
+    //   }, 1000);  
+    // }, 1000);
+    //console.log("hey2");
     setTime();
   }, 5400);
-  console.log("hey3");
+  //console.log("hey3");
   getAllEvents();
   // fetch("https://bits-apogee.org/registrations/events/Registration")
   //   .then((data) => {
@@ -574,4 +639,4 @@ window.onload = () => {
 // window.addEventListener("scroll", (event) => {
 //   activateDots();
 //   //console.log(newSections[2].getBoundingClientRect().top, newSections[1].getBoundingClientRect().bottom)
-// });
+// })

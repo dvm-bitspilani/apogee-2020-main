@@ -48,13 +48,13 @@
 
 .sponsor-heading {
     width: 100%;
-    font-size: 1.5em;
+    font-size: 2em;
     height: 2vw;
     font-family: "Space Mono";
     text-align: center;
     font-style: italic;
     color: white;
-     /* margin-top: 1.2vw; */
+    margin-top: 2.5vw;
 }
 
 .sponsor-card-container {
@@ -63,21 +63,25 @@
     justify-content: center;
     align-content: center;
     flex-wrap: wrap;
-    margin-top: 4vw;
 }
 
 .sponsor-card-container .spons-details {
-    width: 100%;
-    margin: 1vw;
+    width: 25%;
+    margin: 3vw;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-.sponsor-card-container .spons-details:nth-of-type(2) {
-    margin-top: 10vh;
+.spons-container .spons-details .spons-logo{
+    height: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 5%;
 }
+
 
 .sponsor-card-container .spons-details .name {
     width: 100%;
@@ -88,6 +92,7 @@
     /* text-decoration: underline; */
     color: white;
     opacity: 1;
+    margin: 0;
 }
 
 .sponsor-card-container img {
@@ -171,19 +176,18 @@
     }
     .sponsor-heading {
         height: 3vh;
-        font-size: 1.5vh;
-        margin-bottom: 1vh;
-        width: fit-content;
+        font-size: 1.5rem;
+        margin-bottom: 3%;
     }
     .sponsor-card-container {
         display: flex;
         justify-content: center;
         align-content: center;
         flex-wrap: wrap;
-        flex-direction: row;
+        flex-direction: column;
     }
     .sponsor-card-container .spons-details {
-        width: fit-content;
+        width: 100%;
         font-size: 4.75vw;
         font-family: "Ikaros-Sans";
         text-align: center;
@@ -194,12 +198,12 @@
         justify-content: center;
     }
     .sponsor-card-container .spons-details .name {
-      /* width: 100%; */
-      font-size: 2.05vh;
-      font-family: "Ikaros-Sans";
-      text-align: center;
-      /* padding-top: 1.5vh; */
-      width: max-content;
+        width: 100%;
+    font-family: "Teko Medium";
+    font-size: 2em;
+    color: white;
+    opacity: 1;
+    margin: 0;
     }
     .sponsor-card-container img {
         width: 39vw;

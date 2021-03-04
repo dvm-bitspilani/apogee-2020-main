@@ -176,7 +176,7 @@
 
 .hamburger-icon {
   margin-top: -.5vh;
-  position: absolute;
+  position: fixed;
   z-index: 95;
   right: 3vw;
   top: 7.95vh;
@@ -504,8 +504,8 @@ footer .icon.twitter {
 #pagination {
   position: fixed;
   left: 5vw;
-  top: 30vh;
-  min-height: 40vh;
+  top: 25vh;
+  min-height: 50vh;
   z-index: 200;
   display: flex;
   flex-direction: column;
@@ -539,10 +539,10 @@ footer .icon.twitter {
 }
 
 /* will add these class with js */
+
 /* .opacity1Class .name{
   opacity: 1;
 } */
-
 
 .individual {
   display: flex;
@@ -560,7 +560,8 @@ footer .icon.twitter {
   border: 1px solid #FAFAFA;
   opacity: inherit;
   padding: 4px;
-  border-radius: 50%;;
+  border-radius: 50%;
+  ;
 }
 
 .dot {
@@ -582,20 +583,20 @@ footer .icon.twitter {
   margin-top: 0 !important;
 }
 
-.opacity1Class{
+.opacity1Class {
   opacity: 1;
 }
 
 @media all and (max-width: 600px) {
-  #pagination{
+  #pagination {
     display: none !important;
   }
   .hamburger-menu {
     font-size: 1.5rem;
   }
-  .hamburger-icon{
-    right: 8vw;
-    top: 7.75vh;
+  .hamburger-icon {
+    right: 5vw;
+    top: 7vh;
   }
   .home {
     height: 100vh;
@@ -701,4 +702,8 @@ footer .icon.twitter {
   to {
     transform: translateY(20px);
   }
+}
+
+.events-details {
+  overflow: hidden;
 }
