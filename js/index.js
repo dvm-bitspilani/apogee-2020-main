@@ -109,6 +109,7 @@ const events = document.querySelector("#events > .heading > span");
 const contact = document.querySelector("#contact > .heading > span");
 const videos = document.querySelector("#videos > .heading > span");
 const speakers = document.querySelector("#speakers > .heading > span");
+const workshops = document.querySelector("#workshops > .heading > span");
 const home = document.querySelector("#home .register-button");
 
 let isAboutUsAnimated = false;
@@ -116,6 +117,7 @@ let isEventsAnimated = false;
 let isContactAnimated = false;
 let isVideoAnimated = false;
 let isSpeakersAnimated = false;
+let isWorkshopsAnimated = false;
 
 let activePage = "home";
 
@@ -132,6 +134,7 @@ const isInViewport = function (elem) {
 };
 
 const setActivePage = (idAsString) => {
+  console.log(activePage);
   activePage = idAsString;
   str = activePage + "Pagination";
   document.querySelectorAll(".individual").forEach((ele) => {
@@ -162,7 +165,8 @@ window.addEventListener(
         isAboutUsAnimated = true;
         next();
       }
-    } else if (isInViewport(contact)) {
+    } 
+    else if (isInViewport(contact)) {
       setActivePage("contact");
       if (!isContactAnimated) {
         phrases = ["Contact Us"];
@@ -171,7 +175,8 @@ window.addEventListener(
         isContactAnimated = true;
         next();
       }
-    } else if (isInViewport(videos)) {
+    } 
+    else if (isInViewport(videos)) {
       setActivePage("videos");
       if (!isVideoAnimated) {
         phrases = ["Videos"];
@@ -181,19 +186,40 @@ window.addEventListener(
         next();
       }
     }
-    // else if (isInViewport(speakers)) {
-    //   setActivePage("speakers");
-    //   if (!isSpeakersAnimated) {
-    //     phrases = ["Speakers"];
-    //     el = speakers;
-    //     fx = new TextScramble(el);
-    //     isSpeakersAnimated = true;
-    //     next();
-    //   }
-    // }
+    else if (isInViewport(speakers)) {
+      setActivePage("speakers");
+      if (!isSpeakersAnimated) {
+        phrases = ["Speakers"];
+        el = speakers;
+        fx = new TextScramble(el);
+        isSpeakersAnimated = true;
+        next();
+      }
+    }
+    else if (isInViewport(workshops)) {
+      setActivePage("speakers");
+      if (!isWorkshopsAnimated) {
+        phrases = ["Workshops"];
+        el = workshops;
+        fx = new TextScramble(el);
+        isWorkshopsAnimated = true;
+        next();
+      }
+    }
+    else if (isInViewport(events)) {
+      setActivePage("events");
+      if (!isEventsAnimated) {
+        phrases = ["Events"];
+        el = events;
+        fx = new TextScramble(el);
+        isEventsAnimated = true;
+        next();
+      }
+    }
     else if (isInViewport(home)) {
       setActivePage("home");
-    } else if (isInViewport(events)) {
+    } 
+    else if (isInViewport(events)) {
       setActivePage("events");
       if (!isEventsAnimated) {
         phrases = ["Events"];
@@ -219,7 +245,8 @@ window.addEventListener(
         isAboutUsAnimated = true;
         next();
       }
-    } else if (isInViewport(contact)) {
+    }
+    else if (isInViewport(contact)) {
       setActivePage("contact");
       if (!isContactAnimated) {
         phrases = ["Contact Us"];
@@ -228,7 +255,8 @@ window.addEventListener(
         isContactAnimated = true;
         next();
       }
-    } else if (isInViewport(videos)) {
+    }
+    else if (isInViewport(videos)) {
       setActivePage("videos");
       if (!isVideoAnimated) {
         phrases = ["Videos"];
@@ -237,19 +265,31 @@ window.addEventListener(
         isVideoAnimated = true;
         next();
       }
-    } //else if (isInViewport(speakers)) {
-    //   setActivePage("speakers");
-    //   if (!isSpeakersAnimated) {
-    //     phrases = ["Speakers"];
-    //     el = speakers;
-    //     fx = new TextScramble(el);
-    //     isSpeakersAnimated = true;
-    //     next();
-    //   }
-    //}
+    }
+    else if (isInViewport(speakers)) {
+      setActivePage("speakers");
+      if (!isSpeakersAnimated) {
+        phrases = ["Speakers"];
+        el = speakers;
+        fx = new TextScramble(el);
+        isSpeakersAnimated = true;
+        next();
+      }
+    }
+    else if (isInViewport(workshops)) {
+      setActivePage("workshops");
+      if (!isWorkshopsAnimated) {
+        phrases = ["Workshops"];
+        el = workshops;
+        fx = new TextScramble(el);
+        isWorkshopsAnimated = true;
+        next();
+      }
+    }
     else if (isInViewport(home)) {
       setActivePage("home");
-    } else if (isInViewport(events)) {
+    }
+    else if (isInViewport(events)) {
       setActivePage("events");
       if (!isEventsAnimated) {
         phrases = ["Events"];
@@ -300,7 +340,8 @@ const navigateTo = (id) => {
       isAboutUsAnimated = true;
       next();
     }
-  } else if (id == "contact") {
+  }
+  else if (id == "contact") {
     setActivePage("contact");
     if (!isContactAnimated) {
       phrases = ["Contact Us"];
@@ -309,7 +350,8 @@ const navigateTo = (id) => {
       isContactAnimated = true;
       next();
     }
-  } else if (id == "videos") {
+  }
+  else if (id == "videos") {
     setActivePage("videos");
     if (!isVideoAnimated) {
       phrases = ["Videos"];
@@ -318,7 +360,8 @@ const navigateTo = (id) => {
       isVideoAnimated = true;
       next();
     }
-  } else if (id == "speakers") {
+  }
+  else if (id == "speakers") {
     setActivePage("speakers");
     if (!isSpeakersAnimated) {
       phrases = ["Speakers"];
@@ -327,9 +370,21 @@ const navigateTo = (id) => {
       isSpeakersAnimated = true;
       next();
     }
-  } else if (id == "home") {
+  }
+  else if (id == "workshops") {
+    setActivePage("workshops");
+    if (!isWorkshopsAnimated) {
+      phrases = ["Workshops"];
+      el = workshops;
+      fx = new TextScramble(el);
+      isWorkshopsAnimated = true;
+      next();
+    }
+  }
+  else if (id == "home") {
     setActivePage("home");
-  } else if ((id = "events")) {
+  }
+  else if ((id = "events")) {
     setActivePage("events");
     if (!isEventsAnimated) {
       phrases = ["Events"];
@@ -494,7 +549,7 @@ const getAllEvents = async () => {
 
     }, console.error);
 };
-document.getElementsByTagName("BODY")[0].style.overflowY='hidden'
+document.getElementsByTagName("BODY")[0].style.overflowY = 'hidden'
 // document.getElementsByClassName("wrapper")[0].style.display = "none";
 window.onload = () => {
   //console.log("hey1");
@@ -584,4 +639,4 @@ window.onload = () => {
 // window.addEventListener("scroll", (event) => {
 //   activateDots();
 //   //console.log(newSections[2].getBoundingClientRect().top, newSections[1].getBoundingClientRect().bottom)
-// });
+// })
