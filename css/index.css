@@ -504,8 +504,8 @@ footer .icon.twitter {
 #pagination {
   position: fixed;
   left: 5vw;
-  top: 30vh;
-  min-height: 40vh;
+  top: 25vh;
+  min-height: 50vh;
   z-index: 200;
   display: flex;
   flex-direction: column;
