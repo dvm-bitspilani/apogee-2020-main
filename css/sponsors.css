@@ -175,16 +175,18 @@
         margin-bottom: 3vw;
     }
     .sponsor-heading {
-        height: 3vh;
+        height: 10vh;
         font-size: 1.5rem;
         margin-bottom: 3%;
+    }
+    #long-spons-heading{
+        height: 15vh;
     }
     .sponsor-card-container {
         display: flex;
         justify-content: center;
         align-content: center;
         flex-wrap: wrap;
-        flex-direction: column;
     }
     .sponsor-card-container .spons-details {
         width: 100%;
