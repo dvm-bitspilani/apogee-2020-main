@@ -80,6 +80,24 @@
           placeholder="Email*"
           required
         />
+        <div class="field-wrapper">
+          <input
+                  list="workshop_input"
+                  placeholder="Workshops*"
+                  autocomplete="off"
+                  onclick="this.focus()"
+                  id="workshop"
+                  onfocus="showData('workshop_input')"
+          />
+          <datalist id="workshop_input" autocomplete="off">
+            <option disabled id="loadingWorkshop">Loading...</option>
+            <!-- EVENTS LIST GOES HERE -->
+          </datalist>
+          <div class="selected-workshop-container">
+            <!-- SELECTED EVENTS GOES HERE -->
+            <div id="no-workshop-message">No Workshops Selected</div>
+          </div>
+        </div>
         <input
           type="number"
           name="phone"
