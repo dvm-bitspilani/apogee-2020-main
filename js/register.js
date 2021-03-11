@@ -1,8 +1,6 @@
 const REGISTRATIONS_URL = 'https://bits-apogee.org/registrations/Register/';
 const COLLEGE_URL = 'https://bits-apogee.org/registrations/get_college';
 const EVENT_URL = 'https://bits-apogee.org/registrations/events';
-const WORKSHOP_URL = 'https://bits-apogee.org/registrations/workshops';
-
 
 //EVENTS
 const SELECTED_EVENTS = [];
@@ -288,7 +286,7 @@ form.addEventListener("submit", function(event) {
         delete body.referral;
     }
 
-    body.events = SELECTED_EVENTS;
+    body.events = SELECTED_EVENTS + SELECTED_WORKSHOPS;
 
     const params = {
         headers: {
