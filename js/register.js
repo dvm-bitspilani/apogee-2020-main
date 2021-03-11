@@ -27,7 +27,7 @@ document.getElementById("events").addEventListener("keydown", function(e) {
 //WORKSHOPS
 const SELECTED_WORKSHOPS = [];
 const noWorkshopMessage = document.getElementById('no-workshop-message');
-const selectedWorkshopsContainer = document.getElementsByClassName('selected-workshops-container')[0];
+const selectedWorkshopsContainer = document.getElementsByClassName('selected-workshop-container')[0];
 
 console.log(document.getElementById("workshop"));
 document.getElementById("workshop").addEventListener("keypress", function(e) {
@@ -204,7 +204,7 @@ const handleWorkshopClick = (e) => {
     }
 
     workshopTag.appendChild(removeButton);
-    document.getElementsByClassName("selected-workshops-container")[0].appendChild(workshopTag);
+    document.getElementsByClassName("selected-workshop-container")[0].appendChild(workshopTag);
 
     if (SELECTED_WORKSHOPS.length === 0) {
         noWorkshopMessage.style.display = 'initial';
@@ -286,7 +286,7 @@ form.addEventListener("submit", function(event) {
         delete body.referral;
     }
 
-    body.events = SELECTED_EVENTS + SELECTED_WORKSHOPS;
+    body.events = SELECTED_EVENTS.concat(SELECTED_WORKSHOPS);
 
     const params = {
         headers: {
