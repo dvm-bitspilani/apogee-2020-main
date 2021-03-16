@@ -366,6 +366,9 @@
     .form-container form .form-button-container input[type="submit"] {
         border: 4px solid #b02c8d;
     }
+    .form-container form .field-wrapper .paid-event-message{
+        font-size: 1rem;
+    }
     .form-container .back-button {
         width: 25px;
         height: 25px;
