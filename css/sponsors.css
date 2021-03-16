@@ -74,6 +74,19 @@
     align-items: center;
 }
 
+.correctBG img{
+    background: white;
+}
+
+.spons-details{
+    cursor: pointer;
+    transition: 0.1s;
+}
+
+.spons-details:hover{
+    transform: scale(1.1);
+}
+
 .spons-container .spons-details .spons-logo{
     height: 80%;
     display: flex;
@@ -98,6 +111,9 @@
 .sponsor-card-container img {
     width: 20.5vw;
     margin-bottom: 1vw;
+}
+#walmart img{
+    width: 50vw;
 }
 
 .spons-tab-container {
@@ -152,7 +168,7 @@
     cursor: pointer;
 }
 @media (max-width: 600px) {
-    .spons-wrapper {  
+    .spons-wrapper {
         height: 100vh;
         width: 100vw;
         padding-bottom: 0vh;
@@ -175,16 +191,18 @@
         margin-bottom: 3vw;
     }
     .sponsor-heading {
-        height: 3vh;
+        height: 10vh;
         font-size: 1.5rem;
         margin-bottom: 3%;
+    }
+    #long-spons-heading{
+        height: 15vh;
     }
     .sponsor-card-container {
         display: flex;
         justify-content: center;
         align-content: center;
         flex-wrap: wrap;
-        flex-direction: column;
     }
     .sponsor-card-container .spons-details {
         width: 100%;
