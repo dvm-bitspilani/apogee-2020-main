@@ -322,7 +322,7 @@ form.addEventListener(
     body.year = parseInt(body.year);
 
     console.log(body)
-    if (!body.gender || !body.year || !body.college_id) {
+    if (!body.gender || body.year==NaN || !body.college_id) {
       showMessage("Incomplete form data! Please fill all the required fields.");
       return;
     }
