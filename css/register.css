@@ -158,6 +158,12 @@
     align-items: center;
 }
 
+.form-container form .field-wrapper .paid-event-message {
+    font-size: 1.25rem;
+    margin-top: 2%;
+    display: none;
+}
+
 .form-container form .field-wrapper .selected-events-container .selected-events img {
     width: 16px;
     margin-left: 8px;
