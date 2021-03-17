@@ -343,33 +343,33 @@ form.addEventListener(
 
     console.log(body)
 
-    // const params = {
-    //   headers: {
-    //     Accept: "application/json, text/plain, */*",
-    //     "Content-Type": "application/json",
-    //   },
-    //   body: JSON.stringify(body),
-    //   method: "POST",
-    // };
+    const params = {
+      headers: {
+        Accept: "application/json, text/plain, */*",
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(body),
+      method: "POST",
+    };
 
-    // console.log(params);
+    console.log(params);
 
-    // fetch(REGISTRATIONS_URL, params)
-    //   .then((data) => {
-    //     return data.json();
-    //   })
-    //   .then((response) => {
-    //     if (response.message) {
-    //       console.log(response);
-    //       showMessage(response.message);
-    //       return;
-    //     }
-    //     showMessage("Registration successfull!");
-    //     // toogleRegisterForm();
-    //   })
-    //   .catch((error) => {
-    //     showMessage("ERROR: " + error + "\n Contact administrator");
-    //   });
+    fetch(REGISTRATIONS_URL, params)
+      .then((data) => {
+        return data.json();
+      })
+      .then((response) => {
+        if (response.message) {
+          console.log(response);
+          showMessage(response.message);
+          return;
+        }
+        showMessage("Registration successfull!");
+        // toogleRegisterForm();
+      })
+      .catch((error) => {
+        showMessage("ERROR: " + error + "\n Contact administrator");
+      });
   },
   false
 );
