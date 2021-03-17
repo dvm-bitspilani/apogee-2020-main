@@ -31,7 +31,15 @@
       />
       <div class="heading"><span>REGISTRATION</span></div>
       <form name="registration">
-        <input type="text" name="name" id="name" placeholder="Name*" required />
+        <div class="field-wrapper">
+          <input type="text" name="name" id="name" placeholder="Name*" required />
+          <label class="container" >Do you want to register in the event "Overhead Transmission and The SciTech Quiz"
+            <input type="checkbox" id="checkbox" onchange="paid_event_check()">
+            <span class="checkmark"></span>
+          </label>
+          
+        </div>
+        
         <input type="text" name="city" id="city" placeholder="City*" required />
         <div class="field-wrapper">
           <input
@@ -141,6 +149,12 @@
         </div>
         <div class="field-wrapper">
           <label>Year of Study*</label>
+          <div class="sub-field-wrapper" id='year-0-container' style="display: none;">
+            <input type="radio" name="year" value="0" id="year-0" /><label
+              for="year-0"
+              >0</label
+            >
+          </div>
           <div class="sub-field-wrapper">
             <input type="radio" name="year" value="1" id="year-1" /><label
               for="year-1"

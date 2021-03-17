@@ -2,8 +2,18 @@ const REGISTRATIONS_URL = "https://bits-apogee.org/registrations/Register/";
 const COLLEGE_URL = "https://bits-apogee.org/registrations/get_college";
 const EVENT_URL = "https://bits-apogee.org/registrations/events";
 
+
+function paid_event_check(){
+  if(document.getElementById('checkbox').checked){
+    paid_event()
+  }
+  else{
+    not_paid_event()
+  }
+}
+
 //EVENTS
-const SELECTED_EVENTS = [];
+var SELECTED_EVENTS = [];
 const noEventMessage = document.getElementById("no-event-message");
 const selectedEventsContainer = document.getElementsByClassName(
   "selected-events-container"
@@ -27,7 +37,7 @@ document.getElementById("events").addEventListener("keydown", function (e) {
 
 
 //WORKSHOPS
-const SELECTED_WORKSHOPS = [];
+var SELECTED_WORKSHOPS = [];
 const noWorkshopMessage = document.getElementById('no-workshop-message');
 const selectedWorkshopsContainer = document.getElementsByClassName('selected-workshop-container')[0];
 
@@ -91,6 +101,7 @@ const getEventsList = () => {
 
 const handleEventClick = (e) => {
   console.log("cross trigerred");
+  console.log(e)
   const input = e.target;
   const eventName = input.value;
   e.target.value = "";
@@ -112,9 +123,11 @@ const handleEventClick = (e) => {
 
   for (var i = 0; i < options.length; i++) {
     if (options[i].innerText === eventName) {
+      
       SELECTED_EVENTS.push(parseInt(options[i].id));
       options[i].disabled = true;
       const that = options[i];
+
       removeButton.onclick = (e) => {
         e.target.parentNode.remove();
         console.log(e.target.parentNode);
@@ -123,11 +136,15 @@ const handleEventClick = (e) => {
             SELECTED_EVENTS.splice(i, 1);
           }
           if (SELECTED_EVENTS.length === 0) {
-            noEventMessage.style.display = "initial";
+            document.getElementById("no-event-message").style.display = "initial";
             selectedEventsContainer.style.border = "3px solid #0fffff";
           }
-          if (SELECTED_EVENTS.find((el) => el === 349))
+          if (SELECTED_EVENTS.find((el) => el === 349)){
             paidEventMessage.style.display = "block";
+            document.getElementById('checkbox').checked=true
+            paid_event_check()
+          }
+
           else paidEventMessage.style.display = "none";
         }
         that.disabled = false;
@@ -141,15 +158,20 @@ const handleEventClick = (e) => {
     .appendChild(eventTag);
 
   if (SELECTED_EVENTS.length === 0) {
-    noEventMessage.style.display = "initial";
+    document.getElementById("no-event-message").style.display = "initial";
     selectedEventsContainer.style.border = "3px solid #0fffff";
   }
   if (SELECTED_EVENTS.length !== 0) {
-    noEventMessage.style.display = "none";
+    
+    document.getElementById("no-event-message").style.display = "none";
     selectedEventsContainer.style.border = "3px solid #b02c8d";
   }
-  if (SELECTED_EVENTS.find((el) => el === 349))
+  if (SELECTED_EVENTS.find((el) => el === 349)){
+    document.getElementById('checkbox').checked=true
+    paid_event_check()
     paidEventMessage.style.display = "block";
+  }
+   
   else paidEventMessage.style.display = "none";
 };
 
@@ -244,9 +266,14 @@ const getCollegeId = () => {
   const val = input.value;
   const options = document.getElementById("college_input").childNodes;
 
+  if(val==3496){
+    console.log('Not Applicable')
+    return 3496
+  }
+
   for (let i = 0; i < options.length; i++) {
     if (options[i].innerText === val) {
-      return options[i].id;
+      return parseInt(options[i].id);
     }
   }
 
@@ -283,15 +310,19 @@ form.addEventListener(
     event.preventDefault();
 
     const data = new FormData(form);
+    console.log(data)
+
+
     const body = {};
     for (const entry of data) {
       body[entry[0]] = entry[1];
     }
-
-    body.college_id = parseInt(getCollegeId());
+    
+    body.college_id = getCollegeId();
     body.year = parseInt(body.year);
 
-    if (!body.gender || !body.year || !body.college_id) {
+    console.log(body)
+    if (!body.gender || body.year==NaN || !body.college_id) {
       showMessage("Incomplete form data! Please fill all the required fields.");
       return;
     }
@@ -309,6 +340,8 @@ form.addEventListener(
     }
 
     body.events = SELECTED_EVENTS.concat(SELECTED_WORKSHOPS);
+
+    console.log(body)
 
     const params = {
       headers: {
@@ -341,6 +374,55 @@ form.addEventListener(
   false
 );
 
+function paid_event(){
+  document.getElementById("college").value='3496'
+  SELECTED_WORKSHOPS = []
+  SELECTED_EVENTS=[349]
+
+  selectedEventsContainer.innerHTML='<div id="no-event-message" style="display:none;">No Events Selected</div>'
+  const eventTag = document.createElement("div");
+  eventTag.classList.add("selected-events");
+  eventTag.innerHTML = 'Overhead Transmission and The SciTech Quiz';
+  
+  document
+    .getElementsByClassName("selected-events-container")[0]
+    .appendChild(eventTag);
+
+  
+  document.getElementById("no-event-message").style.display = "none";
+  selectedEventsContainer.style.border = "3px solid #b02c8d";
+  
+
+  document.getElementsByClassName(
+    "paid-event-message"
+  )[0].style.display='block'
+  document.getElementById('year-0').style.display='block'
+  document.getElementById('year-0').checked=true
+  document.getElementById('events').style.display='none'
+  document.getElementsByClassName('field-wrapper')[1].style.display='none'
+  document.getElementsByClassName('field-wrapper')[3].style.display='none'
+  document.getElementsByClassName('field-wrapper')[5].style.display='none'
+}
+
+function not_paid_event(){
+  document.getElementById("college").value=''
+  SELECTED_WORKSHOPS = []
+  SELECTED_EVENTS=[]
+  selectedEventsContainer.innerHTML='<div id="no-event-message" style="display:initial;">No Events Selected</div>'
+  document.getElementById("no-event-message").style.display = "initial";
+  selectedEventsContainer.style.border = "3px solid #0fffff";
+
+  document.getElementsByClassName(
+    "paid-event-message"
+  )[0].style.display='none'
+
+  document.getElementById('year-0').checked=false
+  document.getElementById('year-0').style.display='none'
+  document.getElementById('events').style.display='inline-block'
+  document.getElementsByClassName('field-wrapper')[1].style.display='flex'
+  document.getElementsByClassName('field-wrapper')[3].style.display='flex'
+  document.getElementsByClassName('field-wrapper')[5].style.display='flex'
+}
 function showData(id) {
   const eOpts = document.querySelectorAll("#" + id + " > option");
   for (i = 0; i < eOpts.length; i++) {
@@ -353,3 +435,6 @@ window.onload = () => {
     getEventsList();
     getWorkshopsList();
 }
+
+
+
