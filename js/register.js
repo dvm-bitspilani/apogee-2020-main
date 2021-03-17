@@ -266,9 +266,9 @@ const getCollegeId = () => {
   const val = input.value;
   const options = document.getElementById("college_input").childNodes;
 
-  if(val=='NA'){
+  if(val==3496){
     console.log('Not Applicable')
-    return 'NA'
+    return 3496
   }
 
   for (let i = 0; i < options.length; i++) {
@@ -375,7 +375,7 @@ form.addEventListener(
 );
 
 function paid_event(){
-  document.getElementById("college").value='NA'
+  document.getElementById("college").value='3496'
   SELECTED_WORKSHOPS = []
   SELECTED_EVENTS=[349]
 
