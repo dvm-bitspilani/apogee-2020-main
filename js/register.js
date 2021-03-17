@@ -266,9 +266,9 @@ const getCollegeId = () => {
   const val = input.value;
   const options = document.getElementById("college_input").childNodes;
 
-  if(val=='NA'){
+  if(val==3496){
     console.log('Not Applicable')
-    return 'NA'
+    return 3496
   }
 
   for (let i = 0; i < options.length; i++) {
@@ -343,39 +343,39 @@ form.addEventListener(
 
     console.log(body)
 
-    const params = {
-      headers: {
-        Accept: "application/json, text/plain, */*",
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(body),
-      method: "POST",
-    };
+    // const params = {
+    //   headers: {
+    //     Accept: "application/json, text/plain, */*",
+    //     "Content-Type": "application/json",
+    //   },
+    //   body: JSON.stringify(body),
+    //   method: "POST",
+    // };
 
-    console.log(params);
+    // console.log(params);
 
-    fetch(REGISTRATIONS_URL, params)
-      .then((data) => {
-        return data.json();
-      })
-      .then((response) => {
-        if (response.message) {
-          console.log(response);
-          showMessage(response.message);
-          return;
-        }
-        showMessage("Registration successfull!");
-        // toogleRegisterForm();
-      })
-      .catch((error) => {
-        showMessage("ERROR: " + error + "\n Contact administrator");
-      });
+    // fetch(REGISTRATIONS_URL, params)
+    //   .then((data) => {
+    //     return data.json();
+    //   })
+    //   .then((response) => {
+    //     if (response.message) {
+    //       console.log(response);
+    //       showMessage(response.message);
+    //       return;
+    //     }
+    //     showMessage("Registration successfull!");
+    //     // toogleRegisterForm();
+    //   })
+    //   .catch((error) => {
+    //     showMessage("ERROR: " + error + "\n Contact administrator");
+    //   });
   },
   false
 );
 
 function paid_event(){
-  document.getElementById("college").value='NA'
+  document.getElementById("college").value='3496'
   SELECTED_WORKSHOPS = []
   SELECTED_EVENTS=[349]
 
