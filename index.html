@@ -367,13 +367,16 @@
         <div class="ham-item" onclick="navigateTo('aboutUs')">About Us</div>
         <div class="ham-item" onclick="navigateTo('workshops')">Workshops</div>
         <div class="ham-item" onclick="navigateTo('events')">Kernel events</div>
-        <div class="ham-item" onclick="window.location.href = './sponsors.html'" target="_blank">
+        <div class="ham-item" onclick="openInNewTab('./sponsors.html')">
             Sponsors
         </div>
         <div class="ham-item" onclick="togglePage('main', 'allEvents', true); setPaginationDisplay('none');">
             All events
         </div>
-        <div class="ham-item" onclick="window.location.href = './developers.html'" target="_blank">
+        <div class="ham-item" onclick="openInNewTab('https://hpc-site-preview.netlify.app')">
+            WallMag
+        </div>
+        <div class="ham-item" onclick="openInNewTab('./developers.html')">
             Developers
         </div>
         <!-- <div class="ham-item"onclick="window.open('Internships-Website/home.html', '_blank')">Internships</div> -->
