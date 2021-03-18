@@ -549,6 +549,9 @@ const getAllEvents = async () => {
 
     }, console.error);
 };
+const openInNewTab = (url) => {
+  window.open(url, "_blank");
+}
 document.getElementsByTagName("BODY")[0].style.overflowY = 'hidden'
 // document.getElementsByClassName("wrapper")[0].style.display = "none";
 window.onload = () => {

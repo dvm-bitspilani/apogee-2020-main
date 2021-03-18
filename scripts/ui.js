@@ -62,7 +62,7 @@ const contactData = {
     post: "Website and Payments",
     phone: "+91-9897940889",
     email: "webmaster@bits-apogee.org",
-    image: "assets/contact/Devansh.jpeg",
+    image: "assets/contact/Devansh.jpg",
   },
   pcr: {
     name: "Spandan Gupta",
