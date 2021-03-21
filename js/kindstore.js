@@ -248,6 +248,6 @@ function validateEmail(email) {
   return re.test(String(email).toLowerCase());
 }
 function validatePhone(phone) {
-  const re = /^[789]\d{9}$/;
+  const re = /^[689]\d{9}$/;
   return re.test(String(phone).toLowerCase());
 }
