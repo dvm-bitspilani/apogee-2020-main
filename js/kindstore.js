@@ -75,6 +75,7 @@ const registerForKindstore = () => {
   })
     .then((res) => {
       console.log(res);
+      if (!res.ok) return Promise.reject(res.json());
       return res.json();
     })
     .then((data) => {
