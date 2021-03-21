@@ -86,7 +86,7 @@ const confirmDetails = (offer_id) => {
         message ="You have already availed an offer";
       } 
       else {
-        if (offer_id == "13") {
+        if (offer_id == "3") {
           message =
             "<p>Note: Open the link and show the image while redeeming the coupon at Belgian Waffle</p><br>" +
             `<p>${data.coupon}</p>`;
