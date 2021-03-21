@@ -137,6 +137,9 @@ function events_dialog(input, comingFromKindstore, register, hideCloseButton) {
     //   .setAttribute("onClick", `cancelDetails(${input.desc});`);
     document.getElementsByClassName("box-redeem-button")[1].onclick = () =>
       cancelDetails(input.desc);
+      document.getElementsByClassName(
+        "close_button_container"
+      )[0].style.display = "flex";
     document.getElementsByClassName("first-step")[0].style.display = "block";
     document.getElementsByClassName("second-step")[0].style.display = "none";
   }
