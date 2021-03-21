@@ -62,7 +62,7 @@ const registerForKindstore = () => {
   const body2 = {
     name: name,
     email: email,
-   // phone: phone,
+   phone: phone,
   };
   fetch("https://bits-apogee.org/kindstore/register/", {
     method: "POST",
