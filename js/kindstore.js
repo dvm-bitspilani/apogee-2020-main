@@ -82,7 +82,7 @@ const registerForKindstore = () => {
       console.log(data);
     })
     .catch((err) => {
-      console.log("catch");
+      console.log(err);
       Promise.resolve(err).then(data => console.log(data));
     });
 };
