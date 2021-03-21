@@ -1,4 +1,4 @@
-const EMAIL;
+var EMAIL;
 function redeem(x) {}
 
 const togglePage = (from, to, bgToggle) => {
