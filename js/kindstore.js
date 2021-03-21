@@ -43,7 +43,6 @@ const closeMessage = () => {
 };
 
 const confirmDetails = (offer_id) => {
-  
   const eventsDialogText = document.querySelector(".events-dialogue-text");
   const firstStep = document.querySelector(".first-step");
   const secondStep = document.querySelector(".second-step");
@@ -56,7 +55,7 @@ const confirmDetails = (offer_id) => {
     offer_id: offer_id,
     email: EMAIL,
   };
-  console.log('Details',body2)
+  console.log("Details", body2);
   events_dialog(
     {
       desc: "<p>Fetching the coupon code for you... Please Wait</p>",
@@ -82,12 +81,17 @@ const confirmDetails = (offer_id) => {
     })
     .then((data) => {
       console.log(data);
-      var message
-      if(offer_id=='Belgian Waffle_3_Unlimited_True'){
-        message='<p>Note: Open the link and show the image while redeeming the coupon at Belgian Waffle</p><br>'+`<p>${data.message}</p>`
-      }
-      else{
-        message=`<p>${data.message}</p>`
+      var message;
+      if (data.message != "You have already availed an offer") {
+        message = data.message;
+      } else {
+        if (offer_id == "Belgian Waffle_3_Unlimited_True") {
+          message =
+            "<p>Note: Open the link and show the image while redeeming the coupon at Belgian Waffle</p><br>" +
+            `<p>${data.message}</p>`;
+        } else {
+          message = `<p>${data.message}</p>`;
+        }
       }
       close_events();
       setTimeout(() => {
@@ -97,12 +101,8 @@ const confirmDetails = (offer_id) => {
           },
           false,
           true,
-          true
+          false
         );
-        setTimeout(() => {
-          close_events();
-          togglePage("form-section", "store-section", true);
-        }, 600);
       }, 300);
     })
     .catch((err) => {
