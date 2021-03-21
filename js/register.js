@@ -356,6 +356,7 @@ form.addEventListener(
 
     fetch(REGISTRATIONS_URL, params)
       .then((data) => {
+        console.log(data)
         return data.json();
       })
       .then((response) => {

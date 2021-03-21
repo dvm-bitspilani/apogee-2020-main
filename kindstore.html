@@ -66,7 +66,7 @@
               type="button"
               value="NEXT"
               style="border: 5px solid #0fffff"
-              onclick="togglePage('form-section', 'store-section', true)"
+              onclick="registerForKindstore()"
             />
             <input
               type="button"
@@ -75,14 +75,6 @@
             />
           </div>
         </form>
-      </div>
-      <div class="message-box">
-        <img
-          src="assets/icons/close.svg"
-          alt="close"
-          onclick="closeMessage()"
-        />
-        <div id="message"><!-- MESSAGES GOES HERE --></div>
       </div>
     </section>
     <section class="store-page" id="store-section">
@@ -94,7 +86,10 @@
         <div class="kind-store-heading">
           <span>Kind Store</span>
         </div>
-        <div class="back" onclick="togglePage('store-section', 'form-section', true)">
+        <div
+          class="back"
+          onclick="togglePage('store-section', 'form-section', true)"
+        >
           <img src="assets/icons/back.svg" />
         </div>
         <div class="item-container">
@@ -104,6 +99,15 @@
             </div>
             <div class="item-name">Belgian Waffles</div>
             <div class="item-info">20% Discount Coupon</div>
+            <div class="redeem-button">
+              <button
+                onclick="events_dialog({
+                desc: '<div class=`item-info`>20% Discount Coupon</div>'
+              }, true)"
+              >
+                REDEEM
+              </button>
+            </div>
           </div>
 
           <div class="item-card" onclick="redeem(2)">
@@ -114,6 +118,15 @@
             <div class="item-info">
               coupons worth 1L in 500, 1000, 3500. + Subsidized trip for OC +
               (Summer Internships???)
+            </div>
+            <div class="redeem-button">
+              <button
+                onclick="events_dialog({
+                desc: '<div class=`item-info`>coupons worth 1L in 500, 1000, 3500. + Subsidized trip for OC +(Summer Internships???)</div>'
+              }, true)"
+              >
+                REDEEM
+              </button>
             </div>
           </div>
 
@@ -126,6 +139,15 @@
               25% on treks in Karnataka and 15% on Himalayan treks, valid for 1
               yr and 1 trek per person
             </div>
+            <div class="redeem-button">
+              <button
+                onclick="events_dialog({
+                desc: '<div class=`item-info`>25% on treks in Karnataka and 15% on Himalayan treks, valid for 1 yr and 1 trek per person</div>'
+              }, true)"
+              >
+                REDEEM
+              </button>
+            </div>
           </div>
 
           <div class="item-card" onclick="redeem(4)">
@@ -134,6 +156,15 @@
             </div>
             <div class="item-name">Coinswitch</div>
             <div class="item-info">Bitcoin worth INR 100</div>
+            <div class="redeem-button">
+              <button
+                onclick="events_dialog({
+                desc: '<div class=`item-info`>Bitcoin worth INR 100</div>'
+              }, true)"
+              >
+                REDEEM
+              </button>
+            </div>
           </div>
 
           <div class="item-card" onclick="redeem(5)">
@@ -145,6 +176,15 @@
               10% discount coupons on all services valid for 1 yr once per
               attendee
             </div>
+            <div class="redeem-button">
+              <button
+                onclick="events_dialog({
+                desc: '<div class=`item-info`>10% discount coupons on all services valid for 1 yr once per attendee</div>'
+              }, true)"
+              >
+                REDEEM
+              </button>
+            </div>
           </div>
 
           <div class="item-card" onclick="redeem(6)">
@@ -154,6 +194,15 @@
             <div class="item-name">Ekeeda</div>
             <div class="item-info">
               60% off on all courses, 30 day free access
+            </div>
+            <div class="redeem-button">
+              <button
+                onclick="events_dialog({
+                desc: '<div class=`item-info`>60% off on all courses, 30 day free access</div>'
+              }, true)"
+              >
+                REDEEM
+              </button>
             </div>
           </div>
 
@@ -165,6 +214,15 @@
             <div class="item-info">
               Stock Market Made easy course worth INR 999 to all participants
             </div>
+            <div class="redeem-button">
+              <button
+                onclick="events_dialog({
+                desc: '<div class=`item-info`>Stock Market Made easy course worth INR 999 to all participants</div>'
+              }, true)"
+              >
+                REDEEM
+              </button>
+            </div>
           </div>
 
           <div class="item-card" onclick="redeem(8)">
@@ -175,6 +233,15 @@
             <div class="item-info">
               vouchers worth INR 100 to all participants
             </div>
+            <div class="redeem-button">
+              <button
+                onclick="events_dialog({
+                desc: '<div class=`item-info`>vouchers worth INR 100 to all participants</div>'
+              }, true)"
+              >
+                REDEEM
+              </button>
+            </div>
           </div>
 
           <div class="item-card" onclick="redeem(9)">
@@ -183,6 +250,15 @@
             </div>
             <div class="item-name">Ixigo</div>
             <div class="item-info">10% discount Coupons upto INR 1000</div>
+            <div class="redeem-button">
+              <button
+                onclick="events_dialog({
+                desc: '<div class=`item-info`>10% discount Coupons upto INR 1000</div>'
+              }, true)"
+              >
+                REDEEM
+              </button>
+            </div>
           </div>
 
           <div class="item-card" onclick="redeem(10)">
@@ -191,6 +267,15 @@
             </div>
             <div class="item-name">Skolar</div>
             <div class="item-info">20-30% discount</div>
+            <div class="redeem-button">
+              <button
+                onclick="events_dialog({
+                desc: '<div class=`item-info`>20-30% discount</div>'
+              }, true)"
+              >
+                REDEEM
+              </button>
+            </div>
           </div>
 
           <div class="item-card" onclick="redeem(11)">
@@ -202,6 +287,15 @@
               discount of 20%on orders worth over INR 1000 (excluding shipping)
               via discount code for 2 months applicable once per student
             </div>
+            <div class="redeem-button">
+              <button
+                onclick="events_dialog({
+                desc: '<div class=`item-info`>discount of 20%on orders worth over INR 1000 (excluding shipping) via discount code for 2 months applicable once per student</div>'
+              }, true)"
+              >
+                REDEEM
+              </button>
+            </div>
           </div>
 
           <div class="item-card" onclick="redeem(12)">
@@ -212,6 +306,15 @@
             <div class="item-info">
               250 coupons of 30% off upto INR 200 (total val: 50k)
             </div>
+            <div class="redeem-button">
+              <button
+                onclick="events_dialog({
+                desc: '<div class=`item-info`>250 coupons of 30% off upto INR 200 (total val: 50k)</div>'
+              }, true)"
+              >
+                REDEEM
+              </button>
+            </div>
           </div>
 
           <div class="item-card" onclick="redeem(13)">
@@ -220,10 +323,52 @@
             </div>
             <div class="item-name">Surat Diamond Jewellery</div>
             <div class="item-info">600 gift vouchers worth INR 500 each</div>
+            <div class="redeem-button">
+              <button
+                onclick="events_dialog({
+                desc: '<div class=`item-info`>600 gift vouchers worth INR 500 each</div>'
+              }, true)"
+              >
+                REDEEM
+              </button>
+            </div>
           </div>
         </div>
       </div>
     </section>
+    <div class="message-box">
+      <img src="assets/icons/close.svg" alt="close" onclick="closeMessage()" />
+      <div id="message"><!-- MESSAGES GOES HERE --></div>
+    </div>
+    <div class="events-dialogue-container">
+      <div class="events-dialogue-box">
+        <div class="close_button_container">
+          <img
+            src="assets/icons/cancel.svg"
+            class="close_svg"
+            style="cursor: pointer"
+            onclick="close_events(true)"
+          />
+        </div>
+        <div class="events-dialogue-text" style="text-align: center">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste sapiente
+          molestiae eligendi blanditiis! Cupiditate, voluptas numquam? Eligendi
+          libero ratione iste deserunt quae accusantium quasi repellat.
+          Doloremque esse mollitia eligendi odio?
+        </div>
+        <div class="first-step">
+          <div class="box-redeem-button" onclick="confirmDetails()">
+            REDEEM THIS COUPON
+          </div>
+        </div>
+
+        <div class="second-step">
+          <div class="box-redeem-button red-border">NO, TAKE ME BACK</div>
+          <div class="box-redeem-button">YES, REDEEM</div>
+        </div>
+      </div>
+    </div>
     <script src="js/kindstore.js"></script>
+    <script src="js/events.js"></script>
   </body>
 </html>

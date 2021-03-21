@@ -40,3 +40,43 @@ const closeMessage = () => {
     messageBox.style.display = "none";
   }, 500);
 };
+
+const confirmDetails = () => {
+  const eventsDialogText = document.querySelector(".events-dialogue-text");
+  const firstStep = document.querySelector(".first-step");
+  const secondStep = document.querySelector(".second-step");
+  eventsDialogText.innerHTML =
+    "<p>Are you sure you want to redeem this coupon?</p>";
+  firstStep.style.display = "none";
+  secondStep.style.display = "flex";
+};
+
+const registerForKindstore = () => {
+  const name = document.getElementsByName("name")[0].value;
+  const email = document.getElementsByName("email_id")[0].value;
+  const phone = document.getElementsByName("phone")[0].value;
+  const body = new FormData();
+  body.append("name", name);
+  body.append("email", email);
+  body.append("phone", phone);
+  fetch("https://bits-apogee.org/kindstore/register/", {
+    method: "POST",
+    headers: {
+      Accept: "application/json, text/plain, */*",
+      "Content-Type": "application/json",
+    },
+    body: body,
+    redirect: "follow",
+  })
+    .then((res) => {
+      console.log(res);
+      return res.json();
+    })
+    .then((data) => {
+      console.log(data);
+    })
+    .catch((err) => {
+      console.log("catch");
+      console.log(err);
+    });
+};
