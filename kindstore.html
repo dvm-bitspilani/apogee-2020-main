@@ -62,8 +62,12 @@
             required
           />
           <div class="form-button-container">
-            <input type="button" value="NEXT" style="border: 5px solid #0fffff"
-            onclick="togglePage('form-section', 'store-section', true)" />
+            <input
+              type="button"
+              value="NEXT"
+              style="border: 5px solid #0fffff"
+              onclick="registerForKindstore()"
+            />
             <input
               type="button"
               value="GO BACK"
@@ -102,7 +106,8 @@
             <div class="redeem-button">
               <button
                 onclick="events_dialog({
-                desc: '<div class=`item-info`>Visit any Belgium Waffle store and get 20 percent off on showcase of the image above along with your student ID. Note: This is an entity of its own, the code cannot be used along with another code.</div>'
+                desc: '<div class=`item-info`>Visit any Belgium Waffle store and get 20 percent off on showcase of the image along with your student ID.<br> Note: This is an entity of its own, the code cannot be used along with another code.</div>',
+                id:'3'
               }, true)"
               >
                 REDEEM
@@ -121,7 +126,8 @@
             <div class="redeem-button">
               <button
                 onclick="events_dialog({
-                desc: '<div class=`item-info`>Process : Dm @calamado on insta with code else DM 9141815263<br>kind: 25% on treks in Karnataka and 15% on Himalayan treks for all attendees, valid for 1 yr and 1 trek per person (pre booked group treks)</div>'
+                desc: '<div class=`item-info`>Process : Dm @calmado on insta with code else DM 9141815263<br>kind: 25% on treks in Karnataka and 15% on Himalayan treks for all attendees, valid for 1 yr and 1 trek per person (pre booked group treks)</div>'
+                ,id:'11'
               }, true)"
               >
                 REDEEM
@@ -142,6 +148,7 @@
               <button
                 onclick="events_dialog({
                 desc: '<div class=`item-info`>Procedure: mail at contact@cview.info with code as subject line<br>kind : 10% discount coupons on all services valid for 1 yr once per attendee</div>'
+                ,id:'9'
               }, true)"
               >
                 REDEEM
@@ -159,6 +166,7 @@
               <button
                 onclick="events_dialog({
                 desc: '<div class=`item-info`>Procedure - use the website and select any course and apply the code<br>30 Day Free Trial for APOGEE Participants</div>'
+                ,id:'12'
               }, true)"
               >
                 REDEEM
@@ -176,6 +184,7 @@
               <button
                 onclick="events_dialog({
                 desc: '<div class=`item-info`>Procedure - use the website and select any cours and apply the code <br>60 perecent of on all courses for APOGEE Participants</div>'
+                ,id:'13'
               }, true)"
               >
                 REDEEM
@@ -195,6 +204,7 @@
               <button
                 onclick="events_dialog({
                 desc: '<div class=`item-info`>In order to access your FREE COURSE on the Introduction to Stock markets:<br>Click on the link here: Stock Market Made Easy.<br>Click on the “Enroll Now” button in the red box.<br>Login to your account via your Facebook account, Google account or Email Address.<br>You’ll be taken to the cart for payment of the same. Click on “Available coupon codes” option, and enter the Coupon Code- APOGEE, then click on apply.<br>After the coupon has been successfully applied, the entire course becomes free. Now click on the “Start Learning” button to access the course.<br>The course will now reflect in your “Purchased Courses Section”</div>'
+                ,id:'6'
               }, true)"
               >
                 REDEEM
@@ -214,6 +224,7 @@
               <button
                 onclick="events_dialog({
                 desc: '<div class=`item-info`>60% discount offer is valid until 30th March.<br>Procedure: It can be applied at the time of checkout from website</div>'
+                ,id:'14'
               }, true)"
               >
                 REDEEM
@@ -230,6 +241,7 @@
               <button
                 onclick="events_dialog({
                 desc: '<div class=`item-info`> Flat 10% off upto ₹1000 on flights <br>- For new users only <br>- Can be used once per user <br>Procedure: use code on website </div>'
+                ,id:'5'
               }, true)"
               >
                 REDEEM
@@ -247,6 +259,7 @@
               <button
                 onclick="events_dialog({
                 desc: '<div class=`item-info`>Flat 25% discount on all products (ice tea)<br>Procedure: Website</div>'
+                ,id:'8'
               }, true)"
               >
                 REDEEM
@@ -267,6 +280,7 @@
               <button
                 onclick="events_dialog({
                 desc: '<div class=`item-info`>Procedure: DM on Instagram with the code<br>kind : discount of 20 percent on orders worth over 1000 rupees (excluding shipping) via discount code for 2 months applicable once per student</div>'
+                ,id:'10'
               }, true)"
               >
                 REDEEM
@@ -297,9 +311,7 @@
           Doloremque esse mollitia eligendi odio?
         </div>
         <div class="first-step">
-          <div class="box-redeem-button" onclick="confirmDetails()">
-            REDEEM THIS COUPON
-          </div>
+          <div class="box-redeem-button">REDEEM THIS COUPON</div>
         </div>
 
         <div class="second-step">

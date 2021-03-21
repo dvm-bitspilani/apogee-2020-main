@@ -1,3 +1,4 @@
+var EMAIL;
 function redeem(x) {}
 
 const togglePage = (from, to, bgToggle) => {
@@ -41,7 +42,7 @@ const closeMessage = () => {
   }, 500);
 };
 
-const confirmDetails = () => {
+const confirmDetails = (offer_id) => {
   const eventsDialogText = document.querySelector(".events-dialogue-text");
   const firstStep = document.querySelector(".first-step");
   const secondStep = document.querySelector(".second-step");
@@ -49,6 +50,79 @@ const confirmDetails = () => {
     "<p>Are you sure you want to redeem this coupon?</p>";
   firstStep.style.display = "none";
   secondStep.style.display = "flex";
+
+  var body2 = {
+    offer_id: offer_id,
+    email: EMAIL,
+  };
+  console.log("Details", body2);
+  events_dialog(
+    {
+      desc: "<p>Fetching the coupon code for you... Please Wait</p>",
+    },
+    false,
+    true,
+    false
+  );
+
+  fetch("https://bits-apogee.org/kindstore/coupon_view/", {
+    method: "POST",
+    headers: {
+      Accept: "application/json, text/plain, */*",
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(body2),
+    redirect: "follow",
+  })
+    .then((res) => {
+      console.log(res);
+      if (!res.ok) return Promise.reject(res.json());
+      return res.json();
+    })
+    .then((data) => {
+      console.log(data);
+      var message;
+      if (data.message == " You have already availed an offer") {
+        message ="You have already availed an offer";
+      } 
+      else {
+        if (offer_id == "3") {
+          message =
+            "<p>Note: Open the link and show the image while redeeming the coupon at Belgian Waffle</p><br>" +
+            `<a href='${data.coupon}' target='_blank'>Coupon Image</a>`;
+        } else {
+          message = `<p>${data.coupon}</p>`;
+        }
+      }
+      close_events();
+      setTimeout(() => {
+        events_dialog(
+          {
+            desc: message,
+          },
+          false,
+          true,
+          false
+        );
+      }, 300);
+    })
+    .catch((err) => {
+      console.log(err);
+      Promise.resolve(err).then((data) => {
+        console.log(data);
+        close_events();
+        setTimeout(() => {
+          events_dialog(
+            {
+              desc: `<p>${data.message}</p>`,
+            },
+            false,
+            true,
+            false
+          );
+        }, 300);
+      });
+    });
 };
 
 const registerForKindstore = () => {
@@ -63,6 +137,7 @@ const registerForKindstore = () => {
     return;
   }
   const email = document.getElementsByName("email_id")[0].value;
+  EMAIL = document.getElementsByName("email_id")[0].value;
   if (!validateEmail(email)) {
     events_dialog({ desc: "<p>Invalid email</p>" }, false, true, false);
     return;
@@ -167,6 +242,8 @@ function events_dialog(input, comingFromKindstore, register, hideCloseButton) {
     //   .setAttribute("onClick", `cancelDetails(${input.desc});`);
     document.getElementsByClassName("box-redeem-button")[1].onclick = () =>
       cancelDetails(input.desc);
+    document.getElementsByClassName("box-redeem-button")[0].onclick = () =>
+      confirmDetails(input.id);
     document.getElementsByClassName("close_button_container")[0].style.display =
       "flex";
     document.getElementsByClassName("first-step")[0].style.display = "block";
@@ -248,6 +325,6 @@ function validateEmail(email) {
   return re.test(String(email).toLowerCase());
 }
 function validatePhone(phone) {
-  const re = /^[689]\d{9}$/;
+  const re = /^[6789]\d{9}$/;
   return re.test(String(phone).toLowerCase());
 }
