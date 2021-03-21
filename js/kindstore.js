@@ -88,9 +88,9 @@ const confirmDetails = (offer_id) => {
         if (offer_id == "Belgian Waffle_3_Unlimited_True") {
           message =
             "<p>Note: Open the link and show the image while redeeming the coupon at Belgian Waffle</p><br>" +
-            `<p>${data.message}</p>`;
+            `<p>${data.coupon}</p>`;
         } else {
-          message = `<p>${data.message}</p>`;
+          message = `<p>${data.coupon}</p>`;
         }
       }
       close_events();
