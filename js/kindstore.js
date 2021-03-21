@@ -99,6 +99,7 @@ const registerForKindstore = () => {
           true
         );
         setTimeout(() => {
+          close_events();
           togglePage("form-section", "store-section", true);
         }, 300);
       }, 300);
