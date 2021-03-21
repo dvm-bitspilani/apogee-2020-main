@@ -101,12 +101,25 @@ const registerForKindstore = () => {
         setTimeout(() => {
           close_events();
           togglePage("form-section", "store-section", true);
-        }, 300);
+        }, 600);
       }, 300);
     })
     .catch((err) => {
       console.log(err);
-      Promise.resolve(err).then((data) => console.log(data));
+      Promise.resolve(err).then((data) => {
+        console.log(data);
+        close_events();
+        setTimeout(() => {
+          events_dialog(
+            {
+              desc: `<p>${data.message}</p>`,
+            },
+            false,
+            true,
+            false
+          );
+        }, 300);
+      });
     });
 };
 
@@ -137,9 +150,8 @@ function events_dialog(input, comingFromKindstore, register, hideCloseButton) {
     //   .setAttribute("onClick", `cancelDetails(${input.desc});`);
     document.getElementsByClassName("box-redeem-button")[1].onclick = () =>
       cancelDetails(input.desc);
-      document.getElementsByClassName(
-        "close_button_container"
-      )[0].style.display = "flex";
+    document.getElementsByClassName("close_button_container")[0].style.display =
+      "flex";
     document.getElementsByClassName("first-step")[0].style.display = "block";
     document.getElementsByClassName("second-step")[0].style.display = "none";
   }
@@ -150,6 +162,10 @@ function events_dialog(input, comingFromKindstore, register, hideCloseButton) {
       document.getElementsByClassName(
         "close_button_container"
       )[0].style.display = "none";
+    else
+      document.getElementsByClassName(
+        "close_button_container"
+      )[0].style.display = "flex";
   }
   //   setTimeout(() => {
   //     document.getElementsByClassName("events-dialogue-text")[0].style.transform =
