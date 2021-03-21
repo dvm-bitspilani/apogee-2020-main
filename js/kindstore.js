@@ -82,7 +82,7 @@ const confirmDetails = (offer_id) => {
     .then((data) => {
       console.log(data);
       var message;
-      if (data.message != "You have already availed an offer") {
+      if (data.message == "You have already availed an offer") {
         message = data.message;
       } else {
         if (offer_id == "Belgian Waffle_3_Unlimited_True") {
