@@ -62,19 +62,18 @@
             required
           />
           <div class="form-button-container">
-            <input
-              type="button"
-              value="NEXT"
-              style="border: 5px solid #0fffff"
-              onclick="registerForKindstore()"
-            />
+            <input type="button" value="NEXT" style="border: 5px solid #0fffff"
+            onclick="togglePage('form-section', 'store-section', true)" />
             <input
               type="button"
               value="GO BACK"
               onclick="window.location.href='index.html'"
             />
           </div>
-          <div style="width: 100%; text-align: center;">Note: You can register <strong>only once</strong> with one email-id, and you can redeem <strong>1 coupon(s)</strong> per email-id.</div>
+          <div style="width: 100%; text-align: center">
+            Note: You can register <strong>only once</strong> with one email-id,
+            and you can redeem <strong>1 coupon(s)</strong> per email-id.
+          </div>
         </form>
       </div>
     </section>
@@ -103,34 +102,13 @@
             <div class="redeem-button">
               <button
                 onclick="events_dialog({
-                desc: '<div class=`item-info`>20% Discount Coupon</div>'
+                desc: '<div class=`item-info`>Visit any Belgium Waffle store and get 20 percent off on showcase of the image above along with your student ID. Note: This is an entity of its own, the code cannot be used along with another code.</div>'
               }, true)"
               >
                 REDEEM
               </button>
             </div>
           </div>
-
-          <div class="item-card" onclick="redeem(2)">
-            <div class="item-image">
-              <img src="assets\sponsors\Byko Journeys.png" />
-            </div>
-            <div class="item-name">Byko Journeys</div>
-            <div class="item-info">
-              coupons worth 1L in 500, 1000, 3500. + Subsidized trip for OC +
-              (Summer Internships???)
-            </div>
-            <div class="redeem-button">
-              <button
-                onclick="events_dialog({
-                desc: '<div class=`item-info`>coupons worth 1L in 500, 1000, 3500. + Subsidized trip for OC +(Summer Internships???)</div>'
-              }, true)"
-              >
-                REDEEM
-              </button>
-            </div>
-          </div>
-
           <div class="item-card" onclick="redeem(3)">
             <div class="item-image">
               <img src="assets/sponsors/calmado.jpg" />
@@ -143,24 +121,7 @@
             <div class="redeem-button">
               <button
                 onclick="events_dialog({
-                desc: '<div class=`item-info`>25% on treks in Karnataka and 15% on Himalayan treks, valid for 1 yr and 1 trek per person</div>'
-              }, true)"
-              >
-                REDEEM
-              </button>
-            </div>
-          </div>
-
-          <div class="item-card" onclick="redeem(4)">
-            <div class="item-image">
-              <img src="assets/sponsors/coinswitch.png" />
-            </div>
-            <div class="item-name">Coinswitch</div>
-            <div class="item-info">Bitcoin worth INR 100</div>
-            <div class="redeem-button">
-              <button
-                onclick="events_dialog({
-                desc: '<div class=`item-info`>Bitcoin worth INR 100</div>'
+                desc: '<div class=`item-info`>Process : Dm @calamado on insta with code else DM 9141815263<br>kind: 25% on treks in Karnataka and 15% on Himalayan treks for all attendees, valid for 1 yr and 1 trek per person (pre booked group treks)</div>'
               }, true)"
               >
                 REDEEM
@@ -180,7 +141,7 @@
             <div class="redeem-button">
               <button
                 onclick="events_dialog({
-                desc: '<div class=`item-info`>10% discount coupons on all services valid for 1 yr once per attendee</div>'
+                desc: '<div class=`item-info`>Procedure: mail at contact@cview.info with code as subject line<br>kind : 10% discount coupons on all services valid for 1 yr once per attendee</div>'
               }, true)"
               >
                 REDEEM
@@ -193,13 +154,28 @@
               <img src="assets/sponsors/ekeeda.jpg" />
             </div>
             <div class="item-name">Ekeeda</div>
-            <div class="item-info">
-              60% off on all courses, 30 day free access
-            </div>
+            <div class="item-info">30 day free access</div>
             <div class="redeem-button">
               <button
                 onclick="events_dialog({
-                desc: '<div class=`item-info`>60% off on all courses, 30 day free access</div>'
+                desc: '<div class=`item-info`>Procedure - use the website and select any course and apply the code<br>30 Day Free Trial for APOGEE Participants</div>'
+              }, true)"
+              >
+                REDEEM
+              </button>
+            </div>
+          </div>
+
+          <div class="item-card" onclick="redeem(6)">
+            <div class="item-image">
+              <img src="assets/sponsors/ekeeda.jpg" />
+            </div>
+            <div class="item-name">Ekeeda</div>
+            <div class="item-info">60% off on all courses</div>
+            <div class="redeem-button">
+              <button
+                onclick="events_dialog({
+                desc: '<div class=`item-info`>Procedure - use the website and select any cours and apply the code <br>60 perecent of on all courses for APOGEE Participants</div>'
               }, true)"
               >
                 REDEEM
@@ -218,7 +194,7 @@
             <div class="redeem-button">
               <button
                 onclick="events_dialog({
-                desc: '<div class=`item-info`>Stock Market Made easy course worth INR 999 to all participants</div>'
+                desc: '<div class=`item-info`>In order to access your FREE COURSE on the Introduction to Stock markets:<br>Click on the link here: Stock Market Made Easy.<br>Click on the “Enroll Now” button in the red box.<br>Login to your account via your Facebook account, Google account or Email Address.<br>You’ll be taken to the cart for payment of the same. Click on “Available coupon codes” option, and enter the Coupon Code- APOGEE, then click on apply.<br>After the coupon has been successfully applied, the entire course becomes free. Now click on the “Start Learning” button to access the course.<br>The course will now reflect in your “Purchased Courses Section”</div>'
               }, true)"
               >
                 REDEEM
@@ -228,23 +204,22 @@
 
           <div class="item-card" onclick="redeem(8)">
             <div class="item-image">
-              <img src="assets/sponsors/gfg.png" />
+              <img src="assets/all-events/sample-img.jpg" />
             </div>
-            <div class="item-name">GeeksforGeeks</div>
+            <div class="item-name">AlphaBeta</div>
             <div class="item-info">
               vouchers worth INR 100 to all participants
             </div>
             <div class="redeem-button">
               <button
                 onclick="events_dialog({
-                desc: '<div class=`item-info`>vouchers worth INR 100 to all participants</div>'
+                desc: '<div class=`item-info`>60% discount offer is valid until 30th March.<br>Procedure: It can be applied at the time of checkout from website</div>'
               }, true)"
               >
                 REDEEM
               </button>
             </div>
           </div>
-
           <div class="item-card" onclick="redeem(9)">
             <div class="item-image">
               <img src="assets/sponsors/Ixigo.png" />
@@ -254,7 +229,7 @@
             <div class="redeem-button">
               <button
                 onclick="events_dialog({
-                desc: '<div class=`item-info`>10% discount Coupons upto INR 1000</div>'
+                desc: '<div class=`item-info`> Flat 10% off upto ₹1000 on flights <br>- For new users only <br>- Can be used once per user <br>Procedure: use code on website </div>'
               }, true)"
               >
                 REDEEM
@@ -264,14 +239,14 @@
 
           <div class="item-card" onclick="redeem(10)">
             <div class="item-image">
-              <img src="assets/sponsors/skolar.png" />
+              <img src="assets/sponsors/The-Brewhouse-Logo-Retina.png" />
             </div>
-            <div class="item-name">Skolar</div>
+            <div class="item-name">Brewhouse</div>
             <div class="item-info">20-30% discount</div>
             <div class="redeem-button">
               <button
                 onclick="events_dialog({
-                desc: '<div class=`item-info`>20-30% discount</div>'
+                desc: '<div class=`item-info`>Flat 25% discount on all products (ice tea)<br>Procedure: Website</div>'
               }, true)"
               >
                 REDEEM
@@ -291,43 +266,7 @@
             <div class="redeem-button">
               <button
                 onclick="events_dialog({
-                desc: '<div class=`item-info`>discount of 20%on orders worth over INR 1000 (excluding shipping) via discount code for 2 months applicable once per student</div>'
-              }, true)"
-              >
-                REDEEM
-              </button>
-            </div>
-          </div>
-
-          <div class="item-card" onclick="redeem(12)">
-            <div class="item-image">
-              <img src="assets/sponsors/Qwerty Thoughts.png" />
-            </div>
-            <div class="item-name">Qwerty Thoughts</div>
-            <div class="item-info">
-              250 coupons of 30% off upto INR 200 (total val: 50k)
-            </div>
-            <div class="redeem-button">
-              <button
-                onclick="events_dialog({
-                desc: '<div class=`item-info`>250 coupons of 30% off upto INR 200 (total val: 50k)</div>'
-              }, true)"
-              >
-                REDEEM
-              </button>
-            </div>
-          </div>
-
-          <div class="item-card" onclick="redeem(13)">
-            <div class="item-image">
-              <img src="assets/sponsors/suratjew.jpg" />
-            </div>
-            <div class="item-name">Surat Diamond Jewellery</div>
-            <div class="item-info">600 gift vouchers worth INR 500 each</div>
-            <div class="redeem-button">
-              <button
-                onclick="events_dialog({
-                desc: '<div class=`item-info`>600 gift vouchers worth INR 500 each</div>'
+                desc: '<div class=`item-info`>Procedure: DM on Instagram with the code<br>kind : discount of 20 percent on orders worth over 1000 rupees (excluding shipping) via discount code for 2 months applicable once per student</div>'
               }, true)"
               >
                 REDEEM
@@ -351,7 +290,7 @@
             onclick="close_events(true)"
           />
         </div>
-        <div class="events-dialogue-text" >
+        <div class="events-dialogue-text">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste sapiente
           molestiae eligendi blanditiis! Cupiditate, voluptas numquam? Eligendi
           libero ratione iste deserunt quae accusantium quasi repellat.
