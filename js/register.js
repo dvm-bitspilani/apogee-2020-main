@@ -356,9 +356,12 @@ form.addEventListener(
 
     fetch(REGISTRATIONS_URL, params)
       .then((data) => {
+        console.log(data)
         return data.json();
       })
       .then((response) => {
+if (response.ok){
+
         if (response.message) {
           console.log(response);
           showMessage(response.message);
@@ -366,6 +369,19 @@ form.addEventListener(
         }
         showMessage("Registration successfull!");
         // toogleRegisterForm();
+}
+else {
+if (response.message) {
+          console.log(response);
+          showMessage(response.message);
+          return;
+        }
+else{
+showMessage("Registration was unsuccessful. Please try again using a different browser.");
+console.log (response);
+return;
+}
+}
       })
       .catch((error) => {
         showMessage("ERROR: " + error + "\n Contact administrator");
