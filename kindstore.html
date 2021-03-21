@@ -66,7 +66,7 @@
               type="button"
               value="NEXT"
               style="border: 5px solid #0fffff"
-              onclick="registerForKindstore()"
+              onclick="togglePage('form-section', 'store-section', true);"
             />
             <input
               type="button"
@@ -74,6 +74,7 @@
               onclick="window.location.href='index.html'"
             />
           </div>
+          <div style="width: 100%; text-align: center;">Note: You can register <strong>only once</strong> with one email-id, and you can redeem <strong>1 coupon(s)</strong> per email-id.</div>
         </form>
       </div>
     </section>
@@ -350,7 +351,7 @@
             onclick="close_events(true)"
           />
         </div>
-        <div class="events-dialogue-text" style="text-align: center">
+        <div class="events-dialogue-text" >
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste sapiente
           molestiae eligendi blanditiis! Cupiditate, voluptas numquam? Eligendi
           libero ratione iste deserunt quae accusantium quasi repellat.

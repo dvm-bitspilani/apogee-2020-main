@@ -193,6 +193,10 @@ body::-webkit-scrollbar {
   padding: 0%;
 }
 
+.item-card > .item-info {
+  display: none;
+}
+
 .item-name::after {
   content: "";
   height: 3px;
@@ -246,6 +250,7 @@ body::-webkit-scrollbar {
   padding: 6px 0;
   position: relative;
   align-items: center;
+  margin-top: 12.5%;
 }
 
 .redeem-button::before {
@@ -309,6 +314,7 @@ button:focus {
   transition: transform 1s ease-out;
   font-family: "Poppins", sans-serif;
   font-size: 24px;
+  text-align: center"
 }
 
 .close_button_container {
@@ -358,18 +364,18 @@ button:focus {
 }
 
 .second-step {
-    display: none;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
+  display: none;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .second-step .box-redeem-button {
-    width: 33%;
+  width: 33%;
 }
 
 .box-redeem-button.red-border {
-    border: 5px solid #ffffff;
+  border: 5px solid #ffffff;
 }
 
 .box-redeem-button.red-border:hover {
@@ -457,7 +463,8 @@ button:focus {
     padding: 2% 2%;
   }
   .item-card {
-    width: 25%;
+    width: 40%;
+    margin-top: 10%;
   }
   .item-image {
     height: 22vw;
@@ -472,5 +479,40 @@ button:focus {
   .item-info img {
     height: 3vh;
     padding: 0 5px;
+  }
+
+  .item-card > .item-info {
+    display: none;
+  }
+
+  .redeem-button {
+    margin-top: 25%;
+  }
+
+  .second-step {
+    flex-direction: column;
+  }
+
+  .events-dialogue-box .box-redeem-button {
+    width: 90%;
+    text-align: center;
+    padding: 10px 2.5%;
+  }
+
+  .second-step .box-redeem-button {
+    width: 95%;
+  }
+  .events-dialogue-box {
+    width: 85vw;
+    padding: 20px 20px;
+    font-size: 0.8rem;
+  }
+  .close_button_container {
+    width: auto;
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 2vh;
+    margin-top: 0;
+    font-size: 1rem;
   }
 }

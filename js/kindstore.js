@@ -220,3 +220,7 @@ const cancelDetails = (desc) => {
   firstStep.style.display = "block";
   secondStep.style.display = "none";
 };
+
+const redeemCoupon = () => {
+  
+}
