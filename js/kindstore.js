@@ -65,7 +65,7 @@ const registerForKindstore = () => {
       Accept: "application/json, text/plain, */*",
       "Content-Type": "application/json",
     },
-    body: body,
+    body: JSON.stringify(body),
     redirect: "follow",
   })
     .then((res) => {
