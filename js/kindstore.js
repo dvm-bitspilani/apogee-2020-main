@@ -241,7 +241,7 @@ function events_dialog(input, comingFromKindstore, register, hideCloseButton) {
     //   .setAttribute("onClick", `cancelDetails(${input.desc});`);
     document.getElementsByClassName("box-redeem-button")[1].onclick = () =>
       cancelDetails(input.desc);
-    document.getElementsByClassName("box-redeem-button")[2].onclick = () =>
+    document.getElementsByClassName("box-redeem-button")[0].onclick = () =>
       confirmDetails(input.id);
     document.getElementsByClassName("close_button_container")[0].style.display =
       "flex";

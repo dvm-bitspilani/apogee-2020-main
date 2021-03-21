@@ -337,6 +337,8 @@ button:focus {
   border: 5px solid #0fffff;
   padding: 50px 50px;
   width: 40vw;
+  height: 70vh;
+  overflow-y: scroll;
   font-family: "Space Mono", serif;
   z-index: 100;
   transform: translateY(-100vh);
