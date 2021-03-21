@@ -53,8 +53,25 @@ const confirmDetails = () => {
 
 const registerForKindstore = () => {
   const name = document.getElementsByName("name")[0].value;
+  if (!validateName(name)) {
+    events_dialog(
+      { desc: "<p>Name should not be empty</p>" },
+      false,
+      true,
+      false
+    );
+    return;
+  }
   const email = document.getElementsByName("email_id")[0].value;
+  if (!validateEmail(email)) {
+    events_dialog({ desc: "<p>Invalid email</p>" }, false, true, false);
+    return;
+  }
   const phone = document.getElementsByName("phone")[0].value;
+  if (!validatePhone(phone)) {
+    events_dialog({ desc: "<p>Invalid phone number</p>" }, false, true, false);
+    return;
+  }
   const body = new FormData();
   body.append("name", name);
   body.append("email", email);
@@ -221,6 +238,16 @@ const cancelDetails = (desc) => {
   secondStep.style.display = "none";
 };
 
-const redeemCoupon = () => {
-  
+const redeemCoupon = () => {};
+function validateName(name) {
+  if (!name || name === "") return false;
+  return true;
+}
+function validateEmail(email) {
+  const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+  return re.test(String(email).toLowerCase());
+}
+function validatePhone(phone) {
+  const re = /^[789]\d{9}$/;
+  return re.test(String(phone).toLowerCase());
 }
