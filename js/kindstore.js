@@ -82,11 +82,11 @@ const confirmDetails = (offer_id) => {
     .then((data) => {
       console.log(data);
       var message;
-      if (data.message == "You have already availed an offer") {
+      if (data.message == " You have already availed an offer") {
         message ="You have already availed an offer";
       } 
       else {
-        if (offer_id == "3") {
+        if (offer_id == "13") {
           message =
             "<p>Note: Open the link and show the image while redeeming the coupon at Belgian Waffle</p><br>" +
             `<p>${data.coupon}</p>`;
